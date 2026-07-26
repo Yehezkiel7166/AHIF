@@ -1,16 +1,16 @@
 # Version
 
-Current version: **1.7.0**
+Current version: **1.8.0**
 
-Release type: Adapter Architecture Foundation
+Release type: Model-Specific Adapter Layer
 
 Compatibility:
-- AHIF 1.6 Final Prompt contracts
-- Model-neutral final prompt packages
-- Versioned adapter capability profiles
-- Auditable compatibility and transformation planning
-- Identity-safe adapter release gating
+- AHIF 1.7 Adapter Architecture contracts
+- Model-neutral Final Prompt packages
+- Exact adapter registry resolution
+- Immutable capability snapshots
+- Identity-safe target request serialization
 
 ## Release focus
 
-Version 1.7.0 establishes the governed foundation for model-specific adapters without implementing or endorsing a target model. It introduces the adapter boundary, lifecycle, registry, capability model, compatibility policy, machine-readable schemas, adapter QA, and conformance baseline required for the path to AHIF 2.0.
+Version 1.8.0 implements the first experimental model-specific adapters for OpenAI Images, Midjourney, and SDXL through Diffusers. It adds target serializers, capability snapshots, parameter mappings, identity-reference policies, target request schema, adapter QA, and regression fixtures without claiming production-level cross-model equivalence.

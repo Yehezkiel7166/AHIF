@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 1.6.0  
-**Status:** Final Prompt Orchestration Release  
+**Version:** 1.8.0
+**Status:** Model-Specific Adapter Layer — Experimental
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -19,9 +19,10 @@ Knowledge Graph
 → Prompt Compiler
 → Quality Assurance
 → Final Prompt
+→ Model Adapter
 ```
 
-Version 1.7.0 completes the first end-to-end AHIF execution path. It orchestrates compact input, context normalization, decision resolution, reasoning validation, prompt compilation, quality assurance, recovery, explainable summarization, and final prompt release under one deterministic contract.
+Version 1.8.0 extends the validated Final Prompt path through versioned experimental target-model adapters. It orchestrates compact input, context normalization, decision resolution, reasoning validation, prompt compilation, quality assurance, recovery, explainable summarization, and final prompt release under one deterministic contract.
 
 ## Daily use
 
@@ -47,6 +48,7 @@ Output: final image-generation prompt
 - **Prompt Compiler** expresses accepted decisions in deterministic model-neutral prompt form without inventing new decisions.
 - **Quality Assurance** applies mandatory gates, deterministic linting, failure classification, scoring, and recovery routing.
 - **Final Prompt Engine** orchestrates the complete execution, enforces release eligibility, and emits the validated prompt package and explainable result summary.
+- **Model Adapter Layer** translates a released package into an exact target request while preserving identity, semantics, provenance, and loss disclosure.
 
 ## Repository map
 
@@ -66,6 +68,7 @@ Output: final image-generation prompt
 - `13_EXAMPLES/` — worked examples
 - `14_TESTS/` — identity, decision, reasoning, compiler, QA, and final-prompt regression tests
 - `15_FINAL_PROMPT/` — execution orchestration, release contracts, schemas, and final prompt packaging
+- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, target serializers, and mapping contracts
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
@@ -77,8 +80,8 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 1.7.0
+## Current release — 1.8.0
 
-Sprint 007 establishes the Model Adapter Architecture Foundation. It defines the downstream adapter boundary, capability profiles, compatibility assessment, transformation planning, conformance validation, and identity-safe degradation policy. Model-specific adapter implementations are intentionally deferred to Sprint 008.
+Sprint 008 implements experimental adapters for OpenAI Images, Midjourney, and SDXL through Diffusers. Each adapter uses exact version resolution, a date-stamped capability profile, deterministic serialization, identity-safe failure behavior, and complete loss disclosure. Production cross-model equivalence remains deferred to Sprint 009.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).

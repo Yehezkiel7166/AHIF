@@ -21,11 +21,12 @@ Knowledge Graph
 - Transformation and result schemas
 - Adapter QA and conformance baseline
 
-### 1.8 — Sprint 008: Model-Specific Adapter Layer
-- Initial versioned target-model adapters
-- Target request serializers
-- Target-specific parameter mapping
-- Adapter-specific regression fixtures
+### 1.8 — Sprint 008: Model-Specific Adapter Layer — Completed
+- Experimental OpenAI Images, Midjourney, and SDXL Diffusers adapters
+- Exact registry and immutable capability snapshots
+- Target request serializers and parameter mapping
+- Identity-reference mapping and loss disclosure
+- Adapter-specific QA and regression fixtures
 
 ### 1.9 — Sprint 009: Multi-Model Compatibility Contracts
 - Cross-adapter semantic equivalence
@@ -112,3 +113,10 @@ Knowledge Graph
 - Capability and compatibility contracts
 - Transformation planning schemas
 - Adapter QA and conformance baseline
+
+### 1.8
+- First versioned model-specific adapters
+- Target request serialization contracts
+- Capability snapshots and parameter mappings
+- Identity-safe degradation and blocking
+- Adapter QA and regression fixtures

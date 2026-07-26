@@ -1,5 +1,27 @@
 # Changelog
 
+## [1.8.0] — Sprint 008: Model-Specific Adapter Layer
+
+### Added
+
+- Experimental OpenAI Images, Midjourney, and SDXL Diffusers adapters.
+- Exact machine-readable adapter registry.
+- Immutable, date-stamped target capability profiles.
+- Target request serialization and parameter mapping contracts.
+- Canonical identity-reference mapping policy.
+- Target request schema, adapter QA, contract tests, and regression fixtures.
+
+### Changed
+
+- Advanced the adapter layer from architecture-only contracts to executable target-specific serialization specifications.
+- Updated repository metadata and operational context for Sprint 008.
+
+### Compatibility
+
+- Backward compatible with AHIF 1.7.0.
+- No previous files or canonical contracts were removed.
+- All target adapters remain experimental until cross-model compatibility validation in Sprint 009.
+
 ## [1.7.0] — Sprint 007: Adapter Architecture Foundation
 
 ### Added

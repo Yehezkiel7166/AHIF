@@ -1,12 +1,12 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "1.7.0",
-  "status": "adapter-architecture-foundation",
+  "version": "1.8.0",
+  "status": "model-specific-adapter-layer-experimental",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
   "license": "MIT",
-  "latest_sprint": "SPRINT-007-ADAPTER-ARCHITECTURE-FOUNDATION",
+  "latest_sprint": "SPRINT-008-MODEL-SPECIFIC-ADAPTER-LAYER",
   "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md",
   "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md",
   "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
@@ -39,5 +39,13 @@
   "adapter_transformation_schema": "16_MODEL_ADAPTERS/schemas/TRANSFORMATION_PLAN_SCHEMA.md",
   "adapter_result_schema": "16_MODEL_ADAPTERS/schemas/ADAPTER_RESULT_SCHEMA.md",
   "adapter_qa": "11_QUALITY_ASSURANCE/adapters/ADAPTER_QA.md",
-  "adapter_conformance_test": "14_TESTS/adapters/ADAPTER_CONFORMANCE_TEST.md"
+  "adapter_conformance_test": "14_TESTS/adapters/ADAPTER_CONFORMANCE_TEST.md",
+  "adapter_layer": "16_MODEL_ADAPTERS/MODEL_SPECIFIC_ADAPTER_LAYER.md",
+  "adapter_registry": "16_MODEL_ADAPTERS/REGISTRY/ADAPTER_REGISTRY.json",
+  "target_request_schema": "16_MODEL_ADAPTERS/schemas/TARGET_REQUEST_SCHEMA.md",
+  "openai_images_adapter": "16_MODEL_ADAPTERS/adapters/openai-images/ADAPTER.md",
+  "midjourney_adapter": "16_MODEL_ADAPTERS/adapters/midjourney/ADAPTER.md",
+  "sdxl_diffusers_adapter": "16_MODEL_ADAPTERS/adapters/sdxl-diffusers/ADAPTER.md",
+  "model_specific_adapter_qa": "11_QUALITY_ASSURANCE/adapters/MODEL_SPECIFIC_ADAPTER_QA.md",
+  "model_specific_adapter_test": "14_TESTS/adapters/MODEL_SPECIFIC_ADAPTER_CONTRACT_TEST.md"
 }
