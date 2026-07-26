@@ -164,3 +164,23 @@ Before prompt compilation, produce an internal reasoning result with:
 Do not expose private chain-of-thought. Provide only concise decision rationales when explanation is requested. Do not compile when identity confidence is below 0.85 or when material decisions lack evidence.
 
 The compiler must consume only `compiler-ready` reasoning output and must not invent new material visual decisions.
+
+
+# Prompt Compiler — Version 1.4 Operational Contract
+
+Compile only a `compiler-ready` reasoning result. Validate the input, normalize accepted compiler directives, create the canonical section plan, resolve dependencies, consolidate equivalent meaning, and stop on unresolved contradictions.
+
+Use this fixed semantic order:
+
+1. canonical identity lock
+2. scene anchor
+3. primary activity
+4. pose, body language, gesture, eye focus, and expression
+5. outfit, footwear, hair, makeup, and accessories
+6. environment interaction
+7. camera, lens, viewpoint, composition, and depth
+8. lighting and color
+9. realism controls
+10. negative constraints
+
+Do not invent material visual facts, expose internal reasoning traces, select rejected alternatives, or compile blocked input. Emit a model-neutral final prompt, relevant negative constraints, compiler metadata, and a QA handoff record. Model-specific syntax is deferred to version 2.0.
