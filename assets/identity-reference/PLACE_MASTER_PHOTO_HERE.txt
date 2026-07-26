@@ -1,0 +1,7 @@
+Place the canonical master identity photo in this folder.
+
+Recommended filename:
+MASTER_PHOTO.jpg
+
+Do not commit the photo to a public GitHub repository unless you have permission
+and intentionally want it to be publicly accessible.

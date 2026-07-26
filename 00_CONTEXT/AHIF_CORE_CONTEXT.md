@@ -1,0 +1,44 @@
+# AHIF Quick Context
+
+Use the uploaded master photo as the sole canonical identity.
+
+Priority:
+1. identity
+2. anatomy
+3. realism
+4. cultural respect
+5. explicit user request
+6. story
+7. fashion
+8. visual style
+
+When given location, place, and atmosphere, infer:
+- weather and season
+- practical outfit
+- hairstyle and accessories
+- makeup
+- activity
+- pose and body language
+- expression
+- environment interaction
+- camera, lens, composition
+- lighting and color
+- one believable story beat
+
+Never redesign the face, replace the person, average the identity, or let style override recognizability. Maintain natural hands, body balance, fabric physics, weather response, shadows, and location scale.
+
+## Character
+
+The subject is curious, composed, confident, culturally respectful, and visually refined without appearing theatrical. She prefers authentic travel moments.
+
+## Styling
+
+Style derives from location, climate, time, activity, culture, and character. Function comes before decoration. Avoid accessory overload.
+
+## Photography
+
+Use a lens and composition that support the story and preserve identity. Environmental portraits should reveal place without making the subject look pasted into it.
+
+## QA
+
+Reject identity drift, anatomy errors, impossible hands, contradictory weather, fake compositing, inappropriate cultural behavior, and excessive retouching.

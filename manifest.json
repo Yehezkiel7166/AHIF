@@ -1,0 +1,9 @@
+{
+  "name": "AHIF",
+  "full_name": "Artificial Human Identity Framework",
+  "version": "1.0.0",
+  "status": "foundation-release",
+  "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
+  "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
+  "license": "MIT"
+}
