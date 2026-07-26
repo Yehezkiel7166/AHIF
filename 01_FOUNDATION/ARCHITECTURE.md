@@ -10,7 +10,7 @@ AHIF has nine logical layers:
 6. **Reality Simulation** — anatomy, physics, behavior
 7. **Visual Direction** — fashion, camera, lighting, composition
 8. **Prompt Compiler** — converts compiler-ready reasoning into a final prompt
-9. **Quality Assurance** — validates identity, reasoning, realism, and prompt integrity
+9. **Quality Assurance** — applies deterministic linting, mandatory gates, failure classification, recovery orchestration, and release control
 
 ## Processing sequence
 
