@@ -13,22 +13,24 @@ Knowledge Graph
 
 ## Next releases
 
-### 1.4
-- Prompt Compiler hardening
-- Deterministic section ordering
-- Redundancy and contradiction control
-- Compiler regression corpus
-
 ### 1.5
 - Quality Assurance Engine hardening
 - Automated prompt linting
 - Identity and realism validation gates
-- Failure recovery orchestration
+- Failure classification and recovery orchestration
+- End-to-end regression suite
+
+### 1.6
+- Final Prompt orchestration
+- Unified execution contract from compact input to validated output
+- Explainable result summary
+- Release-level scenario corpus
 
 ### 2.0
 - Model-specific adapters
 - Machine-readable knowledge expansion
 - Multi-model prompt compatibility contracts
+- Adapter conformance testing
 
 ## Completed
 
@@ -56,3 +58,12 @@ Knowledge Graph
 - Cross-domain coherence
 - Reasoning output schema
 - Reasoning QA and regression testing
+
+### 1.4
+- Formal Prompt Compiler pipeline
+- Directive normalization and deterministic section ordering
+- Redundancy and contradiction control
+- Risk-based negative constraint synthesis
+- Prompt serialization and compiler metadata
+- Compiler plan and output schemas
+- Compiler QA, contract, regression, and golden-case testing

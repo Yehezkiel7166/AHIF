@@ -1,16 +1,16 @@
 # Version
 
-Current version: **1.3.0**
+Current version: **1.4.0**
 
-Release type: Reasoning Engine
+Release type: Prompt Compiler Hardening
 
 Compatibility:
 - ChatGPT context loading
-- Structured prompt compilation
-- Still image workflows
+- Structured reasoning-to-prompt compilation
+- Model-neutral still-image workflows
 - Travel, lifestyle, fashion, and brand-avatar scenarios
-- AHIF 1.2 decision and knowledge-graph contracts
+- AHIF 1.3 reasoning contracts
 
 ## Release focus
 
-Version 1.3.0 adds a formal Reasoning Engine that binds decisions to evidence, evaluates causal coherence and alternatives, propagates confidence, protects canonical identity, and produces a compiler-ready reasoning result.
+Version 1.4.0 adds a deterministic Prompt Compiler pipeline with normalized directives, canonical section ordering, redundancy control, contradiction blocking, risk-based negative constraints, compiler metadata, machine-readable output schemas, and compiler regression contracts.

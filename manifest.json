@@ -1,17 +1,21 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "1.3.0",
-  "status": "reasoning-engine",
+  "version": "1.4.0",
+  "status": "prompt-compiler-hardening",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
   "license": "MIT",
-  "latest_sprint": "SPRINT-003-REASONING-ENGINE",
+  "latest_sprint": "SPRINT-004-PROMPT-COMPILER",
   "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md",
   "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md",
   "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
   "compiler_schema": "10_PROMPT_COMPILER/schemas/COMPILER_INPUT_SCHEMA.md",
   "reasoning_engine": "09_DECISION_ENGINE/reasoning/REASONING_PIPELINE.md",
   "reasoning_schema": "10_PROMPT_COMPILER/schemas/REASONING_OUTPUT_SCHEMA.md",
-  "reasoning_qa": "11_QUALITY_ASSURANCE/reasoning/REASONING_QA.md"
+  "reasoning_qa": "11_QUALITY_ASSURANCE/reasoning/REASONING_QA.md",
+  "prompt_compiler": "10_PROMPT_COMPILER/COMPILER_PIPELINE.md",
+  "compiler_plan_schema": "10_PROMPT_COMPILER/schemas/COMPILER_PLAN_SCHEMA.md",
+  "compiled_prompt_schema": "10_PROMPT_COMPILER/schemas/COMPILED_PROMPT_SCHEMA.md",
+  "compiler_qa": "11_QUALITY_ASSURANCE/compiler/COMPILER_QA.md"
 }

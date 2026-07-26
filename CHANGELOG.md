@@ -1,5 +1,29 @@
 # Changelog
 
+## 1.4.0 — Prompt Compiler Hardening
+
+Added:
+- formal Prompt Compiler pipeline
+- normalized compiler-unit contract
+- deterministic section ordering
+- directive dependency and priority rules
+- semantic redundancy control
+- compiler contradiction detection and blocking behavior
+- risk-based negative constraint synthesis
+- model-neutral prompt serialization profile
+- compiler metadata and provenance contract
+- machine-readable compiler plan schema
+- machine-readable compiled prompt schema
+- compiler QA gate and scorecard
+- compiler contract, regression, and golden-case tests
+- Sprint 004 documentation
+
+Changed:
+- compiler specification now defines a deterministic reasoning-to-prompt pipeline
+- master prompt template now covers full human, environment, photography, lighting, realism, and story handoff
+- AI context now requires compiler planning, contradiction gating, metadata, and QA handoff
+- roadmap now marks Prompt Compiler hardening complete and advances to Quality Assurance Engine hardening
+
 ## 1.3.0 — Reasoning Engine
 
 Added:

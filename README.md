@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 1.3.0  
-**Status:** Reasoning Engine Release  
+**Version:** 1.4.0  
+**Status:** Prompt Compiler Hardening Release  
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -21,14 +21,14 @@ Knowledge Graph
 → Final Prompt
 ```
 
-The Reasoning Engine introduced in version 1.3.0 verifies why each decision is valid, records evidence and alternatives, propagates confidence, and blocks identity-unsafe or incoherent scenes before compilation.
+Version 1.4.0 hardens the Prompt Compiler. It consumes only validated reasoning output, creates a deterministic section plan, consolidates equivalent directives, blocks contradictions, serializes one coherent model-neutral prompt, and emits traceable metadata for QA.
 
 ## Daily use
 
 1. Upload the canonical master photo to the image generator.
 2. Upload `00_CONTEXT/AHIF_AI_CONTEXT.md` to ChatGPT.
 3. Ask ChatGPT to load the framework.
-4. Provide a compact request such as:
+4. Provide a compact request:
 
 ```text
 Location: Kyoto, Japan
@@ -37,7 +37,15 @@ Atmosphere: calm autumn morning
 Output: final image-generation prompt
 ```
 
-5. AHIF normalizes context, resolves decisions, produces an explainable reasoning result, compiles one coherent prompt, and validates the result.
+5. AHIF normalizes context, resolves decisions, validates reasoning, compiles one coherent prompt, and prepares the artifact for QA.
+
+## Architectural responsibilities
+
+- **Knowledge Graph** represents reusable facts and relationships.
+- **Decision Engine** selects context-appropriate visual decisions.
+- **Reasoning Engine** validates causality, evidence, alternatives, confidence, identity safety, and cross-domain coherence.
+- **Prompt Compiler** expresses accepted decisions in deterministic model-neutral prompt form without inventing new decisions.
+- **Quality Assurance** validates identity, realism, coherence, and output integrity.
 
 ## Repository map
 
@@ -51,17 +59,17 @@ Output: final image-generation prompt
 - `07_PHOTOGRAPHY/` — camera, lens, lighting, composition
 - `08_STORY/` — narrative and environmental interaction
 - `09_DECISION_ENGINE/` — context, knowledge graph, inference, resolution, and reasoning
-- `10_PROMPT_COMPILER/` — prompt assembly and machine-readable handoff schemas
-- `11_QUALITY_ASSURANCE/` — identity, decision, reasoning, and final validation
+- `10_PROMPT_COMPILER/` — compiler pipeline, schemas, ordering, contradiction control, and serialization
+- `11_QUALITY_ASSURANCE/` — identity, decision, reasoning, compiler, and final validation
 - `12_TEMPLATES/` — reusable input and output templates
 - `13_EXAMPLES/` — worked examples
-- `14_TESTS/` — identity, decision, reasoning, and prompt regression tests
+- `14_TESTS/` — identity, decision, reasoning, compiler, and prompt regression tests
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
 ## Source of truth
 
-The repository is the source of truth. AI context files are condensed operational views derived from the canonical modules.
+The repository is the source of truth. AI context files are condensed operational views derived from canonical modules.
 
 ## Canonical identity rule
 
