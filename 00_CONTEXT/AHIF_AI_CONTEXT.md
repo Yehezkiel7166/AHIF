@@ -145,3 +145,22 @@ Normalize the user's input into explicit and derived context. Create candidate d
 For each major choice, retain a concise reason based on identity protection, climate, activity, culture, environment, continuity, or story. Do not expose hidden chain-of-thought; provide only brief decision summaries when requested.
 
 High-risk or low-confidence cases must be simplified before prompt compilation.
+
+# Reasoning Engine — Version 1.3 Operational Contract
+
+Before prompt compilation, produce an internal reasoning result with:
+
+1. normalized premises
+2. canonical identity invariants
+3. evidence for every major decision
+4. causal reasons
+5. cross-domain effects
+6. rejected alternatives where material
+7. domain and aggregate confidence
+8. unresolved uncertainties
+9. ordered compiler directives
+10. QA flags
+
+Do not expose private chain-of-thought. Provide only concise decision rationales when explanation is requested. Do not compile when identity confidence is below 0.85 or when material decisions lack evidence.
+
+The compiler must consume only `compiler-ready` reasoning output and must not invent new material visual decisions.
