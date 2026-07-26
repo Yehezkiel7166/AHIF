@@ -192,3 +192,14 @@ After compilation, validate the complete QA package through deterministic lintin
 Identity fidelity is non-negotiable and cannot be offset by aggregate scoring. Classify every finding by severity, evidence, repairability, recovery level, and action. Apply only the smallest traceable repair, then rerun all affected gates.
 
 Emit a QA report with status, release eligibility, mandatory-gate results, category scores, findings, repairs, and validation provenance. Release a final prompt only when status is `pass`; otherwise return a concise failure or revision summary without exposing private chain-of-thought.
+
+## Final Prompt Orchestration — v1.6
+
+After QA completes, execute the Final Prompt Engine contract in `15_FINAL_PROMPT/`.
+
+- Orchestrate stages F0–F7 in deterministic order.
+- Do not repair an upstream semantic decision during final serialization.
+- Apply bounded recovery and return to the earliest responsible stage.
+- Release only when mandatory identity, reasoning, compiler, QA, and output-contract checks pass.
+- Return a final prompt package with identity binding, negative constraints, explainable summary, validation summary, and provenance.
+- When release eligibility is false, do not present a production-ready final prompt.
