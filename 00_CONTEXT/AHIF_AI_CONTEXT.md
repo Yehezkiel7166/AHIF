@@ -207,3 +207,8 @@ After QA completes, execute the Final Prompt Engine contract in `15_FINAL_PROMPT
 ## Adapter Layer
 
 Use `16_MODEL_ADAPTERS/ADAPTER_ARCHITECTURE.md` only after a Final Prompt Package is release eligible. Adapters translate canonical meaning; they do not make new visual decisions or weaken identity constraints.
+
+
+## Sprint 008 Adapter Execution Rule
+
+After Final Prompt release, resolve one exact experimental adapter version and its immutable capability profile. Preserve the master-photo identity reference, reject unknown parameters, disclose every lossy mapping, and block any identity-critical incompatibility. OpenAI Images, Midjourney, and SDXL Diffusers adapters are experimental until Sprint 009 cross-model equivalence validation.

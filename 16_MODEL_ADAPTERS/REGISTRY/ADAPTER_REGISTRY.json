@@ -1,0 +1,31 @@
+{
+  "registry_version": "1.0.0",
+  "framework_version": "1.8.0",
+  "resolution_policy": "exact-only",
+  "adapters": [
+    {
+      "adapter_id": "ahif.openai-images.v1",
+      "adapter_version": "1.0.0",
+      "target_family": "openai-images",
+      "profile": "profiles/OPENAI_IMAGES_PROFILE.json",
+      "serializer": "adapters/openai-images/SERIALIZER.md",
+      "status": "experimental"
+    },
+    {
+      "adapter_id": "ahif.midjourney.v1",
+      "adapter_version": "1.0.0",
+      "target_family": "midjourney",
+      "profile": "profiles/MIDJOURNEY_PROFILE.json",
+      "serializer": "adapters/midjourney/SERIALIZER.md",
+      "status": "experimental"
+    },
+    {
+      "adapter_id": "ahif.sdxl-diffusers.v1",
+      "adapter_version": "1.0.0",
+      "target_family": "sdxl-diffusers",
+      "profile": "profiles/SDXL_DIFFUSERS_PROFILE.json",
+      "serializer": "adapters/sdxl-diffusers/SERIALIZER.md",
+      "status": "experimental"
+    }
+  ]
+}

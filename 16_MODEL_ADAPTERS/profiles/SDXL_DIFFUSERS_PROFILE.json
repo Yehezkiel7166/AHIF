@@ -1,0 +1,21 @@
+{
+  "profile_id": "sdxl-diffusers.snapshot-2026-07",
+  "profile_version": "1.0.0",
+  "verified_on": "2026-07-26",
+  "status": "experimental",
+  "capabilities": {
+    "prompt": "native",
+    "negative_prompt": "native",
+    "guidance_scale": "native",
+    "inference_steps": "native",
+    "seed_control": "translated",
+    "width_height": "native",
+    "image_to_image": "native",
+    "identity_reference": "emulated",
+    "style_reference": "emulated"
+  },
+  "critical_policy": {
+    "unknown_is_supported": false,
+    "identity_conditioning_requires_declared-pipeline": true
+  }
+}

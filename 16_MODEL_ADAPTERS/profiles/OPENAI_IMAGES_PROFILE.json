@@ -1,0 +1,21 @@
+{
+  "profile_id": "openai-images.snapshot-2026-07",
+  "profile_version": "1.0.0",
+  "verified_on": "2026-07-26",
+  "status": "experimental",
+  "capabilities": {
+    "structured_request": "native",
+    "natural_language_prompt": "native",
+    "image_reference": "native",
+    "negative_prompt_field": "unsupported",
+    "aspect_ratio": "translated",
+    "seed_control": "unknown",
+    "weighted_directives": "unsupported",
+    "style_reference": "translated",
+    "identity_reference": "translated"
+  },
+  "critical_policy": {
+    "unknown_is_supported": false,
+    "text_only_identity_fallback": "blocked-for-production"
+  }
+}

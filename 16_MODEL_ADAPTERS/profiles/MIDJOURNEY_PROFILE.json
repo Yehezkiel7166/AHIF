@@ -1,0 +1,21 @@
+{
+  "profile_id": "midjourney.snapshot-2026-07",
+  "profile_version": "1.0.0",
+  "verified_on": "2026-07-26",
+  "status": "experimental",
+  "capabilities": {
+    "prompt_text": "native",
+    "parameter_suffix": "native",
+    "aspect_ratio": "native",
+    "seed_control": "native",
+    "negative_constraint": "translated",
+    "style_reference": "native",
+    "identity_reference": "translated",
+    "structured_api_request": "unsupported",
+    "weighted_directives": "translated"
+  },
+  "critical_policy": {
+    "unknown_is_supported": false,
+    "website_or-supported-interface-required": true
+  }
+}
