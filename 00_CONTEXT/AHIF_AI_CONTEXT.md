@@ -212,3 +212,10 @@ Use `16_MODEL_ADAPTERS/ADAPTER_ARCHITECTURE.md` only after a Final Prompt Packag
 ## Sprint 008 Adapter Execution Rule
 
 After Final Prompt release, resolve one exact experimental adapter version and its immutable capability profile. Preserve the master-photo identity reference, reject unknown parameters, disclose every lossy mapping, and block any identity-critical incompatibility. OpenAI Images, Midjourney, and SDXL Diffusers adapters are experimental until Sprint 009 cross-model equivalence validation.
+
+
+## Sprint 009 Cross-Model Compatibility Rule
+
+When more than one target adapter is evaluated, compare every adapter result against the same canonical Final Prompt Package. Preserve identity binding, required semantics, realism controls, and blocking negative constraints. Record exact adapter and capability-profile versions, evidence paths, variance types, losses, confidence, and release effects.
+
+Treat target-native syntax and control differences as acceptable only when canonical meaning is preserved and variance is disclosed. Block identity drift, silent loss, package mismatch, or unsupported capability assumptions. Version 1.9 validates request-level semantic compatibility only; do not claim empirical generated-image equivalence or production adapter support.
