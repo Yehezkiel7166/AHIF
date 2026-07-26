@@ -1,15 +1,15 @@
 # Version
 
-Current version: **1.1.0**
+Current version: **1.2.0**
 
-Release type: Core Identity Hardening
+Release type: Knowledge Graph and Decision Engine
 
 Compatibility:
 - ChatGPT context loading
-- General image-generation prompt compilation
+- Structured prompt compilation
 - Still image workflows
 - Travel, lifestyle, fashion, and brand-avatar scenarios
 
 ## Release focus
 
-Version 1.1.0 expands identity invariants, risk scoring, validation, failure recovery, and regression testing.
+Version 1.2.0 adds structured context normalization, knowledge graph schemas, inference rules, conflict resolution, decision scoring, explainability, compiler schemas, and regression tests.

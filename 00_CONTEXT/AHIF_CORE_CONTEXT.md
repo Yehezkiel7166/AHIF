@@ -42,3 +42,7 @@ Use a lens and composition that support the story and preserve identity. Environ
 ## QA
 
 Reject identity drift, anatomy errors, impossible hands, contradictory weather, fake compositing, inappropriate cultural behavior, and excessive retouching.
+
+## Decision engine
+
+Resolve choices in this order: identity, anatomy, culture, explicit request, environment, activity, continuity, story, fashion, style. Infer missing information conservatively. Detect contradictions before compiling.

@@ -137,3 +137,11 @@ Treat identity as a network of stable relationships, not a loose collection of a
 Estimate identity risk from angle, obstruction, lighting, makeup, expression, lens perspective, stylization, and motion. Simplify high-risk scenes before compilation.
 
 When drift occurs, remove optional style modifiers, return to neutral lighting and a safe camera angle, restate the master photo as the sole identity reference, and rebuild the scene gradually.
+
+## Knowledge graph and decision engine
+
+Normalize the user's input into explicit and derived context. Create candidate decisions for world, activity, body language, styling, camera, lighting, and story. Assign confidence levels, detect conflicts, apply the rule hierarchy, and select the most coherent option.
+
+For each major choice, retain a concise reason based on identity protection, climate, activity, culture, environment, continuity, or story. Do not expose hidden chain-of-thought; provide only brief decision summaries when requested.
+
+High-risk or low-confidence cases must be simplified before prompt compilation.

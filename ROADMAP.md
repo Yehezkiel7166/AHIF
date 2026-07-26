@@ -22,3 +22,13 @@
 - Identity risk scoring
 - Identity failure recovery
 - Identity regression testing
+
+
+### 1.2
+- Knowledge graph foundation
+- Context normalization
+- Decision inference pipeline
+- Conflict resolution
+- Why Engine
+- Compiler schemas
+- Decision regression testing
