@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.7.0] — Sprint 007: Adapter Architecture Foundation
+
+### Added
+
+- Permanent AHIF Project Constitution.
+- Formal Model Adapter architecture and lifecycle.
+- Adapter registry and immutable capability profile contracts.
+- Multi-model compatibility, degradation, and loss-disclosure policy.
+- Adapter profile, transformation plan, and adapter result schemas.
+- Adapter QA gates and conformance test specifications.
+- Staged release roadmap from 1.7.0 to 2.0.0.
+
+### Changed
+
+- Extended the canonical architectural sequence with a downstream Model Adapter layer.
+- Updated repository metadata and documentation for Sprint 007.
+
+### Compatibility
+
+- Backward compatible with AHIF 1.6.0.
+- No existing file or canonical contract was removed.
+- No external image model is declared supported in this release.
+
+
 ## 1.6.0 — Final Prompt Orchestration
 
 Added:

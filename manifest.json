@@ -1,12 +1,12 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "1.6.0",
-  "status": "final-prompt-orchestration",
+  "version": "1.7.0",
+  "status": "adapter-architecture-foundation",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
   "license": "MIT",
-  "latest_sprint": "SPRINT-006-FINAL-PROMPT-ORCHESTRATION",
+  "latest_sprint": "SPRINT-007-ADAPTER-ARCHITECTURE-FOUNDATION",
   "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md",
   "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md",
   "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
@@ -29,5 +29,15 @@
   "final_prompt_release_contract": "15_FINAL_PROMPT/FINAL_PROMPT_RELEASE_CONTRACT.md",
   "final_prompt_schema": "15_FINAL_PROMPT/schemas/FINAL_PROMPT_PACKAGE_SCHEMA.md",
   "execution_trace_schema": "15_FINAL_PROMPT/schemas/EXECUTION_TRACE_SCHEMA.md",
-  "final_prompt_test": "14_TESTS/final_prompt/FINAL_PROMPT_CONTRACT_TEST.md"
+  "final_prompt_test": "14_TESTS/final_prompt/FINAL_PROMPT_CONTRACT_TEST.md",
+  "project_constitution": "PROJECT_CONSTITUTION.md",
+  "adapter_architecture": "16_MODEL_ADAPTERS/ADAPTER_ARCHITECTURE.md",
+  "adapter_lifecycle": "16_MODEL_ADAPTERS/ADAPTER_LIFECYCLE.md",
+  "adapter_capability_model": "16_MODEL_ADAPTERS/CAPABILITY_MODEL.md",
+  "adapter_compatibility_policy": "16_MODEL_ADAPTERS/COMPATIBILITY_POLICY.md",
+  "adapter_profile_schema": "16_MODEL_ADAPTERS/schemas/ADAPTER_PROFILE_SCHEMA.md",
+  "adapter_transformation_schema": "16_MODEL_ADAPTERS/schemas/TRANSFORMATION_PLAN_SCHEMA.md",
+  "adapter_result_schema": "16_MODEL_ADAPTERS/schemas/ADAPTER_RESULT_SCHEMA.md",
+  "adapter_qa": "11_QUALITY_ASSURANCE/adapters/ADAPTER_QA.md",
+  "adapter_conformance_test": "14_TESTS/adapters/ADAPTER_CONFORMANCE_TEST.md"
 }

@@ -9,15 +9,47 @@ Knowledge Graph
 → Prompt Compiler
 → Quality Assurance
 → Final Prompt
+→ Model Adapter
 ```
 
-## Next releases
+## Path to 2.0
 
-### 2.0
-- Model-specific adapters
-- Machine-readable knowledge expansion
-- Multi-model prompt compatibility contracts
-- Adapter conformance testing
+### 1.7 — Sprint 007: Adapter Architecture Foundation
+- Adapter boundary and lifecycle
+- Registry and capability profile contracts
+- Compatibility and degradation policy
+- Transformation and result schemas
+- Adapter QA and conformance baseline
+
+### 1.8 — Sprint 008: Model-Specific Adapter Layer
+- Initial versioned target-model adapters
+- Target request serializers
+- Target-specific parameter mapping
+- Adapter-specific regression fixtures
+
+### 1.9 — Sprint 009: Multi-Model Compatibility Contracts
+- Cross-adapter semantic equivalence
+- Compatibility matrix
+- Cross-model release comparison
+- Adapter interoperability regression
+
+### 2.0.0-rc1 — Sprint 010: Machine-Readable Knowledge Expansion
+- Structured knowledge packages
+- Stable knowledge identifiers
+- Knowledge provenance and validation
+- Adapter-consumable capability metadata
+
+### 2.0.0-rc2 — Sprint 011: Cross-Model Validation
+- End-to-end multi-model conformance
+- Identity preservation comparison
+- Degradation audits
+- Release candidate regression suite
+
+### 2.0.0 — Sprint 012: Stable Release
+- Stable adapter contracts
+- Validated multi-model support
+- Consolidated release documentation
+- 2.0 migration and compatibility guarantees
 
 ## Completed
 
@@ -73,3 +105,10 @@ Knowledge Graph
 - Final request and response templates
 - Release-level scenario corpus
 - Final prompt contract and regression testing
+
+### 1.7
+- Project Constitution
+- Adapter Architecture Foundation
+- Capability and compatibility contracts
+- Transformation planning schemas
+- Adapter QA and conformance baseline

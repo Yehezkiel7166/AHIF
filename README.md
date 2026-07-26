@@ -21,7 +21,7 @@ Knowledge Graph
 → Final Prompt
 ```
 
-Version 1.6.0 completes the first end-to-end AHIF execution path. It orchestrates compact input, context normalization, decision resolution, reasoning validation, prompt compilation, quality assurance, recovery, explainable summarization, and final prompt release under one deterministic contract.
+Version 1.7.0 completes the first end-to-end AHIF execution path. It orchestrates compact input, context normalization, decision resolution, reasoning validation, prompt compilation, quality assurance, recovery, explainable summarization, and final prompt release under one deterministic contract.
 
 ## Daily use
 
@@ -76,3 +76,9 @@ The repository is the source of truth. AI context files are condensed operationa
 ## Canonical identity rule
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
+
+## Current release — 1.7.0
+
+Sprint 007 establishes the Model Adapter Architecture Foundation. It defines the downstream adapter boundary, capability profiles, compatibility assessment, transformation planning, conformance validation, and identity-safe degradation policy. Model-specific adapter implementations are intentionally deferred to Sprint 008.
+
+The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).

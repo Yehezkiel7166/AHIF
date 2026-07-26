@@ -1,17 +1,16 @@
 # Version
 
-Current version: **1.6.0**
+Current version: **1.7.0**
 
-Release type: Final Prompt Orchestration
+Release type: Adapter Architecture Foundation
 
 Compatibility:
-- ChatGPT context loading
-- Compact-input to validated-output execution
-- Structured knowledge, decision, reasoning, compiler, and QA contracts
-- Model-neutral still-image workflows
-- Travel, lifestyle, fashion, and brand-avatar scenarios
-- AHIF 1.5 Quality Assurance contracts
+- AHIF 1.6 Final Prompt contracts
+- Model-neutral final prompt packages
+- Versioned adapter capability profiles
+- Auditable compatibility and transformation planning
+- Identity-safe adapter release gating
 
 ## Release focus
 
-Version 1.6.0 completes the first canonical AHIF execution sequence with deterministic F0–F7 orchestration, release eligibility, bounded recovery, explainable result summaries, execution tracing, machine-readable final prompt packaging, and release-level scenario regression.
+Version 1.7.0 establishes the governed foundation for model-specific adapters without implementing or endorsing a target model. It introduces the adapter boundary, lifecycle, registry, capability model, compatibility policy, machine-readable schemas, adapter QA, and conformance baseline required for the path to AHIF 2.0.
