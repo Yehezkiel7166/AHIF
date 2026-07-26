@@ -129,3 +129,11 @@ different person, identity drift, altered facial geometry, generic model face, c
 - environment scale is believable
 - subject appears physically present
 - one clear visual story
+
+## Core identity hardening
+
+Treat identity as a network of stable relationships, not a loose collection of attractive features. Validate face silhouette, eye system, central facial proportions, lower-face proportions, apparent age, and recognizability together.
+
+Estimate identity risk from angle, obstruction, lighting, makeup, expression, lens perspective, stylization, and motion. Simplify high-risk scenes before compilation.
+
+When drift occurs, remove optional style modifiers, return to neutral lighting and a safe camera angle, restate the master photo as the sole identity reference, and rebuild the scene gradually.

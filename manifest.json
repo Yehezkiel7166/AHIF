@@ -1,9 +1,11 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "1.0.0",
-  "status": "foundation-release",
+  "version": "1.1.0",
+  "status": "core-identity-hardening",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
-  "license": "MIT"
+  "license": "MIT",
+  "latest_sprint": "SPRINT-001-CORE-IDENTITY",
+  "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md"
 }

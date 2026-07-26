@@ -14,3 +14,11 @@
 - Structured machine-readable knowledge graph
 - Automated prompt linting
 - Model-specific adapters
+
+## Completed
+
+### 1.1
+- Core identity hardening
+- Identity risk scoring
+- Identity failure recovery
+- Identity regression testing
