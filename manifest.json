@@ -1,14 +1,17 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "1.2.0",
-  "status": "knowledge-graph-decision-engine",
+  "version": "1.3.0",
+  "status": "reasoning-engine",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
   "license": "MIT",
-  "latest_sprint": "SPRINT-002-KNOWLEDGE-GRAPH-DECISION-ENGINE",
+  "latest_sprint": "SPRINT-003-REASONING-ENGINE",
   "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md",
   "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md",
   "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
-  "compiler_schema": "10_PROMPT_COMPILER/schemas/COMPILER_INPUT_SCHEMA.md"
+  "compiler_schema": "10_PROMPT_COMPILER/schemas/COMPILER_INPUT_SCHEMA.md",
+  "reasoning_engine": "09_DECISION_ENGINE/reasoning/REASONING_PIPELINE.md",
+  "reasoning_schema": "10_PROMPT_COMPILER/schemas/REASONING_OUTPUT_SCHEMA.md",
+  "reasoning_qa": "11_QUALITY_ASSURANCE/reasoning/REASONING_QA.md"
 }
