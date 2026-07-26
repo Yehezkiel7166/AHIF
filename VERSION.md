@@ -1,16 +1,17 @@
 # Version
 
-Current version: **1.5.0**
+Current version: **1.6.0**
 
-Release type: Quality Assurance Engine Hardening
+Release type: Final Prompt Orchestration
 
 Compatibility:
 - ChatGPT context loading
-- Structured reasoning-to-prompt compilation
+- Compact-input to validated-output execution
+- Structured knowledge, decision, reasoning, compiler, and QA contracts
 - Model-neutral still-image workflows
 - Travel, lifestyle, fashion, and brand-avatar scenarios
-- AHIF 1.4 compiler contracts
+- AHIF 1.5 Quality Assurance contracts
 
 ## Release focus
 
-Version 1.5.0 adds a deterministic Quality Assurance Engine with mandatory validation gates, stable prompt-lint rules, failure classification, weighted scoring with identity override, recovery orchestration, machine-readable QA reports, and end-to-end regression contracts.
+Version 1.6.0 completes the first canonical AHIF execution sequence with deterministic F0–F7 orchestration, release eligibility, bounded recovery, explainable result summaries, execution tracing, machine-readable final prompt packaging, and release-level scenario regression.

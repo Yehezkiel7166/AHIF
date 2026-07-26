@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 1.5.0  
-**Status:** Quality Assurance Engine Hardening Release  
+**Version:** 1.6.0  
+**Status:** Final Prompt Orchestration Release  
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -21,7 +21,7 @@ Knowledge Graph
 → Final Prompt
 ```
 
-Version 1.5.0 hardens the Quality Assurance Engine. It applies deterministic lint rules and mandatory identity, realism, context, compiler, and output gates; classifies failures; orchestrates safe recovery; and releases only traceable validated prompts.
+Version 1.6.0 completes the first end-to-end AHIF execution path. It orchestrates compact input, context normalization, decision resolution, reasoning validation, prompt compilation, quality assurance, recovery, explainable summarization, and final prompt release under one deterministic contract.
 
 ## Daily use
 
@@ -45,7 +45,8 @@ Output: final image-generation prompt
 - **Decision Engine** selects context-appropriate visual decisions.
 - **Reasoning Engine** validates causality, evidence, alternatives, confidence, identity safety, and cross-domain coherence.
 - **Prompt Compiler** expresses accepted decisions in deterministic model-neutral prompt form without inventing new decisions.
-- **Quality Assurance** applies mandatory gates, deterministic linting, failure classification, scoring, recovery routing, and final release control.
+- **Quality Assurance** applies mandatory gates, deterministic linting, failure classification, scoring, and recovery routing.
+- **Final Prompt Engine** orchestrates the complete execution, enforces release eligibility, and emits the validated prompt package and explainable result summary.
 
 ## Repository map
 
@@ -63,7 +64,8 @@ Output: final image-generation prompt
 - `11_QUALITY_ASSURANCE/` — QA orchestration, linting, failure taxonomy, recovery, schemas, domain gates, and final validation
 - `12_TEMPLATES/` — reusable input and output templates
 - `13_EXAMPLES/` — worked examples
-- `14_TESTS/` — identity, decision, reasoning, compiler, and prompt regression tests
+- `14_TESTS/` — identity, decision, reasoning, compiler, QA, and final-prompt regression tests
+- `15_FINAL_PROMPT/` — execution orchestration, release contracts, schemas, and final prompt packaging
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 

@@ -1,12 +1,12 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "1.5.0",
-  "status": "quality-assurance-hardening",
+  "version": "1.6.0",
+  "status": "final-prompt-orchestration",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
   "license": "MIT",
-  "latest_sprint": "SPRINT-005-QUALITY-ASSURANCE-ENGINE",
+  "latest_sprint": "SPRINT-006-FINAL-PROMPT-ORCHESTRATION",
   "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md",
   "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md",
   "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
@@ -23,5 +23,11 @@
   "qa_failure_taxonomy": "11_QUALITY_ASSURANCE/FAILURE_TAXONOMY.md",
   "qa_report_schema": "11_QUALITY_ASSURANCE/schemas/QA_REPORT_SCHEMA.md",
   "qa_recovery": "11_QUALITY_ASSURANCE/RECOVERY_ORCHESTRATION.md",
-  "qa_end_to_end_test": "14_TESTS/qa/END_TO_END_REGRESSION.md"
+  "qa_end_to_end_test": "14_TESTS/qa/END_TO_END_REGRESSION.md",
+  "final_prompt_engine": "15_FINAL_PROMPT/FINAL_PROMPT_ENGINE_OVERVIEW.md",
+  "final_prompt_orchestration": "15_FINAL_PROMPT/EXECUTION_ORCHESTRATION.md",
+  "final_prompt_release_contract": "15_FINAL_PROMPT/FINAL_PROMPT_RELEASE_CONTRACT.md",
+  "final_prompt_schema": "15_FINAL_PROMPT/schemas/FINAL_PROMPT_PACKAGE_SCHEMA.md",
+  "execution_trace_schema": "15_FINAL_PROMPT/schemas/EXECUTION_TRACE_SCHEMA.md",
+  "final_prompt_test": "14_TESTS/final_prompt/FINAL_PROMPT_CONTRACT_TEST.md"
 }

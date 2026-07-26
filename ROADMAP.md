@@ -13,12 +13,6 @@ Knowledge Graph
 
 ## Next releases
 
-### 1.6
-- Final Prompt orchestration
-- Unified execution contract from compact input to validated output
-- Explainable result summary
-- Release-level scenario corpus
-
 ### 2.0
 - Model-specific adapters
 - Machine-readable knowledge expansion
@@ -69,3 +63,13 @@ Knowledge Graph
 - Recovery orchestration and escalation
 - Machine-readable QA report schema
 - End-to-end QA regression suite
+
+### 1.6
+- Final Prompt Engine orchestration
+- Unified F0–F7 execution contract from compact input to validated output
+- Release eligibility and bounded recovery
+- Explainable result summary
+- Execution trace and final prompt package schemas
+- Final request and response templates
+- Release-level scenario corpus
+- Final prompt contract and regression testing

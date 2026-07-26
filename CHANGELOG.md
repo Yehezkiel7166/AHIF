@@ -1,5 +1,27 @@
 # Changelog
 
+## 1.6.0 — Final Prompt Orchestration
+
+Added:
+- formal Final Prompt Engine architecture
+- deterministic F0–F7 execution orchestration
+- final prompt release contract and eligibility states
+- bounded correction and identity recovery budgets
+- explainable result summary contract
+- execution trace contract
+- machine-readable execution request, execution trace, and final prompt package schemas
+- final prompt request and response templates
+- Kyoto cold-morning and Tokyo rain release-level scenarios
+- final prompt contract, regression, and scenario-corpus acceptance tests
+- Sprint 006 documentation and upload guide
+
+Changed:
+- framework pipeline now completes the canonical path through Final Prompt release
+- README now documents the Final Prompt Engine responsibility and repository module
+- roadmap now marks v1.6 complete and advances to v2.0 model-specific adapters
+- manifest now identifies Final Prompt orchestration as the latest sprint
+- AI context now requires release eligibility, explainable summaries, and traceable final packaging
+
 ## 1.5.0 — Quality Assurance Engine Hardening
 
 Added:
