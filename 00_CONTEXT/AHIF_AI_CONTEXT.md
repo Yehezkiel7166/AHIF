@@ -203,3 +203,7 @@ After QA completes, execute the Final Prompt Engine contract in `15_FINAL_PROMPT
 - Release only when mandatory identity, reasoning, compiler, QA, and output-contract checks pass.
 - Return a final prompt package with identity binding, negative constraints, explainable summary, validation summary, and provenance.
 - When release eligibility is false, do not present a production-ready final prompt.
+
+## Adapter Layer
+
+Use `16_MODEL_ADAPTERS/ADAPTER_ARCHITECTURE.md` only after a Final Prompt Package is release eligible. Adapters translate canonical meaning; they do not make new visual decisions or weaken identity constraints.
