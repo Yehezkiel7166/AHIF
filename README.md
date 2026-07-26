@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 1.8.0
-**Status:** Model-Specific Adapter Layer — Experimental
+**Version:** 1.9.0
+**Status:** Multi-Model Compatibility Contracts — Experimental
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 1.8.0 extends the validated Final Prompt path through versioned experimental target-model adapters. It orchestrates compact input, context normalization, decision resolution, reasoning validation, prompt compilation, quality assurance, recovery, explainable summarization, and final prompt release under one deterministic contract.
+Version 1.9.0 extends the validated Final Prompt path with deterministic cross-adapter semantic compatibility contracts. It orchestrates compact input, context normalization, decision resolution, reasoning validation, prompt compilation, quality assurance, recovery, explainable summarization, and final prompt release under one deterministic contract.
 
 ## Daily use
 
@@ -68,7 +68,7 @@ Output: final image-generation prompt
 - `13_EXAMPLES/` — worked examples
 - `14_TESTS/` — identity, decision, reasoning, compiler, QA, and final-prompt regression tests
 - `15_FINAL_PROMPT/` — execution orchestration, release contracts, schemas, and final prompt packaging
-- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, target serializers, and mapping contracts
+- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, mappings, and cross-model compatibility contracts
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
@@ -80,8 +80,8 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 1.8.0
+## Current release — 1.9.0
 
-Sprint 008 implements experimental adapters for OpenAI Images, Midjourney, and SDXL through Diffusers. Each adapter uses exact version resolution, a date-stamped capability profile, deterministic serialization, identity-safe failure behavior, and complete loss disclosure. Production cross-model equivalence remains deferred to Sprint 009.
+Sprint 009 defines how AHIF compares multiple target adapters against one canonical Final Prompt Package. It adds semantic-domain equivalence, a compatibility matrix, variance tolerance, deterministic reports, interoperability regression, and identity-first cross-model QA. All adapters remain experimental because empirical generated-image validation is scheduled for Sprint 011.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).

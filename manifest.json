@@ -1,12 +1,12 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "1.8.0",
-  "status": "model-specific-adapter-layer-experimental",
+  "version": "1.9.0",
+  "status": "multi-model-compatibility-contracts-experimental",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
   "license": "MIT",
-  "latest_sprint": "SPRINT-008-MODEL-SPECIFIC-ADAPTER-LAYER",
+  "latest_sprint": "SPRINT-009-MULTI-MODEL-COMPATIBILITY-CONTRACTS",
   "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md",
   "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md",
   "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
@@ -47,5 +47,14 @@
   "midjourney_adapter": "16_MODEL_ADAPTERS/adapters/midjourney/ADAPTER.md",
   "sdxl_diffusers_adapter": "16_MODEL_ADAPTERS/adapters/sdxl-diffusers/ADAPTER.md",
   "model_specific_adapter_qa": "11_QUALITY_ASSURANCE/adapters/MODEL_SPECIFIC_ADAPTER_QA.md",
-  "model_specific_adapter_test": "14_TESTS/adapters/MODEL_SPECIFIC_ADAPTER_CONTRACT_TEST.md"
+  "model_specific_adapter_test": "14_TESTS/adapters/MODEL_SPECIFIC_ADAPTER_CONTRACT_TEST.md",
+  "compatibility_contract": "16_MODEL_ADAPTERS/compatibility/COMPATIBILITY_CONTRACT.md",
+  "semantic_equivalence_model": "16_MODEL_ADAPTERS/compatibility/SEMANTIC_EQUIVALENCE_MODEL.md",
+  "adapter_compatibility_matrix": "16_MODEL_ADAPTERS/compatibility/COMPATIBILITY_MATRIX.md",
+  "cross_model_comparison": "16_MODEL_ADAPTERS/compatibility/CROSS_MODEL_COMPARISON_PROTOCOL.md",
+  "compatibility_report_schema": "16_MODEL_ADAPTERS/schemas/COMPATIBILITY_REPORT_SCHEMA.md",
+  "interoperability_result_schema": "16_MODEL_ADAPTERS/schemas/INTEROPERABILITY_RESULT_SCHEMA.md",
+  "cross_model_compatibility_qa": "11_QUALITY_ASSURANCE/adapters/CROSS_MODEL_COMPATIBILITY_QA.md",
+  "cross_model_equivalence_test": "14_TESTS/adapters/CROSS_MODEL_EQUIVALENCE_TEST.md",
+  "interoperability_regression": "14_TESTS/adapters/INTEROPERABILITY_REGRESSION.md"
 }

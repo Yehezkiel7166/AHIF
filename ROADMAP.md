@@ -28,10 +28,10 @@ Knowledge Graph
 - Identity-reference mapping and loss disclosure
 - Adapter-specific QA and regression fixtures
 
-### 1.9 — Sprint 009: Multi-Model Compatibility Contracts
-- Cross-adapter semantic equivalence
-- Compatibility matrix
-- Cross-model release comparison
+### 1.9 — Sprint 009: Multi-Model Compatibility Contracts — Completed
+- Cross-adapter semantic equivalence contract
+- Compatibility matrix and variance tolerance
+- Deterministic cross-model comparison reports
 - Adapter interoperability regression
 
 ### 2.0.0-rc1 — Sprint 010: Machine-Readable Knowledge Expansion
@@ -120,3 +120,13 @@ Knowledge Graph
 - Capability snapshots and parameter mappings
 - Identity-safe degradation and blocking
 - Adapter QA and regression fixtures
+
+
+### 1.9
+- Multi-model compatibility contract
+- Semantic equivalence model
+- Adapter compatibility matrix
+- Variance and tolerance policy
+- Cross-model comparison protocol
+- Compatibility and interoperability schemas
+- Cross-model QA and regression testing

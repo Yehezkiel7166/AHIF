@@ -1,5 +1,31 @@
 # Changelog
 
+## [1.9.0] — Sprint 009: Multi-Model Compatibility Contracts
+
+### Added
+
+- Formal request-level multi-model compatibility contract.
+- Semantic equivalence model with identity-first confidence floors.
+- Compatibility matrix for OpenAI Images, Midjourney, and SDXL Diffusers.
+- Variance and tolerance policy for target-native differences.
+- Deterministic cross-model comparison protocol.
+- Compatibility report and interoperability result schemas.
+- Cross-model compatibility QA with stable failure codes.
+- Equivalence, interoperability, and contract regression tests.
+- Kyoto cross-model comparison scenario.
+
+### Changed
+
+- Extended the experimental adapter layer with auditable cross-adapter comparison.
+- Updated repository metadata, roadmap, context, and release documentation for Sprint 009.
+
+### Compatibility
+
+- Backward compatible with AHIF 1.8.0.
+- No previous files or canonical contracts were removed.
+- Request-level compatibility does not claim empirical image-output parity.
+- All model adapters remain experimental pending Sprint 011 cross-model validation.
+
 ## [1.8.0] — Sprint 008: Model-Specific Adapter Layer
 
 ### Added

@@ -1,16 +1,16 @@
 # Version
 
-Current version: **1.8.0**
+Current version: **1.9.0**
 
-Release type: Model-Specific Adapter Layer
+Release type: Multi-Model Compatibility Contracts
 
 Compatibility:
-- AHIF 1.7 Adapter Architecture contracts
-- Model-neutral Final Prompt packages
-- Exact adapter registry resolution
-- Immutable capability snapshots
-- Identity-safe target request serialization
+- AHIF 1.8 model-specific adapter contracts
+- Canonical Final Prompt Package semantics
+- Exact adapter and capability-profile resolution
+- Deterministic cross-adapter comparison
+- Identity-first compatibility gating
 
 ## Release focus
 
-Version 1.8.0 implements the first experimental model-specific adapters for OpenAI Images, Midjourney, and SDXL through Diffusers. It adds target serializers, capability snapshots, parameter mappings, identity-reference policies, target request schema, adapter QA, and regression fixtures without claiming production-level cross-model equivalence.
+Version 1.9.0 defines request-level semantic equivalence, compatibility classification, variance tolerance, cross-model comparison, interoperability schemas, QA gates, and regression tests for the experimental OpenAI Images, Midjourney, and SDXL Diffusers adapters. It does not claim empirical image-output parity or production support.
