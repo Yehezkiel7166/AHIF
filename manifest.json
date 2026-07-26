@@ -1,12 +1,12 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "1.4.0",
-  "status": "prompt-compiler-hardening",
+  "version": "1.5.0",
+  "status": "quality-assurance-hardening",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
   "license": "MIT",
-  "latest_sprint": "SPRINT-004-PROMPT-COMPILER",
+  "latest_sprint": "SPRINT-005-QUALITY-ASSURANCE-ENGINE",
   "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md",
   "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md",
   "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
@@ -17,5 +17,11 @@
   "prompt_compiler": "10_PROMPT_COMPILER/COMPILER_PIPELINE.md",
   "compiler_plan_schema": "10_PROMPT_COMPILER/schemas/COMPILER_PLAN_SCHEMA.md",
   "compiled_prompt_schema": "10_PROMPT_COMPILER/schemas/COMPILED_PROMPT_SCHEMA.md",
-  "compiler_qa": "11_QUALITY_ASSURANCE/compiler/COMPILER_QA.md"
+  "compiler_qa": "11_QUALITY_ASSURANCE/compiler/COMPILER_QA.md",
+  "qa_engine": "11_QUALITY_ASSURANCE/QA_PIPELINE.md",
+  "qa_lint_catalog": "11_QUALITY_ASSURANCE/LINT_RULE_CATALOG.md",
+  "qa_failure_taxonomy": "11_QUALITY_ASSURANCE/FAILURE_TAXONOMY.md",
+  "qa_report_schema": "11_QUALITY_ASSURANCE/schemas/QA_REPORT_SCHEMA.md",
+  "qa_recovery": "11_QUALITY_ASSURANCE/RECOVERY_ORCHESTRATION.md",
+  "qa_end_to_end_test": "14_TESTS/qa/END_TO_END_REGRESSION.md"
 }

@@ -1,16 +1,16 @@
 # Version
 
-Current version: **1.4.0**
+Current version: **1.5.0**
 
-Release type: Prompt Compiler Hardening
+Release type: Quality Assurance Engine Hardening
 
 Compatibility:
 - ChatGPT context loading
 - Structured reasoning-to-prompt compilation
 - Model-neutral still-image workflows
 - Travel, lifestyle, fashion, and brand-avatar scenarios
-- AHIF 1.3 reasoning contracts
+- AHIF 1.4 compiler contracts
 
 ## Release focus
 
-Version 1.4.0 adds a deterministic Prompt Compiler pipeline with normalized directives, canonical section ordering, redundancy control, contradiction blocking, risk-based negative constraints, compiler metadata, machine-readable output schemas, and compiler regression contracts.
+Version 1.5.0 adds a deterministic Quality Assurance Engine with mandatory validation gates, stable prompt-lint rules, failure classification, weighted scoring with identity override, recovery orchestration, machine-readable QA reports, and end-to-end regression contracts.

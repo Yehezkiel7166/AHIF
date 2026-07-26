@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 1.4.0  
-**Status:** Prompt Compiler Hardening Release  
+**Version:** 1.5.0  
+**Status:** Quality Assurance Engine Hardening Release  
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -21,7 +21,7 @@ Knowledge Graph
 → Final Prompt
 ```
 
-Version 1.4.0 hardens the Prompt Compiler. It consumes only validated reasoning output, creates a deterministic section plan, consolidates equivalent directives, blocks contradictions, serializes one coherent model-neutral prompt, and emits traceable metadata for QA.
+Version 1.5.0 hardens the Quality Assurance Engine. It applies deterministic lint rules and mandatory identity, realism, context, compiler, and output gates; classifies failures; orchestrates safe recovery; and releases only traceable validated prompts.
 
 ## Daily use
 
@@ -37,7 +37,7 @@ Atmosphere: calm autumn morning
 Output: final image-generation prompt
 ```
 
-5. AHIF normalizes context, resolves decisions, validates reasoning, compiles one coherent prompt, and prepares the artifact for QA.
+5. AHIF normalizes context, resolves decisions, validates reasoning, compiles one coherent prompt, runs mandatory QA gates, and releases only a validated artifact.
 
 ## Architectural responsibilities
 
@@ -45,7 +45,7 @@ Output: final image-generation prompt
 - **Decision Engine** selects context-appropriate visual decisions.
 - **Reasoning Engine** validates causality, evidence, alternatives, confidence, identity safety, and cross-domain coherence.
 - **Prompt Compiler** expresses accepted decisions in deterministic model-neutral prompt form without inventing new decisions.
-- **Quality Assurance** validates identity, realism, coherence, and output integrity.
+- **Quality Assurance** applies mandatory gates, deterministic linting, failure classification, scoring, recovery routing, and final release control.
 
 ## Repository map
 
@@ -60,7 +60,7 @@ Output: final image-generation prompt
 - `08_STORY/` — narrative and environmental interaction
 - `09_DECISION_ENGINE/` — context, knowledge graph, inference, resolution, and reasoning
 - `10_PROMPT_COMPILER/` — compiler pipeline, schemas, ordering, contradiction control, and serialization
-- `11_QUALITY_ASSURANCE/` — identity, decision, reasoning, compiler, and final validation
+- `11_QUALITY_ASSURANCE/` — QA orchestration, linting, failure taxonomy, recovery, schemas, domain gates, and final validation
 - `12_TEMPLATES/` — reusable input and output templates
 - `13_EXAMPLES/` — worked examples
 - `14_TESTS/` — identity, decision, reasoning, compiler, and prompt regression tests

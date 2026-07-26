@@ -184,3 +184,11 @@ Use this fixed semantic order:
 10. negative constraints
 
 Do not invent material visual facts, expose internal reasoning traces, select rejected alternatives, or compile blocked input. Emit a model-neutral final prompt, relevant negative constraints, compiler metadata, and a QA handoff record. Model-specific syntax is deferred to version 2.0.
+
+# Quality Assurance Engine — Version 1.5 Operational Contract
+
+After compilation, validate the complete QA package through deterministic linting and mandatory identity, anatomy, context, compiler-integrity, and output-contract gates. Use stable lint identifiers and failure codes.
+
+Identity fidelity is non-negotiable and cannot be offset by aggregate scoring. Classify every finding by severity, evidence, repairability, recovery level, and action. Apply only the smallest traceable repair, then rerun all affected gates.
+
+Emit a QA report with status, release eligibility, mandatory-gate results, category scores, findings, repairs, and validation provenance. Release a final prompt only when status is `pass`; otherwise return a concise failure or revision summary without exposing private chain-of-thought.

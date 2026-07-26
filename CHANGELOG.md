@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.5.0 — Quality Assurance Engine Hardening
+
+Added:
+- formal Quality Assurance Engine architecture and execution pipeline
+- deterministic prompt lint rule catalog with stable AHIF-L identifiers
+- failure taxonomy with stable codes and severity levels
+- mandatory identity, anatomy, context, compiler-integrity, and output-contract gates
+- weighted QA scoring model with non-negotiable identity override
+- recovery orchestration with R0–R6 escalation levels
+- QA report contract and machine-readable schema
+- end-to-end validation contract
+- QA contract, regression, recovery, and end-to-end test suites
+- Sprint 005 documentation and upload guide
+
+Changed:
+- final validation now operates as a release gate rather than a simple checklist
+- QA scorecard now uses category scores, mandatory minimums, and aggregate release thresholds
+- prompt lint checklist now references the stable lint rule catalog
+- AI context now requires formal QA reporting, failure codes, recovery routing, and release eligibility
+- roadmap now marks Quality Assurance Engine hardening complete and advances to Final Prompt orchestration
+
 ## 1.4.0 — Prompt Compiler Hardening
 
 Added:

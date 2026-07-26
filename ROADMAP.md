@@ -13,13 +13,6 @@ Knowledge Graph
 
 ## Next releases
 
-### 1.5
-- Quality Assurance Engine hardening
-- Automated prompt linting
-- Identity and realism validation gates
-- Failure classification and recovery orchestration
-- End-to-end regression suite
-
 ### 1.6
 - Final Prompt orchestration
 - Unified execution contract from compact input to validated output
@@ -67,3 +60,12 @@ Knowledge Graph
 - Prompt serialization and compiler metadata
 - Compiler plan and output schemas
 - Compiler QA, contract, regression, and golden-case testing
+
+### 1.5
+- Quality Assurance Engine hardening
+- Automated prompt linting
+- Identity, anatomy, context, compiler, and output validation gates
+- Stable failure classification and severity model
+- Recovery orchestration and escalation
+- Machine-readable QA report schema
+- End-to-end QA regression suite
