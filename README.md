@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.0.0-rc1
-**Status:** Machine-Readable Knowledge Expansion — Release Candidate
+**Version:** 2.0.0-rc2
+**Status:** Cross-Model Validation — Release Candidate 2
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.0.0-rc1 adds a validated machine-readable knowledge layer to the existing identity-first pipeline. Canonical Markdown remains authoritative while structured packages provide stable identifiers, provenance, deterministic validation, and adapter-consumable metadata.
+Version 2.0.0-rc2 adds formal cross-model validation to the identity-first pipeline. It freezes canonical inputs, validates deterministic adapter requests, audits semantic degradation, defines identity-preservation evidence, and prevents support claims from exceeding available evidence.
 
 ## Daily use
 
@@ -68,7 +68,7 @@ Output: final image-generation prompt
 - `13_EXAMPLES/` — worked examples
 - `14_TESTS/` — identity, decision, reasoning, compiler, QA, and final-prompt regression tests
 - `15_FINAL_PROMPT/` — execution orchestration, release contracts, schemas, and final prompt packaging
-- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, mappings, and cross-model compatibility contracts
+- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, mappings, compatibility contracts, and cross-model validation
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
@@ -80,8 +80,8 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.0.0-rc1
+## Current release — 2.0.0-rc2
 
-Sprint 010 introduces the first release-candidate machine-readable knowledge layer. It adds stable knowledge identifiers, provenance policy, package and registry schemas, a central registry, candidate fashion/travel/photography packages, knowledge QA, and regression tests. Structured packages remain subordinate to canonical Markdown and are not promoted to stable `active` status until the 2.0 release gate.
+Sprint 011 establishes the Cross-Model Validation layer. It adds deterministic V0–V7 execution, exact evidence binding, identity-preservation comparison, degradation auditing, reproducibility levels, validation schemas, QA gates, and release-candidate regression fixtures. Repository-level contract and semantic validation are complete, while empirical generated-image evidence remains explicitly pending. All adapters remain experimental until the stable 2.0 release gate is satisfied.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).

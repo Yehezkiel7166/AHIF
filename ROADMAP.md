@@ -40,11 +40,11 @@ Knowledge Graph
 - Knowledge provenance and validation
 - Adapter-consumable capability metadata
 
-### 2.0.0-rc2 — Sprint 011: Cross-Model Validation
-- End-to-end multi-model conformance
-- Identity preservation comparison
-- Degradation audits
-- Release candidate regression suite
+### 2.0.0-rc2 — Sprint 011: Cross-Model Validation — Completed
+- End-to-end contract and semantic conformance architecture
+- Identity preservation comparison and evidence schema
+- Degradation and reproducibility audits
+- Release candidate regression suite and fixtures
 
 ### 2.0.0 — Sprint 012: Stable Release
 - Stable adapter contracts
@@ -138,3 +138,12 @@ Knowledge Graph
 - Package and registry schemas
 - Candidate fashion, travel, and photography packages
 - Knowledge QA and provenance regression testing
+
+
+### 2.0.0-rc2
+- Cross-model validation architecture and V0–V7 protocol
+- Identity preservation comparison protocol
+- Degradation audit and evidence reproducibility policy
+- Validation and identity comparison schemas
+- Cross-model QA with stable AHIF-VAL failure codes
+- Release-candidate regression fixtures and baseline

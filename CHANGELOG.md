@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0-rc2] — Sprint 011: Cross-Model Validation
+
+### Added
+- Cross-model validation architecture and deterministic V0–V7 execution protocol.
+- Identity preservation comparison and machine-readable report schema.
+- Degradation audit, evidence integrity, and reproducibility policies.
+- Release-candidate conformance matrix and validation baseline.
+- Cross-model validation QA with stable AHIF-VAL failure codes.
+- Contract tests, release-candidate regression suite, and Kyoto/Tokyo fixtures.
+
+### Changed
+- README, roadmap, version, manifest, and AI operational context now distinguish contract validation from empirical image validation.
+
+### Compatibility
+- Backward compatible with 2.0.0-rc1. No canonical module, structured knowledge package, adapter, or previous test was removed.
+- All adapters remain experimental. No generated-image equivalence or production support is claimed without external empirical evidence.
+
 ## [2.0.0-rc1] — Sprint 010: Machine-Readable Knowledge Expansion
 
 ### Added
