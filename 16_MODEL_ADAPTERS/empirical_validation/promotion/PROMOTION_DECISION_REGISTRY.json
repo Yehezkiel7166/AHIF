@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0.0",
+  "registry_id": "ahif:promotion-decision-registry",
+  "policy_version": "2.5.0",
+  "append_only_events": true,
+  "dossier_count": 0,
+  "authorized_count": 0,
+  "applied_registry_change_count": 0,
+  "dossiers": [],
+  "claim_boundary": "No real promotion dossiers, authorizations, reviewer identities, empirical decisions, or adapter registry changes are included in the repository baseline."
+}

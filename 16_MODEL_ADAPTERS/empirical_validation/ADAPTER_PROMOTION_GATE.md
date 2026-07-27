@@ -47,3 +47,8 @@ A target is downgraded when:
 ## Decision authority
 
 Promotion and downgrade decisions are recorded as versioned release evidence. No adapter may self-promote based on one successful output.
+
+
+## Sprint 017 dossier boundary
+
+Promotion-gate outputs must enter `ADAPTER_PROMOTION_DECISION_DOSSIER.md` before any support-tier decision is authorized. The dossier preserves exact evidence scope, adverse findings, independent reviews, and authorization. An authorized dossier is not a registry mutation; application requires a separate governed release action.
