@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0.0",
+  "queue_id": "ahif:evidence-evaluation-queue",
+  "policy_version": "2.4.0",
+  "append_only_events": true,
+  "job_count": 0,
+  "jobs": [],
+  "claim_boundary": "No external evidence, evaluation jobs, reviewer decisions, or empirical scores are included in the repository baseline."
+}
