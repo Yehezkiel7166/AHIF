@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "request_id": "ahif-ingestion-request:example-not-for-registration",
+  "submitted_at": "2026-07-27T00:00:00Z",
+  "submitted_by": {
+    "type": "owner",
+    "identifier": "repository-owner"
+  },
+  "bundle": {
+    "bundle_id": "ahif-evidence-bundle:example",
+    "execution_id": "external-execution:example",
+    "adapter_id": "openai-images",
+    "adapter_version": "contract-2.0",
+    "model_id": "provider-model",
+    "model_version": "owner-declared-version",
+    "prompt_package_id": "ahif-final-prompt:example",
+    "target_request_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "artifacts": [
+    {
+      "artifact_id": "target-request",
+      "role": "target_request",
+      "path": "external/target-request.json",
+      "media_type": "application/json",
+      "size_bytes": 0,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "availability": "external"
+    },
+    {
+      "artifact_id": "generated-output",
+      "role": "generated_output",
+      "path": "external/generated-output.png",
+      "media_type": "image/png",
+      "size_bytes": 0,
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "availability": "external"
+    }
+  ],
+  "evaluation_reports": {
+    "identity_report_id": null,
+    "semantic_report_id": null
+  },
+  "declarations": {
+    "external_execution": true,
+    "generated_output_is_not_canonical_identity": true,
+    "no_secrets_included": true
+  },
+  "expected_baseline_decision": "quarantined",
+  "note": "Illustrative structure only. Zero digests and absent bytes are not acceptable empirical proof."
+}

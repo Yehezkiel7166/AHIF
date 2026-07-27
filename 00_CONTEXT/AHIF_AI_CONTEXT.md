@@ -247,3 +247,8 @@ Do not promote an adapter or claim image-output parity from documentation, reque
 ## Evidence aggregation rule
 
 Only QA-accepted empirical evidence bundles may be aggregated. Preserve explicit cohorts, source bundle IDs, adverse evidence, confidence limits, and drift findings. Aggregates and target-profile recommendations are advisory; human governance is mandatory for adapter status changes.
+
+
+## Evidence ingestion governance (v2.3)
+
+External execution evidence must enter through the I0–I8 ingestion contract. Verify artifact fingerprints, provenance, duplicate state, and evaluation links. Classify evidence as accepted, quarantined, rejected, or duplicate. Never treat generated output as canonical identity and never change adapter status during ingestion.
