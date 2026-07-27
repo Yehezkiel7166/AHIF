@@ -1,10 +1,11 @@
 # Version
 
-Current version: **2.10.0**
+Current version: **2.11.0**
 
 Release type: Backward-Compatible Framework Expansion
 
 Compatibility:
+- AHIF 2.10.0 metrics, KPI, and quality governance
 - AHIF 2.9.0 continuous compliance and governance audit
 - AHIF 2.8.0 adapter incident response and recovery governance
 - AHIF 2.7.0 adapter release observation and rollback assurance governance
@@ -18,6 +19,6 @@ Compatibility:
 
 ## Release focus
 
-Version 2.10.0 adds governed metric specifications, denominator integrity, KPI threshold versioning, immutable metric snapshots, dashboard publication contracts, and metric retirement controls.
+Version 2.11.0 adds deterministic security and supply-chain governance for asset inventory, provenance, secret handling, vulnerability intake, remediation, exceptions, snapshots, and release eligibility.
 
-No observed metric value, external telemetry, KPI achievement, empirical certification, production-health certification, deployment, rollback, or adapter-tier change is included. Metric and dashboard baselines remain empty.
+No external scan, vulnerability-absence claim, production-security certification, secret revocation proof, deployment, rollback, empirical certification, or adapter-tier change is included. Security registries remain empty and status remains `not-evaluated`.

@@ -63,4 +63,8 @@ AHIF 2.9.0 uses CA0–CA9 to audit repository synchronization, manifest integrit
 
 ## Sprint 022 Metrics, KPI, and Quality Governance Rule
 
-Use MQ0–MQ9 for any governed metric. Resolve a versioned specification, pin exact source records and fingerprints, disclose numerator, denominator, exclusions, missing-data handling, freshness, and threshold version, then require independent review before publication. Empty or unavailable populations are `not-evaluated`; they are never zero, pass, or KPI achievement. Dashboards cannot create telemetry, empirical certification, production-health claims, or adapter mutations. The AHIF 2.10.0 baseline contains zero metric specifications, snapshots, and dashboards.
+Use MQ0–MQ9 for any governed metric. Resolve a versioned specification, pin exact source records and fingerprints, disclose numerator, denominator, exclusions, missing-data handling, freshness, and threshold version, then require independent review before publication. Empty or unavailable populations are `not-evaluated`; they are never zero, pass, or KPI achievement. Dashboards cannot create telemetry, empirical certification, production-health claims, or adapter mutations. The AHIF 2.11.0 baseline contains zero metric specifications, snapshots, and dashboards.
+
+## Security and supply-chain governance (2.11.0)
+
+Use the S0–S9 process for security scope, inventory, provenance, secret handling, vulnerability intake, remediation, exceptions, validation, and closure. Never reproduce secrets or fabricate external scan results, provenance, vulnerability absence, or production-security certification. Empty security registries mean `not-evaluated`.

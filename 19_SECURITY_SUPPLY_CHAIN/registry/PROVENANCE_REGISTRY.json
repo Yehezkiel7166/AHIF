@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "framework_version": "2.11.0",
+  "registry_type": "append-only-supply-chain-provenance",
+  "record_count": 0,
+  "records": [],
+  "claim_boundary": "Empty baseline. Repository files are not retrospectively assigned fabricated provenance records."
+}

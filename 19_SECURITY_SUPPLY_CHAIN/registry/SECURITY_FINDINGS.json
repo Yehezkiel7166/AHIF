@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "framework_version": "2.11.0",
+  "registry_type": "append-only-security-findings",
+  "finding_count": 0,
+  "findings": [],
+  "claim_boundary": "Empty baseline. No external scan, vulnerability absence, production security, or certification is asserted."
+}

@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.11.0 — Security and Supply Chain Governance
+
+Added:
+- S0–S9 security and supply-chain governance workflow
+- dependency and artifact provenance policy
+- secret and sensitive-data handling policy
+- vulnerability risk, exception, and immutable snapshot governance
+- security report, finding event, provenance record, and exception schemas
+- append-only security findings and provenance registries with a `not-evaluated` baseline
+- AHIF-SEC QA catalog, contract test, registry regression, and blocked example
+- Sprint 023 and release validation documentation
+
+Changed:
+- release metadata, roadmap, manifest, README, and AI contexts synchronized to 2.11.0
+- post-2.0 governance chain extended from metrics governance to security and supply-chain governance
+
+Claim boundary:
+- no external scan, vulnerability absence, production-security certification, secret revocation proof, deployment, rollback, empirical certification, or adapter-tier change is asserted
+
 ## 2.10.0 — Metrics, KPI, and Quality Governance
 
 Added:

@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.10.0
-**Status:** Stable Framework + Continuous Compliance Audit Governance
+**Version:** 2.11.0
+**Status:** Stable Framework + Security and Supply Chain Governance
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.10.0 preserves the stable 2.x framework and adds governed metric specifications, denominator integrity, KPI threshold versioning, immutable metric snapshots, dashboard publication contracts, and metric retirement. It preserves strict boundaries between repository conformance, metric reporting, empirical evidence, operational execution, adapter-tier mutation, and production-health claims.
+Version 2.11.0 preserves the stable 2.x framework and adds security and supply-chain governance for repository inventory, provenance, secret handling, vulnerability intake, remediation, exceptions, immutable snapshots, and release eligibility. It preserves strict boundaries between repository inspection, external security testing, operational execution, adapter-tier mutation, and production-health claims.
 
 ## Daily use
 
@@ -71,6 +71,7 @@ Output: final image-generation prompt
 - `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, compatibility, empirical evidence, release, observation, and incident governance
 - `17_CONTINUOUS_AUDIT/` — continuous compliance rules, drift detection, exceptions, snapshots, and append-only audit status
 - `18_METRICS_QUALITY/` — canonical metrics, KPI thresholds, denominator controls, snapshots, and dashboard governance
+- `19_SECURITY_SUPPLY_CHAIN/` — security scope, provenance, secret handling, vulnerability risk, exceptions, snapshots, and append-only registries
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
@@ -82,11 +83,11 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.10.0
+## Current release — 2.11.0
 
-Sprint 022 adds Metrics, KPI, and Quality Governance. An MQ0–MQ9 workflow now governs metric requests, definitions, source populations, deterministic calculations, threshold interpretation, independent review, immutable publication, and retirement.
+Sprint 023 adds Security and Supply Chain Governance. An S0–S9 workflow now governs scope, inventory, provenance, secret review, vulnerability intake, risk classification, remediation, independent validation, and immutable closure.
 
-The release contains zero real audit runs, findings, approved exceptions, empirical certifications, production-health certifications, deployments, rollbacks, or adapter-tier changes.
+The release contains zero security findings, zero provenance records, zero approved security exceptions, no external scan results, and no production-security certification.
 
 ## Version 2.2 evidence aggregation
 
@@ -121,3 +122,7 @@ Only a completed and signed release may open an observation plan. Observation ma
 ## Sprint 022 Metrics and Quality Rule
 
 Treat every metric as a versioned governance contract. Pin the exact population, numerator, denominator, exclusions, missing-data treatment, threshold version, and source fingerprints. Empty populations must produce `not-evaluated`, not zero or success. Dashboards are projections of immutable snapshots and may not fabricate telemetry, KPI achievement, empirical certification, production health, or adapter-tier changes. The AHIF 2.10.0 baseline contains zero registered metric specifications, zero metric snapshots, and zero dashboards.
+
+## Sprint 023 Security and Supply Chain Rule
+
+Treat repository security as a scoped, evidence-bound governance process. Never store raw secrets, fabricate advisory data, infer vulnerability absence from an empty finding registry, or treat repository review as infrastructure penetration testing. Unknown executable provenance and unresolved critical exposure block release eligibility. The AHIF 2.11.0 baseline contains zero security findings, zero provenance records, and status `not-evaluated`.

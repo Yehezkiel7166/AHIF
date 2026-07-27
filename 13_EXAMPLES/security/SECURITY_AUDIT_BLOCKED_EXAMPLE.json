@@ -1,0 +1,23 @@
+{
+  "example_only": true,
+  "schema_version": "1.0.0",
+  "run_id": "example-security-blocked",
+  "scope": {
+    "repository_version": "2.11.0",
+    "external_infrastructure": false
+  },
+  "status": "blocked",
+  "reason_codes": [
+    "AHIF-SEC-003"
+  ],
+  "finding_summary": [
+    {
+      "finding_id": "example-finding-001",
+      "severity": "unknown",
+      "locator": "redacted/example-dependency",
+      "description": "Executable dependency provenance is not available. No vulnerability is asserted."
+    }
+  ],
+  "release_eligibility": "blocked",
+  "claim_boundary": "Illustrative governance data only; not a real finding or scan result."
+}

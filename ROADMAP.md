@@ -225,6 +225,12 @@ Knowledge Graph
 - Immutable metric snapshots and dashboard publication contracts
 - Metric schemas, QA, contract tests, and zero-metric baseline
 
+### 2.11.0 — Sprint 023: Security and Supply Chain Governance — Completed
+- Deterministic S0–S9 security and supply-chain workflow
+- Asset inventory, provenance, secret-handling, vulnerability, remediation, and exception governance
+- Immutable security snapshots and append-only findings/provenance registries
+- Security schemas, QA, contract tests, regression tests, and `not-evaluated` baseline
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages

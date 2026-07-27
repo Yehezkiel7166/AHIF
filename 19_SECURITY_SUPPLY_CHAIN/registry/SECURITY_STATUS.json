@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0.0",
+  "framework_version": "2.11.0",
+  "status": "not-evaluated",
+  "latest_run_id": null,
+  "open_findings": 0,
+  "active_exceptions": 0,
+  "release_eligibility": "not-evaluated",
+  "claim_boundary": "No external security scan or production certification has been performed."
+}
