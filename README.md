@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.11.0
-**Status:** Stable Framework + Security and Supply Chain Governance
+**Version:** 2.12.0
+**Status:** Stable Framework + Operational Resilience Governance
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.11.0 preserves the stable 2.x framework and adds security and supply-chain governance for repository inventory, provenance, secret handling, vulnerability intake, remediation, exceptions, immutable snapshots, and release eligibility. It preserves strict boundaries between repository inspection, external security testing, operational execution, adapter-tier mutation, and production-health claims.
+Version 2.12.0 preserves the stable 2.x framework and adds operational resilience and disaster recovery governance for recovery objectives, dependency mapping, backups, restores, runbooks, exercises, failover, validation, and immutable records. Documentation remains distinct from operational proof.
 
 ## Daily use
 
@@ -72,6 +72,7 @@ Output: final image-generation prompt
 - `17_CONTINUOUS_AUDIT/` — continuous compliance rules, drift detection, exceptions, snapshots, and append-only audit status
 - `18_METRICS_QUALITY/` — canonical metrics, KPI thresholds, denominator controls, snapshots, and dashboard governance
 - `19_SECURITY_SUPPLY_CHAIN/` — security scope, provenance, secret handling, vulnerability risk, exceptions, snapshots, and append-only registries
+- `20_OPERATIONAL_RESILIENCE/` — recovery objectives, backup/restore governance, disaster declaration, runbooks, exercises, and resilience registries
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 

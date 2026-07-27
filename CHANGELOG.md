@@ -1,5 +1,22 @@
 # Changelog
 
+## 2.12.0 — Operational Resilience and Disaster Recovery Governance
+
+Added:
+- OR0–OR9 operational resilience and disaster recovery workflow
+- recovery-objective, backup/restore, disaster declaration, runbook, and exercise governance
+- recovery plan, exercise event, and resilience assessment schemas
+- append-only recovery plan and exercise registries with a `not-evaluated` baseline
+- AHIF-RES QA catalog, contract test, registry regression, and blocked example
+- Sprint 024 and release validation documentation
+
+Changed:
+- release metadata, roadmap, manifest, README, and AI context synchronized to 2.12.0
+- post-2.0 governance chain extended from security governance to operational resilience
+
+Claim boundary:
+- no backup, restore, failover, disaster, measured RTO/RPO, production recovery, deployment, rollback, empirical certification, or adapter-tier change is asserted
+
 ## 2.11.0 — Security and Supply Chain Governance
 
 Added:

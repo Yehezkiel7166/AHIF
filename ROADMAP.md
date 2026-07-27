@@ -231,6 +231,12 @@ Knowledge Graph
 - Immutable security snapshots and append-only findings/provenance registries
 - Security schemas, QA, contract tests, regression tests, and `not-evaluated` baseline
 
+### 2.12.0 — Sprint 024: Operational Resilience and Disaster Recovery Governance — Completed
+- Deterministic OR0–OR9 resilience and recovery workflow
+- Recovery objectives, dependency maps, backup/restore, disaster declaration, and runbook standards
+- Governed exercises, failover controls, independent validation, and immutable event chains
+- Recovery schemas, QA, contract tests, regression tests, and `not-evaluated` baseline
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages

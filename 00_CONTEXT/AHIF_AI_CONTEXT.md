@@ -296,3 +296,7 @@ Use MQ0–MQ9 for any governed metric. Resolve a versioned specification, pin ex
 ## Security and supply-chain governance (2.11.0)
 
 Use the S0–S9 process for security scope, inventory, provenance, secret handling, vulnerability intake, remediation, exceptions, validation, and closure. Never reproduce secrets or fabricate external scan results, provenance, vulnerability absence, or production-security certification. Empty security registries mean `not-evaluated`.
+
+## Operational resilience governance (v2.12.0)
+
+Treat recovery plans, backup declarations, RTO/RPO targets, and runbooks as governed specifications rather than operational proof. Empty resilience registries mean `not-evaluated`. Never infer successful backup, restore, failover, disaster recovery, or production readiness without user-provided execution evidence.

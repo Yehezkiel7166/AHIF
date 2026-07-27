@@ -1,0 +1,10 @@
+{
+  "example_only": true,
+  "exercise_id": "EXAMPLE-BLOCKED-001",
+  "exercise_type": "isolated_restore",
+  "status": "blocked",
+  "reason": "No user-provided backup artifact or authorized execution environment.",
+  "production_claim": false,
+  "metric_observations": [],
+  "adapter_tier_change": false
+}
