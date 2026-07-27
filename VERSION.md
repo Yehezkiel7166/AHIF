@@ -1,17 +1,16 @@
 # Version
 
-Current version: **2.0.0**
+Current version: **2.1.0**
 
-Release type: Stable Framework Release
+Release type: Backward-Compatible Framework Expansion
 
 Compatibility:
+- AHIF 2.0.0 stable framework and adapter contracts
 - AHIF 2.0.0-rc2 cross-model validation contracts
-- AHIF 2.0.0-rc1 machine-readable knowledge packages
-- AHIF 1.9 multi-model compatibility contracts
 - Canonical Final Prompt Package authority
 
 ## Release focus
 
-Version 2.0.0 stabilizes the AHIF framework core, schemas, registries, quality gates, final-prompt orchestration, and model-adapter contracts. It adds release governance, compatibility guarantees, support tiers, contract freeze rules, migration guidance, and a release evidence register.
+Version 2.1.0 adds the Empirical Validation Evidence Pipeline required to capture externally generated outputs, evaluate identity and semantic preservation, record reproducibility, and govern adapter promotion.
 
-OpenAI Images, Midjourney, and SDXL/Diffusers remain contract-validated experimental targets until reproducible empirical image evidence is supplied. This stable release does not claim image-output equivalence.
+The release does not include external model executions or generated-image evidence. OpenAI Images, Midjourney, and SDXL/Diffusers remain contract-validated experimental targets.

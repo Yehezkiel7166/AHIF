@@ -155,6 +155,17 @@ Knowledge Graph
 - Stable release QA and regression gates
 - 2.0 migration guide and consolidated release documentation
 
-## Post-2.0 direction
+## Post-2.0 roadmap
 
-Future 2.x work may add empirically validated target profiles, expanded machine-readable knowledge packages, and backward-compatible adapter capabilities. No post-2.0 sprint is authorized by this roadmap yet.
+### 2.1.0 — Sprint 013: Empirical Validation Evidence Pipeline — Completed
+- External execution evidence bundle contract
+- Identity and semantic evaluation protocols
+- Reproducibility levels and evidence integrity gates
+- Adapter promotion and downgrade governance
+- Empirical evidence schemas, QA, and regression tests
+
+### Future 2.x direction
+- Empirically validated target profiles based on accepted evidence
+- Expanded machine-readable knowledge packages
+- Backward-compatible adapter capability updates
+- Automated evidence aggregation after governance approval

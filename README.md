@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.0.0
-**Status:** Stable Framework Release
+**Version:** 2.1.0
+**Status:** Stable Framework + Empirical Validation Infrastructure
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -68,7 +68,7 @@ Output: final image-generation prompt
 - `13_EXAMPLES/` — worked examples
 - `14_TESTS/` — identity, decision, reasoning, compiler, QA, and final-prompt regression tests
 - `15_FINAL_PROMPT/` — execution orchestration, release contracts, schemas, and final prompt packaging
-- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, mappings, compatibility contracts, and cross-model validation
+- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, compatibility, cross-model validation, and empirical evidence governance
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
@@ -80,10 +80,10 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.0.0
+## Current release — 2.1.0
 
-Sprint 012 promotes the AHIF framework core and adapter contract system to stable 2.0. The release adds governance, compatibility guarantees, support tiers, contract-freeze rules, migration guidance, stable-release QA, and an evidence register.
+Sprint 013 adds the Empirical Validation Evidence Pipeline. It defines immutable execution evidence, identity and semantic evaluation, reproducibility levels, empirical QA, and governed adapter promotion.
 
-OpenAI Images, Midjourney, and SDXL/Diffusers are contract-validated experimental targets. The repository does not claim image-output parity or production-certified target fidelity without reproducible external evidence.
+OpenAI Images, Midjourney, and SDXL/Diffusers remain contract-validated experimental targets. Version 2.1.0 provides the infrastructure for real evidence but contains no external executions or generated-image proof.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).

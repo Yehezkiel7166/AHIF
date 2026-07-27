@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.1.0] — Sprint 013: Empirical Validation Evidence Pipeline
+
+### Added
+- Empirical validation architecture for externally generated image evidence.
+- Immutable evidence bundle contract.
+- Identity and semantic evaluation protocols.
+- Reproducibility levels R0–R4.
+- Adapter promotion and downgrade gates.
+- Evidence bundle, identity report, semantic report, and promotion report schemas.
+- Empirical evidence QA with stable AHIF-EV failure codes.
+- Evidence contract and adapter promotion regression tests.
+- Evidence capture example and Sprint 013 documentation.
+
+### Changed
+- README, roadmap, version, manifest, and AI operational context now describe the post-2.0 evidence workflow.
+
+### Compatibility
+- Backward compatible with AHIF 2.0.0.
+- No stable framework or adapter contract was removed.
+- Existing adapters remain contract-validated experimental targets until accepted external evidence is supplied.
+
 ## [2.0.0] — Sprint 012: Stable Release
 
 ### Added
