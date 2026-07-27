@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "framework_version": "2.2.0",
+  "status": "infrastructure_only",
+  "accepted_aggregate_count": 0,
+  "approved_target_profile_count": 0,
+  "adapter_summaries": [
+    {
+      "adapter_id": "openai-images",
+      "confidence_class": "C0",
+      "evidence_status": "not_provided",
+      "profile_status": "none"
+    },
+    {
+      "adapter_id": "midjourney",
+      "confidence_class": "C0",
+      "evidence_status": "not_provided",
+      "profile_status": "none"
+    },
+    {
+      "adapter_id": "sdxl-diffusers",
+      "confidence_class": "C0",
+      "evidence_status": "not_provided",
+      "profile_status": "none"
+    }
+  ],
+  "claim_boundary": "No external image evidence is stored in this repository."
+}
