@@ -34,7 +34,7 @@ Knowledge Graph
 - Deterministic cross-model comparison reports
 - Adapter interoperability regression
 
-### 2.0.0-rc1 — Sprint 010: Machine-Readable Knowledge Expansion
+### 2.0.0-rc1 — Sprint 010: Machine-Readable Knowledge Expansion — Completed
 - Structured knowledge packages
 - Stable knowledge identifiers
 - Knowledge provenance and validation
@@ -130,3 +130,11 @@ Knowledge Graph
 - Cross-model comparison protocol
 - Compatibility and interoperability schemas
 - Cross-model QA and regression testing
+
+
+### 2.0.0-rc1
+- Machine-readable knowledge architecture
+- Stable knowledge identifiers and provenance
+- Package and registry schemas
+- Candidate fashion, travel, and photography packages
+- Knowledge QA and provenance regression testing

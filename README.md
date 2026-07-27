@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 1.9.0
-**Status:** Multi-Model Compatibility Contracts — Experimental
+**Version:** 2.0.0-rc1
+**Status:** Machine-Readable Knowledge Expansion — Release Candidate
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 1.9.0 extends the validated Final Prompt path with deterministic cross-adapter semantic compatibility contracts. It orchestrates compact input, context normalization, decision resolution, reasoning validation, prompt compilation, quality assurance, recovery, explainable summarization, and final prompt release under one deterministic contract.
+Version 2.0.0-rc1 adds a validated machine-readable knowledge layer to the existing identity-first pipeline. Canonical Markdown remains authoritative while structured packages provide stable identifiers, provenance, deterministic validation, and adapter-consumable metadata.
 
 ## Daily use
 
@@ -61,7 +61,7 @@ Output: final image-generation prompt
 - `06_TRAVEL_WORLD/` — geography, culture, weather, transport, safety
 - `07_PHOTOGRAPHY/` — camera, lens, lighting, composition
 - `08_STORY/` — narrative and environmental interaction
-- `09_DECISION_ENGINE/` — context, knowledge graph, inference, resolution, and reasoning
+- `09_DECISION_ENGINE/` — context, knowledge graph, structured knowledge packages, inference, resolution, and reasoning
 - `10_PROMPT_COMPILER/` — compiler pipeline, schemas, ordering, contradiction control, and serialization
 - `11_QUALITY_ASSURANCE/` — QA orchestration, linting, failure taxonomy, recovery, schemas, domain gates, and final validation
 - `12_TEMPLATES/` — reusable input and output templates
@@ -80,8 +80,8 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 1.9.0
+## Current release — 2.0.0-rc1
 
-Sprint 009 defines how AHIF compares multiple target adapters against one canonical Final Prompt Package. It adds semantic-domain equivalence, a compatibility matrix, variance tolerance, deterministic reports, interoperability regression, and identity-first cross-model QA. All adapters remain experimental because empirical generated-image validation is scheduled for Sprint 011.
+Sprint 010 introduces the first release-candidate machine-readable knowledge layer. It adds stable knowledge identifiers, provenance policy, package and registry schemas, a central registry, candidate fashion/travel/photography packages, knowledge QA, and regression tests. Structured packages remain subordinate to canonical Markdown and are not promoted to stable `active` status until the 2.0 release gate.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).

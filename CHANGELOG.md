@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.0.0-rc1] — Sprint 010: Machine-Readable Knowledge Expansion
+
+### Added
+- Machine-readable knowledge architecture and authority model.
+- Stable knowledge identifier and provenance policies.
+- Knowledge package and registry schemas.
+- Central package registry.
+- Candidate fashion, travel, and photography knowledge packages.
+- Knowledge package QA gates and stable failure codes.
+- Contract and provenance regression tests.
+
+### Changed
+- README, roadmap, version, manifest, and AI operational context now describe release-candidate structured knowledge consumption.
+
+### Compatibility
+- Backward compatible with 1.9.0. No existing canonical file or adapter contract was removed.
+
 ## [1.9.0] — Sprint 009: Multi-Model Compatibility Contracts
 
 ### Added
