@@ -1,0 +1,8 @@
+{
+  "manifest": "AHIF Metrics Dashboard Manifest",
+  "schema_version": "1.0.0",
+  "dashboards": [],
+  "publication_state": "empty-baseline",
+  "metric_snapshot_count": 0,
+  "claim_boundary": "No dashboard, KPI value, trend, ranking, or production-health statement is published."
+}

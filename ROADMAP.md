@@ -218,6 +218,13 @@ Knowledge Graph
 - Append-only findings and compliance-status baselines
 - Audit schemas, QA, contract tests, and zero-finding baseline
 
+### 2.10.0 — Sprint 022: Metrics, KPI, and Quality Governance — Completed
+- Deterministic MQ0–MQ9 metric lifecycle
+- Canonical metric catalog and versioned KPI thresholds
+- Denominator, missing-data, cohort, deduplication, and freshness governance
+- Immutable metric snapshots and dashboard publication contracts
+- Metric schemas, QA, contract tests, and zero-metric baseline
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages

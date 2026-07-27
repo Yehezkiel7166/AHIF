@@ -1,0 +1,18 @@
+{
+  "snapshot_id": "example-blocked-metric-snapshot",
+  "metric_id": "AHIF-MET-010",
+  "specification_version": "example-only",
+  "source_record_ids": [],
+  "numerator": null,
+  "denominator": null,
+  "value": null,
+  "unit": "ratio",
+  "calculation_state": "not-evaluated",
+  "threshold_state": "not-evaluated",
+  "data_quality_state": "blocked",
+  "warnings": [
+    "No governed audit findings exist in the baseline."
+  ],
+  "publication_state": "blocked",
+  "claim_boundary": "Illustrative blocked record only. It is not a real metric observation or quality claim."
+}

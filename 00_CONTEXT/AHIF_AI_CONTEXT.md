@@ -288,3 +288,7 @@ Treat incident handling as a separate governed process after release observation
 Treat repository compliance auditing as a separate governed process after incident-response governance. Resolve CA0–CA9 through `17_CONTINUOUS_AUDIT/CONTINUOUS_AUDIT_PROTOCOL.md`. Pin repository identity, source fingerprint, active rule-set, immutable snapshot, scope, exclusions, and independent roles. Preserve append-only findings, adverse evidence, exceptions, remediation boundaries, and residual risk.
 
 Audit may validate repository conformance only. It must not fabricate external telemetry, empirical model evidence, production-health certification, actors, approvals, deployments, rollbacks, or adapter-tier changes. The AHIF 2.9.0 baseline contains zero audit runs, findings, and approved exceptions.
+
+## Sprint 022 Metrics, KPI, and Quality Governance Rule
+
+Use MQ0–MQ9 for any governed metric. Resolve a versioned specification, pin exact source records and fingerprints, disclose numerator, denominator, exclusions, missing-data handling, freshness, and threshold version, then require independent review before publication. Empty or unavailable populations are `not-evaluated`; they are never zero, pass, or KPI achievement. Dashboards cannot create telemetry, empirical certification, production-health claims, or adapter mutations. The AHIF 2.10.0 baseline contains zero metric specifications, snapshots, and dashboards.

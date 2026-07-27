@@ -1,0 +1,8 @@
+{
+  "registry": "AHIF Metric Specification Registry",
+  "schema_version": "1.0.0",
+  "append_only": true,
+  "active_catalog": "18_METRICS_QUALITY/METRIC_CATALOG.md",
+  "specifications": [],
+  "claim_boundary": "The catalog defines governance contracts only; no observed values or achieved targets are asserted."
+}

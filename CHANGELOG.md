@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.10.0 — Metrics, KPI, and Quality Governance
+
+Added:
+- MQ0–MQ9 metric definition, calculation, review, publication, and retirement workflow
+- canonical AHIF-MET catalog and versioned KPI threshold policy
+- denominator, missing-data, deduplication, cohort, and freshness controls
+- metric specification, snapshot, and event schemas
+- append-only metric registries and empty dashboard manifest
+- AHIF-METRIC QA catalog, contract test, registry regression, and blocked example
+- Sprint 022 and release validation documentation
+
+Changed:
+- release metadata, roadmap, manifest, README, and AI context synchronized to 2.10.0
+- post-2.0 governance chain extended from compliance audit to metric and quality governance
+
+Claim boundary:
+- no observed metric value, KPI achievement, external telemetry, empirical certification, production-health certification, deployment, rollback, or adapter-tier change is asserted
+
+
 ## 2.9.0 — Continuous Compliance and Governance Audit
 
 Added:

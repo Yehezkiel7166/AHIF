@@ -1,10 +1,11 @@
 # Version
 
-Current version: **2.9.0**
+Current version: **2.10.0**
 
 Release type: Backward-Compatible Framework Expansion
 
 Compatibility:
+- AHIF 2.9.0 continuous compliance and governance audit
 - AHIF 2.8.0 adapter incident response and recovery governance
 - AHIF 2.7.0 adapter release observation and rollback assurance governance
 - AHIF 2.6.0 adapter release execution governance
@@ -17,6 +18,6 @@ Compatibility:
 
 ## Release focus
 
-Version 2.9.0 adds deterministic continuous compliance auditing, governance-drift detection, immutable repository snapshots, append-only findings, bounded exceptions, and independent closure validation.
+Version 2.10.0 adds governed metric specifications, denominator integrity, KPI threshold versioning, immutable metric snapshots, dashboard publication contracts, and metric retirement controls.
 
-No real audit run, external telemetry, empirical certification, production-health certification, deployment, rollback, or adapter-tier change is included. Audit and exception baselines remain empty.
+No observed metric value, external telemetry, KPI achievement, empirical certification, production-health certification, deployment, rollback, or adapter-tier change is included. Metric and dashboard baselines remain empty.

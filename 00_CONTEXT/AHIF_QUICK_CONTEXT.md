@@ -40,3 +40,7 @@ Treat incident handling as a separate governed process after release observation
 ## v2.9 audit boundary
 
 Use continuous audit for repository conformance only. Do not infer telemetry, model quality, production health, deployment, rollback, or adapter-tier changes.
+
+## Sprint 022 Metrics, KPI, and Quality Governance Rule
+
+Use MQ0–MQ9 for any governed metric. Resolve a versioned specification, pin exact source records and fingerprints, disclose numerator, denominator, exclusions, missing-data handling, freshness, and threshold version, then require independent review before publication. Empty or unavailable populations are `not-evaluated`; they are never zero, pass, or KPI achievement. Dashboards cannot create telemetry, empirical certification, production-health claims, or adapter mutations. The AHIF 2.10.0 baseline contains zero metric specifications, snapshots, and dashboards.

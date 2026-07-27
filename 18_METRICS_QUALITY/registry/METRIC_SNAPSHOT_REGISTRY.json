@@ -1,0 +1,8 @@
+{
+  "registry": "AHIF Metric Snapshot Registry",
+  "schema_version": "1.0.0",
+  "append_only": true,
+  "baseline": "AHIF 2.10.0",
+  "metric_snapshots": [],
+  "claim_boundary": "No metric calculation, external telemetry, empirical result, KPI achievement, or production-health claim is included."
+}
