@@ -1,6 +1,6 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.7.0
+**Version:** 2.8.0
 **Status:** Stable Framework + Governed Post-Release Observation Infrastructure
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.7.0 preserves the stable 2.x framework and adds governed post-release observation, declared-signal control, rollback assurance, independent response authorization, and append-only observation records. It preserves strict boundaries between observation, empirical evidence, release authorization, rollback execution, and repository mutation.
+Version 2.8.0 preserves the stable 2.x framework and adds governed incident intake, bounded containment and recovery, independent authorization and validation, and append-only incident records. It preserves strict boundaries between governance records, external telemetry, operational execution, adapter-tier mutation, and production-health claims.
 
 ## Daily use
 
@@ -80,13 +80,11 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.7.0
+## Current release — 2.8.0
 
-Sprint 019 adds Adapter Release Observation and Rollback Assurance Governance. A completed release may enter a deterministic O0–O9 observation workflow with exact signal declarations, signed baselines, compatibility and repository conformance checks, rollback reconstruction verification, independent response authorization, and append-only signoff.
+Sprint 020 adds Adapter Incident Response and Recovery Governance. A governed release observation may open an IR0–IR9 incident workflow with pinned provenance, bounded severity, reversible containment, authorized recovery, immutable snapshots, independent validation, residual-risk review, and append-only closure.
 
-The repository baseline contains no external execution evidence, accepted registry records, completed evaluation jobs, authorized promotion dossiers, completed release executions, observation plans, health certifications, incidents, rollback recommendations, or adapter-tier changes. OpenAI Images, Midjourney, and SDXL/Diffusers remain at their existing support tiers.
-
-The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).
+The release contains zero real incidents, executed recoveries, rollbacks, deployments, production-health certifications, or adapter-tier changes.
 
 ## Version 2.2 evidence aggregation
 

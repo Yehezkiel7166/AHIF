@@ -204,6 +204,13 @@ Knowledge Graph
 - Independent response authorization and append-only observation records
 - Observation schemas, QA, contract tests, and zero-observation baseline
 
+### 2.8.0 — Sprint 020: Adapter Incident Response and Recovery Governance — Completed
+- Deterministic IR0–IR9 incident workflow
+- Bounded severity, reversible containment, and recovery-path governance
+- Independent response authorization and validation
+- Append-only incident registry and stable AHIF-INC failure codes
+- Incident schemas, contract tests, and zero-incident baseline
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages

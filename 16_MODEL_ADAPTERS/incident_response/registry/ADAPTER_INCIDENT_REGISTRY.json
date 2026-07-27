@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "registry_type": "adapter_incident_registry",
+  "append_only": true,
+  "incidents": [],
+  "baseline": {
+    "incident_count": 0,
+    "executed_recoveries": 0,
+    "executed_rollbacks": 0,
+    "adapter_tier_changes": 0,
+    "production_health_certifications": 0
+  }
+}

@@ -1,5 +1,16 @@
 # Changelog
 
+## 2.8.0 — Adapter Incident Response and Recovery Governance
+
+Added:
+- IR0–IR9 incident response protocol;
+- bounded severity, containment, recovery, and closure governance;
+- append-only incident registry, schemas, QA, contract tests, and regression baseline;
+- Sprint 020 documentation and release validation.
+
+Claim boundary:
+- no real incident, external telemetry, executed containment, recovery, rollback, deployment, production-health certification, or adapter-tier change is included.
+
 ## 2.7.0 — Adapter Release Observation and Rollback Assurance Governance
 
 Added:

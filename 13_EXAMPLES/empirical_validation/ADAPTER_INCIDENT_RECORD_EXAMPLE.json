@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "example_only": true,
+  "incident_id": "EXAMPLE-BLOCKED-INCIDENT",
+  "status": "blocked",
+  "severity": "SEV-4",
+  "scope_fingerprint": "unavailable",
+  "adapter_id": "unavailable",
+  "release_execution_id": "unavailable",
+  "observation_id": "unavailable",
+  "declared_findings": [],
+  "affected_contracts": [],
+  "containment_plan": [],
+  "recovery_path": "blocked_insufficient_evidence",
+  "events": [],
+  "claim_boundary": "Illustrative only; not a real incident or operational record."
+}
