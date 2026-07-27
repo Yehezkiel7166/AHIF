@@ -1,0 +1,42 @@
+{
+  "example_only": true,
+  "schema_version": "1.0.0",
+  "observation_id": "ahif:release-observation:example-blocked",
+  "observation_scope_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "framework_version": "2.7.0",
+  "state": "blocked",
+  "release": {
+    "release_id": "ahif:adapter-release:missing",
+    "release_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "package_manifest_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "pre_change_snapshot_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "post_change_snapshot_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "adapter": {
+    "adapter_id": "example-only",
+    "adapter_version": "0.0.0",
+    "support_tier": "unchanged"
+  },
+  "observation_window": {
+    "opened_at": "2026-07-27T00:00:00Z",
+    "closes_at": "2026-08-03T00:00:00Z",
+    "window_policy_version": "1.0.0"
+  },
+  "declared_signals": [],
+  "roles": {
+    "observation_owner_role": "unassigned",
+    "validator_role": "unassigned",
+    "rollback_verifier_role": "unassigned",
+    "response_authorizer_role": "unassigned",
+    "separation_satisfied": false
+  },
+  "rollback_assurance": {
+    "status": "not_applicable",
+    "verification_fingerprint": null
+  },
+  "outcome": "blocked",
+  "failure_codes": [
+    "AHIF-OBS-002"
+  ],
+  "events": []
+}

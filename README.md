@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.6.0
-**Status:** Stable Framework + Governed Adapter Release Execution Infrastructure
+**Version:** 2.7.0
+**Status:** Stable Framework + Governed Post-Release Observation Infrastructure
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.6.0 preserves the stable 2.x framework and adds governed adapter release planning, immutable package and snapshot contracts, independent approval, deterministic rollback, and append-only execution records. It preserves strict boundaries between evidence, evaluation, promotion authorization, and repository mutation.
+Version 2.7.0 preserves the stable 2.x framework and adds governed post-release observation, declared-signal control, rollback assurance, independent response authorization, and append-only observation records. It preserves strict boundaries between observation, empirical evidence, release authorization, rollback execution, and repository mutation.
 
 ## Daily use
 
@@ -80,11 +80,11 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.6.0
+## Current release — 2.7.0
 
-Sprint 018 adds Adapter Release Execution Governance. An authorized promotion or downgrade dossier may be converted into a deterministic R0–R9 release plan with exact package mutations, immutable before/after snapshots, independent approval, rollback readiness, post-change validation, and append-only signoff.
+Sprint 019 adds Adapter Release Observation and Rollback Assurance Governance. A completed release may enter a deterministic O0–O9 observation workflow with exact signal declarations, signed baselines, compatibility and repository conformance checks, rollback reconstruction verification, independent response authorization, and append-only signoff.
 
-The repository baseline contains no external execution evidence, accepted registry records, completed evaluation jobs, authorized promotion dossiers, release plans, approvals, executions, or adapter-tier changes. OpenAI Images, Midjourney, and SDXL/Diffusers remain at their existing support tiers.
+The repository baseline contains no external execution evidence, accepted registry records, completed evaluation jobs, authorized promotion dossiers, completed release executions, observation plans, health certifications, incidents, rollback recommendations, or adapter-tier changes. OpenAI Images, Midjourney, and SDXL/Diffusers remain at their existing support tiers.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).
 
@@ -111,3 +111,8 @@ Only completed evaluation jobs and eligible aggregates may enter a promotion dos
 ## Version 2.6 release execution
 
 Only an authorized promote or downgrade dossier may open an adapter release plan. Every mutation must be declared, fingerprinted, validated, independently approved, reversible, and reconciled with repository documentation. AHIF 2.6.0 defines this mechanism without executing a real release.
+
+
+## Version 2.7 release observation
+
+Only a completed and signed release may open an observation plan. Observation may classify repository-level conformance and rollback readiness, but it cannot prove production health, create empirical evidence, mutate the adapter registry, or execute rollback.

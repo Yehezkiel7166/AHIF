@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.7.0 — Adapter Release Observation and Rollback Assurance Governance
+
+Added:
+- O0–O9 post-release observation protocol;
+- declared-signal and observation-window governance;
+- rollback assurance and reconstruction verification policy;
+- append-only observation registry, schemas, QA, contract tests, and regression baseline;
+- Sprint 019 documentation and release validation.
+
+Corrected:
+- stale `manifest.json` `latest_sprint` field from Sprint 017 to Sprint 019;
+- latest sprint, upload guide, and release validation pointers.
+
+Claim boundary:
+- no completed release, real observation, telemetry, health certification, incident, rollback recommendation, rollback execution, or adapter-tier change is included.
+
 ## 2.6.0 — Sprint 018: Adapter Release Execution Governance
 
 ### Added

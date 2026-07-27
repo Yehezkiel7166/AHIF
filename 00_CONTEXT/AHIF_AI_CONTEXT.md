@@ -270,4 +270,9 @@ A dossier may recommend promote, hold, downgrade, or block, but authorization do
 
 Treat an authorized promotion dossier as permission to prepare one exact release candidate, not permission to mutate the repository automatically. Resolve the R0–R9 workflow in `16_MODEL_ADAPTERS/release_execution/ADAPTER_RELEASE_EXECUTION_PROTOCOL.md`. Pin the adapter, source and target tiers, registry state, support policy, capability profile, compatibility contract, authorized dossier, and declared mutation set.
 
-Require immutable pre-change and post-change snapshots, package fingerprints, independent approval and validation, deterministic rollback readiness, append-only events, and documentation reconciliation. Block undeclared changes, stale authorization, role conflicts, claim inflation, or any mutation of canonical identity authority. The AHIF 2.6.0 baseline contains no real release plan or adapter-tier change.
+Require immutable pre-change and post-change snapshots, package fingerprints, independent approval and validation, deterministic rollback readiness, append-only events, and documentation reconciliation. Block undeclared changes, stale authorization, role conflicts, claim inflation, or any mutation of canonical identity authority. The AHIF 2.7.0 baseline contains no real release plan or adapter-tier change.
+
+
+## Sprint 019 Adapter Release Observation Rule
+
+Treat post-release observation as a separate governed process. Only completed and signed release records may enter O0–O9. Pin the exact release, package, snapshots, observation window, signal sources, thresholds, and roles. Observation may verify repository conformance and rollback reconstructability, but it must not fabricate telemetry, certify production health, create empirical evidence, mutate adapter tiers, or execute rollback. The AHIF 2.7.0 baseline contains zero observation records.

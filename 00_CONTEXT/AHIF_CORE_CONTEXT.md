@@ -46,3 +46,8 @@ Reject identity drift, anatomy errors, impossible hands, contradictory weather, 
 ## Decision engine
 
 Resolve choices in this order: identity, anatomy, culture, explicit request, environment, activity, continuity, story, fashion, style. Infer missing information conservatively. Detect contradictions before compiling.
+
+
+## Sprint 019 Adapter Release Observation Rule
+
+Treat post-release observation as a separate governed process. Only completed and signed release records may enter O0–O9. Pin the exact release, package, snapshots, observation window, signal sources, thresholds, and roles. Observation may verify repository conformance and rollback reconstructability, but it must not fabricate telemetry, certify production health, create empirical evidence, mutate adapter tiers, or execute rollback. The AHIF 2.7.0 baseline contains zero observation records.

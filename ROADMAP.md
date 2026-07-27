@@ -197,6 +197,13 @@ Knowledge Graph
 - Append-only release execution registry and stable AHIF-REL failure codes
 - Release schemas, QA, contract tests, and zero-release baseline
 
+### 2.7.0 — Sprint 019: Adapter Release Observation and Rollback Assurance Governance — Completed
+- Deterministic O0–O9 post-release observation workflow
+- Declared-signal inventory and signed observation baselines
+- Continuous rollback reconstruction assurance
+- Independent response authorization and append-only observation records
+- Observation schemas, QA, contract tests, and zero-observation baseline
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages
