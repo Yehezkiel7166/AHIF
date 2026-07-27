@@ -1,10 +1,11 @@
 # Version
 
-Current version: **2.4.0**
+Current version: **2.5.0**
 
 Release type: Backward-Compatible Framework Expansion
 
 Compatibility:
+- AHIF 2.4.0 evidence evaluation and review queue governance
 - AHIF 2.3.0 evidence ingestion and registry governance
 - AHIF 2.2.0 evidence aggregation and target-profile governance
 - AHIF 2.1.0 empirical validation evidence contracts
@@ -12,6 +13,6 @@ Compatibility:
 
 ## Release focus
 
-Version 2.4.0 adds deterministic post-ingestion evidence evaluation, append-only review queue governance, immutable evaluation events, and explicit reviewer-separation gates.
+Version 2.5.0 adds deterministic adapter promotion decision dossiers, append-only decision registry governance, independent technical/governance/authorization roles, and an explicit boundary between an authorized recommendation and a later adapter-registry release action.
 
-No external generated-image evidence, evaluation scores, or reviewer identities are included. The evidence registry and evaluation queue baselines remain empty, adapter tiers remain unchanged, and evaluation cannot promote an adapter automatically.
+No external generated-image evidence, completed evaluation jobs, promotion authorizations, reviewer identities, or adapter-tier changes are included. Evidence, evaluation, and promotion baselines remain empty, and adapters remain at their existing support tiers.

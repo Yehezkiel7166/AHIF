@@ -80,11 +80,11 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.4.0
+## Current release — 2.5.0
 
-Sprint 016 adds Evidence Evaluation and Review Queue Governance. Accepted evidence records can be converted into deterministic E0–E9 evaluation jobs for identity, semantic, and reproducibility review. Jobs use immutable pinned inputs, governed state transitions, append-only events, duplicate-scope detection, and independent-review gates.
+Sprint 017 adds Adapter Promotion Decision Dossier Governance. Completed evaluations and eligible aggregates can be assembled into deterministic P0–P9 dossiers that recommend promote, hold, downgrade, or block outcomes. Dossiers preserve adverse evidence, append-only events, exact policy versions, reviewer separation, and an explicit authorization boundary.
 
-The repository baseline contains no external execution evidence, no accepted registry records, no queued jobs, and no empirical scores. OpenAI Images, Midjourney, and SDXL/Diffusers remain contract-validated experimental targets. Evaluation never promotes adapters automatically.
+The repository baseline contains no external execution evidence, accepted registry records, completed evaluation jobs, promotion dossiers, authorizations, or empirical scores. OpenAI Images, Midjourney, and SDXL/Diffusers remain at their existing support tiers. Authorization never changes the adapter registry automatically.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).
 
@@ -101,3 +101,8 @@ Owner-supplied evidence can now be checked against explicit request and result s
 ## Version 2.4 evidence evaluation
 
 Only accepted evidence records may enter the evaluation queue. Evaluation jobs pin all governed versions, preserve append-only reviewer events, and resolve to completed, needs-revision, blocked, or cancelled without changing adapter status.
+
+
+## Version 2.5 promotion decisions
+
+Only completed evaluation jobs and eligible aggregates may enter a promotion dossier. Recommendations and authorizations are append-only governance records. Adapter registry mutation requires a separate release action with before/after snapshots, rollback instructions, stable-release QA, and documentation updates.

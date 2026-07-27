@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.5.0 — Sprint 017: Adapter Promotion Decision Dossier Governance
+
+### Added
+- P0–P9 promotion decision dossier workflow.
+- Append-only promotion decision registry and event-chain governance.
+- Promotion dossier and decision event schemas.
+- Independent technical, governance, and authorization role requirements.
+- `AHIF-PROMO-001` through `AHIF-PROMO-012` QA failure codes.
+- Contract and registry regression tests with a zero-dossier baseline.
+
+### Governance
+- Authorization is explicitly separated from adapter-registry mutation.
+- Promotion, hold, downgrade, and block recommendations must retain adverse evidence and drift findings.
+- No empirical support claim or adapter-tier change is introduced.
+
 ## 2.4.0 — Sprint 016: Evidence Evaluation and Review Queue Governance
 
 ### Added

@@ -183,6 +183,13 @@ Knowledge Graph
 - Immutable job scope, report linkage, and reviewer-separation rules
 - Evaluation schemas, QA, contract tests, and zero-job baseline
 
+### 2.5.0 — Sprint 017: Adapter Promotion Decision Dossier Governance — Completed
+- Deterministic P0–P9 promotion decision workflow
+- Append-only dossier registry and decision event chain
+- Independent technical, governance, and authorization roles
+- Explicit authorization versus adapter-registry mutation boundary
+- Promotion dossier schemas, QA, contract tests, and zero-dossier baseline
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages
