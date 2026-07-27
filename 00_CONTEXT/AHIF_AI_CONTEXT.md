@@ -236,3 +236,10 @@ Treat contract validation and empirical image validation as separate evidence pl
 AHIF 2.0 stabilizes the framework core and adapter contracts. Contract validation and empirical image validation are distinct evidence classes. Never claim image-output equivalence, production-certified target support, or identity fidelity beyond the evidence recorded in `16_MODEL_ADAPTERS/RELEASE_EVIDENCE_REGISTER.md`.
 
 Use `16_MODEL_ADAPTERS/SUPPORT_POLICY.md` to interpret target support status and `01_FOUNDATION/COMPATIBILITY_GUARANTEES.md` for 2.x compatibility obligations.
+
+
+## Empirical validation requirement — Version 2.1.0
+
+Generated outputs are observations, not identity authorities. Any claim that a model adapter preserves identity or semantics must be supported by an immutable empirical evidence bundle, linked identity and semantic evaluation reports, disclosed execution metadata, and the adapter promotion gate.
+
+Do not promote an adapter or claim image-output parity from documentation, request serialization, or a single successful output. External evidence is required and must pass `11_QUALITY_ASSURANCE/adapters/EMPIRICAL_EVIDENCE_QA.md`.
