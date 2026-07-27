@@ -171,8 +171,14 @@ Knowledge Graph
 - Evidence-backed target-profile recommendation governance
 - Aggregation schemas, QA, contract tests, and baseline
 
+### 2.3.0 — Sprint 015: Evidence Ingestion and Registry Governance — Completed
+- Deterministic external evidence intake and classification
+- SHA-256 artifact integrity and provenance validation
+- Duplicate detection and append-only registry governance
+- Ingestion schemas, QA, contract tests, and zero-evidence baseline
+
 ### Future 2.x direction
-- Real evidence ingestion after user-provided model executions
+- Real evidence records after user-provided model executions and evaluations
 - Expanded machine-readable knowledge packages
 - Backward-compatible adapter capability updates
 - Governance-approved adapter profile maintenance

@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.3.0 — Sprint 015: Evidence Ingestion and Registry Governance
+
+### Added
+- deterministic I0–I8 evidence ingestion pipeline;
+- artifact integrity and SHA-256 verification policy;
+- append-only evidence registry governance;
+- ingestion request, result, and registry schemas;
+- evidence ingestion QA and stable AHIF-ING failure codes;
+- contract tests, registry regression, and zero-evidence baseline.
+
+### Claim boundary
+- no external image evidence or empirical scores are included;
+- registry baseline contains zero accepted records;
+- ingestion cannot promote adapters or alter canonical identity authority.
+
+
 ## 2.2.0 — Sprint 014: Evidence Aggregation and Target Profile Governance
 
 ### Added

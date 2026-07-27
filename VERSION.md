@@ -1,16 +1,16 @@
 # Version
 
-Current version: **2.2.0**
+Current version: **2.3.0**
 
 Release type: Backward-Compatible Framework Expansion
 
 Compatibility:
+- AHIF 2.2.0 evidence aggregation and target-profile governance
 - AHIF 2.1.0 empirical validation evidence contracts
 - AHIF 2.0.0 stable framework and adapter contracts
-- Canonical Final Prompt Package authority
 
 ## Release focus
 
-Version 2.2.0 adds governed evidence aggregation, confidence classification, drift analysis, and evidence-backed target-profile recommendations.
+Version 2.3.0 adds deterministic external evidence ingestion, artifact-integrity verification, duplicate detection, and append-only registry governance.
 
-No external generated-image evidence is included. Adapter support tiers remain unchanged and no profile is approved automatically.
+No external generated-image evidence is included. The evidence registry baseline is empty, adapter tiers remain unchanged, and ingestion cannot promote an adapter automatically.

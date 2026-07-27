@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.2.0
-**Status:** Stable Framework + Evidence Aggregation Infrastructure
+**Version:** 2.3.0
+**Status:** Stable Framework + Governed Evidence Ingestion Infrastructure
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.2.0 preserves the stable 2.x framework and adds governed aggregation of accepted empirical evidence into confidence summaries and target-profile recommendations. It preserves a strict boundary between infrastructure, external image evidence, and human adapter-governance decisions.
+Version 2.3.0 preserves the stable 2.x framework and adds deterministic ingestion of owner-supplied execution evidence, artifact-integrity verification, duplicate detection, and an append-only evidence registry. It preserves a strict boundary between infrastructure, external image evidence, and human adapter-governance decisions.
 
 ## Daily use
 
@@ -80,14 +80,19 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.1.0
+## Current release — 2.3.0
 
-Sprint 013 adds the Empirical Validation Evidence Pipeline. It defines immutable execution evidence, identity and semantic evaluation, reproducibility levels, empirical QA, and governed adapter promotion.
+Sprint 015 adds the Evidence Ingestion and Registry Governance layer. It defines deterministic I0–I8 intake, artifact checksums, provenance checks, duplicate detection, quarantine and rejection states, and append-only registry events.
 
-OpenAI Images, Midjourney, and SDXL/Diffusers remain contract-validated experimental targets. Version 2.1.0 provides the infrastructure for real evidence but contains no external executions or generated-image proof.
+The repository baseline contains no external execution evidence and no accepted registry records. OpenAI Images, Midjourney, and SDXL/Diffusers remain contract-validated experimental targets. Ingestion never promotes adapters automatically.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).
 
 ## Version 2.2 evidence aggregation
 
 Accepted evidence bundles may now be grouped into explicit cohorts, aggregated conservatively, audited for outliers and drift, and converted into advisory target-profile recommendations. The framework does not include real external evidence in this release and never promotes adapters automatically.
+
+
+## Version 2.3 evidence ingestion
+
+Owner-supplied evidence can now be checked against explicit request and result schemas, verified using SHA-256 artifact fingerprints, classified as accepted, quarantined, rejected, or duplicate, and indexed in an append-only registry. Empirical evaluation and adapter promotion remain separate governed processes.
