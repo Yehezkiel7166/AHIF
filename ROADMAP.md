@@ -46,10 +46,10 @@ Knowledge Graph
 - Degradation and reproducibility audits
 - Release candidate regression suite and fixtures
 
-### 2.0.0 — Sprint 012: Stable Release
-- Stable adapter contracts
-- Validated multi-model support
-- Consolidated release documentation
+### 2.0.0 — Sprint 012: Stable Release — Completed
+- Stable framework and adapter contracts
+- Contract-validated multi-model support with explicit empirical-evidence boundary
+- Consolidated release governance and documentation
 - 2.0 migration and compatibility guarantees
 
 ## Completed
@@ -147,3 +147,14 @@ Knowledge Graph
 - Validation and identity comparison schemas
 - Cross-model QA with stable AHIF-VAL failure codes
 - Release-candidate regression fixtures and baseline
+
+### 2.0.0
+- Stable release governance and compatibility guarantees
+- Stable adapter support tiers and contract freeze
+- Release evidence register and claim boundary
+- Stable release QA and regression gates
+- 2.0 migration guide and consolidated release documentation
+
+## Post-2.0 direction
+
+Future 2.x work may add empirically validated target profiles, expanded machine-readable knowledge packages, and backward-compatible adapter capabilities. No post-2.0 sprint is authorized by this roadmap yet.

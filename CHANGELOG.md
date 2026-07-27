@@ -1,5 +1,26 @@
 # Changelog
 
+## [2.0.0] — Sprint 012: Stable Release
+
+### Added
+- Stable release governance and release-decision policy.
+- 2.0 compatibility guarantees and semantic-versioning rules.
+- Stable adapter support tiers and promotion requirements.
+- Adapter contract freeze for the 2.0 line.
+- Release evidence register with explicit evidence boundaries.
+- Stable release QA, contract tests, and regression requirements.
+- Migration guide from 1.9.0, 2.0.0-rc1, and 2.0.0-rc2.
+
+### Changed
+- Promoted the AHIF framework core and adapter contracts to stable 2.0.
+- Consolidated README, roadmap, version, manifest, and AI operational context.
+- Defined OpenAI Images, Midjourney, and SDXL/Diffusers as contract-validated experimental targets.
+
+### Compatibility
+- Backward compatible with 2.0.0-rc2.
+- No canonical file, schema, adapter, knowledge package, or previous test was removed.
+- No empirical image-output equivalence or production-certified target support is claimed.
+
 ## [2.0.0-rc2] — Sprint 011: Cross-Model Validation
 
 ### Added

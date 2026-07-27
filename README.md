@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.0.0-rc2
-**Status:** Cross-Model Validation — Release Candidate 2
+**Version:** 2.0.0
+**Status:** Stable Framework Release
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.0.0-rc2 adds formal cross-model validation to the identity-first pipeline. It freezes canonical inputs, validates deterministic adapter requests, audits semantic degradation, defines identity-preservation evidence, and prevents support claims from exceeding available evidence.
+Version 2.0.0 stabilizes the complete identity-first framework pipeline, machine-readable contracts, release governance, compatibility guarantees, and model-adapter interfaces. It preserves a strict boundary between repository-level validation and external image-output evidence.
 
 ## Daily use
 
@@ -80,8 +80,10 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.0.0-rc2
+## Current release — 2.0.0
 
-Sprint 011 establishes the Cross-Model Validation layer. It adds deterministic V0–V7 execution, exact evidence binding, identity-preservation comparison, degradation auditing, reproducibility levels, validation schemas, QA gates, and release-candidate regression fixtures. Repository-level contract and semantic validation are complete, while empirical generated-image evidence remains explicitly pending. All adapters remain experimental until the stable 2.0 release gate is satisfied.
+Sprint 012 promotes the AHIF framework core and adapter contract system to stable 2.0. The release adds governance, compatibility guarantees, support tiers, contract-freeze rules, migration guidance, stable-release QA, and an evidence register.
+
+OpenAI Images, Midjourney, and SDXL/Diffusers are contract-validated experimental targets. The repository does not claim image-output parity or production-certified target fidelity without reproducible external evidence.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).

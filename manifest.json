@@ -1,12 +1,12 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "2.0.0-rc2",
-  "status": "cross-model-validation-release-candidate",
+  "version": "2.0.0",
+  "status": "stable-framework-release",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
   "license": "MIT",
-  "latest_sprint": "SPRINT-011-CROSS-MODEL-VALIDATION",
+  "latest_sprint": "SPRINT-012-STABLE-RELEASE",
   "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md",
   "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md",
   "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
@@ -80,5 +80,15 @@
   "cross_model_validation_qa": "11_QUALITY_ASSURANCE/adapters/CROSS_MODEL_VALIDATION_QA.md",
   "cross_model_validation_test": "14_TESTS/adapters/CROSS_MODEL_VALIDATION_CONTRACT_TEST.md",
   "release_candidate_regression": "14_TESTS/adapters/RELEASE_CANDIDATE_REGRESSION_SUITE.md",
-  "cross_model_validation_baseline": "16_MODEL_ADAPTERS/validation/VALIDATION_BASELINE.json"
+  "cross_model_validation_baseline": "16_MODEL_ADAPTERS/validation/VALIDATION_BASELINE.json",
+  "release_governance": "01_FOUNDATION/RELEASE_GOVERNANCE.md",
+  "compatibility_guarantees": "01_FOUNDATION/COMPATIBILITY_GUARANTEES.md",
+  "adapter_support_policy": "16_MODEL_ADAPTERS/SUPPORT_POLICY.md",
+  "adapter_contract_freeze": "16_MODEL_ADAPTERS/API_CONTRACT_FREEZE.md",
+  "release_evidence_register": "16_MODEL_ADAPTERS/RELEASE_EVIDENCE_REGISTER.md",
+  "stable_release_qa": "11_QUALITY_ASSURANCE/release/STABLE_RELEASE_QA.md",
+  "stable_release_contract_test": "14_TESTS/release/STABLE_RELEASE_CONTRACT_TEST.md",
+  "stable_release_regression": "14_TESTS/release/STABLE_RELEASE_REGRESSION.md",
+  "migration_2_0": "docs/MIGRATION_2.0.md",
+  "sprint_012": "docs/sprints/SPRINT-012-STABLE-RELEASE.md"
 }
