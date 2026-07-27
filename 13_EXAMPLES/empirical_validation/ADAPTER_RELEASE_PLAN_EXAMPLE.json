@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "example_only": true,
+  "release_id": "ahif:adapter-release:example-blocked",
+  "release_scope_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "framework_version": "2.6.0",
+  "state": "blocked",
+  "authorization": {
+    "dossier_id": "ahif:promotion-dossier:missing-example",
+    "dossier_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+    "recommendation": "promote",
+    "authorization_event_id": "missing"
+  },
+  "adapter": {
+    "adapter_id": "example-adapter",
+    "adapter_version": "0.0.0",
+    "from_tier": "experimental",
+    "to_tier": "validated"
+  },
+  "validation": {
+    "candidate_passed": false,
+    "post_change_passed": false,
+    "failure_codes": [
+      "AHIF-REL-002"
+    ]
+  },
+  "claim_boundary": "Illustrative blocked record. It is not a real authorization, release, or tier change."
+}

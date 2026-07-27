@@ -1,5 +1,24 @@
 # Changelog
 
+## 2.6.0 — Sprint 018: Adapter Release Execution Governance
+
+### Added
+- R0–R9 adapter release execution protocol.
+- Immutable release package, pre-change/post-change snapshot, and rollback governance.
+- Release plan, package manifest, event, and snapshot schemas.
+- Append-only release execution registry with zero-release baseline.
+- `AHIF-REL-001` through `AHIF-REL-014` QA failure codes.
+- Contract and registry regression tests.
+
+### Changed
+- Synchronized the stale README version header.
+- Corrected latest-sprint, upload-guide, and release-validation manifest pointers.
+
+### Governance
+- Promotion authorization remains separate from repository mutation.
+- No release may complete without exact declared mutations, independent approval, post-change validation, rollback readiness, and signoff.
+- No empirical support claim or adapter-tier change is introduced.
+
 ## 2.5.0 — Sprint 017: Adapter Promotion Decision Dossier Governance
 
 ### Added

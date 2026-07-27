@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0.0",
+  "framework_version": "2.6.0",
+  "records": [],
+  "baseline": {
+    "release_plans": 0,
+    "approved_releases": 0,
+    "executed_releases": 0,
+    "completed_releases": 0,
+    "rolled_back_releases": 0,
+    "adapter_tier_changes": 0
+  },
+  "claim_boundary": "No real release authorization, execution, deployment, rollback, or adapter-tier mutation is included."
+}

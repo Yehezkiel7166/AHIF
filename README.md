@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.4.0
-**Status:** Stable Framework + Governed Evidence Evaluation Infrastructure
+**Version:** 2.6.0
+**Status:** Stable Framework + Governed Adapter Release Execution Infrastructure
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.4.0 preserves the stable 2.x framework and adds deterministic post-ingestion evaluation jobs, append-only review events, reviewer-separation controls, and a zero-job evaluation queue baseline. It preserves strict boundaries between ingestion, evaluation, aggregation, and human adapter-promotion governance.
+Version 2.6.0 preserves the stable 2.x framework and adds governed adapter release planning, immutable package and snapshot contracts, independent approval, deterministic rollback, and append-only execution records. It preserves strict boundaries between evidence, evaluation, promotion authorization, and repository mutation.
 
 ## Daily use
 
@@ -80,11 +80,11 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.5.0
+## Current release — 2.6.0
 
-Sprint 017 adds Adapter Promotion Decision Dossier Governance. Completed evaluations and eligible aggregates can be assembled into deterministic P0–P9 dossiers that recommend promote, hold, downgrade, or block outcomes. Dossiers preserve adverse evidence, append-only events, exact policy versions, reviewer separation, and an explicit authorization boundary.
+Sprint 018 adds Adapter Release Execution Governance. An authorized promotion or downgrade dossier may be converted into a deterministic R0–R9 release plan with exact package mutations, immutable before/after snapshots, independent approval, rollback readiness, post-change validation, and append-only signoff.
 
-The repository baseline contains no external execution evidence, accepted registry records, completed evaluation jobs, promotion dossiers, authorizations, or empirical scores. OpenAI Images, Midjourney, and SDXL/Diffusers remain at their existing support tiers. Authorization never changes the adapter registry automatically.
+The repository baseline contains no external execution evidence, accepted registry records, completed evaluation jobs, authorized promotion dossiers, release plans, approvals, executions, or adapter-tier changes. OpenAI Images, Midjourney, and SDXL/Diffusers remain at their existing support tiers.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).
 
@@ -106,3 +106,8 @@ Only accepted evidence records may enter the evaluation queue. Evaluation jobs p
 ## Version 2.5 promotion decisions
 
 Only completed evaluation jobs and eligible aggregates may enter a promotion dossier. Recommendations and authorizations are append-only governance records. Adapter registry mutation requires a separate release action with before/after snapshots, rollback instructions, stable-release QA, and documentation updates.
+
+
+## Version 2.6 release execution
+
+Only an authorized promote or downgrade dossier may open an adapter release plan. Every mutation must be declared, fingerprinted, validated, independently approved, reversible, and reconciled with repository documentation. AHIF 2.6.0 defines this mechanism without executing a real release.

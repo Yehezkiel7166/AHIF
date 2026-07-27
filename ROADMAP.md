@@ -190,6 +190,13 @@ Knowledge Graph
 - Explicit authorization versus adapter-registry mutation boundary
 - Promotion dossier schemas, QA, contract tests, and zero-dossier baseline
 
+### 2.6.0 — Sprint 018: Adapter Release Execution Governance — Completed
+- Deterministic R0–R9 adapter release execution workflow
+- Immutable release package and pre-change/post-change snapshot contracts
+- Independent approval, validation, signoff, and rollback governance
+- Append-only release execution registry and stable AHIF-REL failure codes
+- Release schemas, QA, contract tests, and zero-release baseline
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages

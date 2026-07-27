@@ -264,3 +264,10 @@ Only registry records with accepted ingestion state may enter E0–E9 evaluation
 Only completed evaluation jobs and eligible, drift-reviewed aggregates may enter P0–P9 promotion dossier review. Pin exact adapter, support policy, promotion gate, registry, evidence cutoff, job, and aggregate versions. Preserve adverse evidence and append-only events. Require independent technical review, governance review, and authorization roles.
 
 A dossier may recommend promote, hold, downgrade, or block, but authorization does not mutate the adapter registry. Any tier change requires a separate release action with before/after snapshots, rollback instructions, stable-release QA, changelog, roadmap, manifest, and release documentation updates. Never fabricate evidence, reviewer identities, authorizations, or adapter-tier changes.
+
+
+## Sprint 018 Adapter Release Execution Rule
+
+Treat an authorized promotion dossier as permission to prepare one exact release candidate, not permission to mutate the repository automatically. Resolve the R0–R9 workflow in `16_MODEL_ADAPTERS/release_execution/ADAPTER_RELEASE_EXECUTION_PROTOCOL.md`. Pin the adapter, source and target tiers, registry state, support policy, capability profile, compatibility contract, authorized dossier, and declared mutation set.
+
+Require immutable pre-change and post-change snapshots, package fingerprints, independent approval and validation, deterministic rollback readiness, append-only events, and documentation reconciliation. Block undeclared changes, stale authorization, role conflicts, claim inflation, or any mutation of canonical identity authority. The AHIF 2.6.0 baseline contains no real release plan or adapter-tier change.
