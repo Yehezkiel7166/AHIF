@@ -219,3 +219,8 @@ After Final Prompt release, resolve one exact experimental adapter version and i
 When more than one target adapter is evaluated, compare every adapter result against the same canonical Final Prompt Package. Preserve identity binding, required semantics, realism controls, and blocking negative constraints. Record exact adapter and capability-profile versions, evidence paths, variance types, losses, confidence, and release effects.
 
 Treat target-native syntax and control differences as acceptable only when canonical meaning is preserved and variance is disclosed. Block identity drift, silent loss, package mismatch, or unsupported capability assumptions. Version 1.9 validates request-level semantic compatibility only; do not claim empirical generated-image equivalence or production adapter support.
+
+
+## Sprint 010 Machine-Readable Knowledge Rule
+
+Resolve structured knowledge only through `09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_REGISTRY.json`. Treat canonical Markdown modules as authoritative. Cite stable knowledge identifiers in auditable decision and reasoning outputs, validate provenance before consumption, and block packages that conflict with identity invariants or canonical semantics. Candidate packages may support release-candidate evaluation but are not stable until the 2.0 release gate.
