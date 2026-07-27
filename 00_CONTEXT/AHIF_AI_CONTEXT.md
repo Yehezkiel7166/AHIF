@@ -230,3 +230,9 @@ Resolve structured knowledge only through `09_DECISION_ENGINE/knowledge_graph/KN
 Freeze canonical inputs before adapter comparison. Resolve exact adapter, serializer, capability-profile, knowledge-registry, and scenario versions. Validate deterministic request serialization, mandatory semantic preservation, identity-reference integrity, loss disclosure, and support-claim integrity.
 
 Treat contract validation and empirical image validation as separate evidence planes. Never infer generated-image identity preservation from prompt or request similarity. When external output evidence is absent, report `empirical_pending`, keep the adapter experimental, and prohibit production-support claims. Any identity-critical loss, undisclosed degradation, invalid evidence, or overstated support blocks release.
+
+## Stable 2.0 release policy
+
+AHIF 2.0 stabilizes the framework core and adapter contracts. Contract validation and empirical image validation are distinct evidence classes. Never claim image-output equivalence, production-certified target support, or identity fidelity beyond the evidence recorded in `16_MODEL_ADAPTERS/RELEASE_EVIDENCE_REGISTER.md`.
+
+Use `16_MODEL_ADAPTERS/SUPPORT_POLICY.md` to interpret target support status and `01_FOUNDATION/COMPATIBILITY_GUARANTEES.md` for 2.x compatibility obligations.
