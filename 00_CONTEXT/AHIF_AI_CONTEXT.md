@@ -257,3 +257,10 @@ External execution evidence must enter through the I0–I8 ingestion contract. V
 ## Evidence evaluation governance (v2.4.0)
 
 Only registry records with accepted ingestion state may enter E0–E9 evaluation. Pin adapter, profile, scenario, package, and protocol versions; recheck artifact integrity; detect duplicate scope; preserve append-only events; require independent reviewer separation where declared; and attach identity, semantic, and reproducibility reports before completion. Evaluation cannot alter adapter status or canonical identity authority.
+
+
+## Adapter promotion decision governance (v2.5.0)
+
+Only completed evaluation jobs and eligible, drift-reviewed aggregates may enter P0–P9 promotion dossier review. Pin exact adapter, support policy, promotion gate, registry, evidence cutoff, job, and aggregate versions. Preserve adverse evidence and append-only events. Require independent technical review, governance review, and authorization roles.
+
+A dossier may recommend promote, hold, downgrade, or block, but authorization does not mutate the adapter registry. Any tier change requires a separate release action with before/after snapshots, rollback instructions, stable-release QA, changelog, roadmap, manifest, and release documentation updates. Never fabricate evidence, reviewer identities, authorizations, or adapter-tier changes.
