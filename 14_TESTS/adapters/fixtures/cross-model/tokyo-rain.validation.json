@@ -1,0 +1,28 @@
+{
+  "fixture_version": "1.0.0",
+  "scenario_id": "tokyo-rain",
+  "framework_version": "2.0.0-rc2",
+  "expected_adapters": [
+    "openai-images",
+    "midjourney",
+    "sdxl-diffusers"
+  ],
+  "mandatory_semantics": [
+    "canonical_identity_lock",
+    "tokyo_street_anchor",
+    "rain_response",
+    "umbrella_interaction",
+    "wet_surface_reflections",
+    "consistent_practical_lighting",
+    "identity_drift_negative_constraint"
+  ],
+  "expected_validation_state": "contract_validated",
+  "expected_empirical_state": "pending",
+  "production_support_allowed": false,
+  "required_failure_on": [
+    "weather_physics_removed",
+    "identity_reference_removed",
+    "reflection_semantics_removed",
+    "loss_undisclosed"
+  ]
+}

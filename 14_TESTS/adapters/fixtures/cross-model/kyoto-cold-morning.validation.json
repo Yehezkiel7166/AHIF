@@ -1,0 +1,28 @@
+{
+  "fixture_version": "1.0.0",
+  "scenario_id": "kyoto-cold-morning",
+  "framework_version": "2.0.0-rc2",
+  "expected_adapters": [
+    "openai-images",
+    "midjourney",
+    "sdxl-diffusers"
+  ],
+  "mandatory_semantics": [
+    "canonical_identity_lock",
+    "gion_scene_anchor",
+    "cold_weather_layering",
+    "natural_walking_activity",
+    "moderate_portrait_perspective",
+    "soft_cold_morning_light",
+    "identity_drift_negative_constraint"
+  ],
+  "expected_validation_state": "contract_validated",
+  "expected_empirical_state": "pending",
+  "production_support_allowed": false,
+  "required_failure_on": [
+    "identity_reference_removed",
+    "required_semantic_removed",
+    "loss_undisclosed",
+    "support_claim_overstated"
+  ]
+}
