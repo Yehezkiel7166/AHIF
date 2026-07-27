@@ -1,0 +1,42 @@
+{
+  "package_id": "AHIF-KP-FASHION-CONTEXT",
+  "package_version": "1.0.0-rc1",
+  "schema_version": "1.0",
+  "status": "candidate",
+  "domain": "FASHION",
+  "canonical_sources": [
+    "05_FASHION/CONTEXT_AWARE_STYLING.md",
+    "05_FASHION/HAIR_MAKEUP_ACCESSORIES.md"
+  ],
+  "records": [
+    {
+      "id": "AHIF-KG-FASHION-0001",
+      "label": "Climate-appropriate layering",
+      "domain": "FASHION",
+      "type": "decision-rule",
+      "status": "candidate",
+      "conditions": {"temperature_band": "cold", "activity_intensity": ["low", "moderate"]},
+      "effects": {"wardrobe": ["functional outer layer", "coherent base layer"], "exposure": "reduced"},
+      "constraints": ["preserve body proportions", "avoid decorative layers without function"],
+      "priority": 80,
+      "confidence": 0.95,
+      "provenance": [{"class": "canonical-module", "path": "05_FASHION/CONTEXT_AWARE_STYLING.md", "anchor": "climate and activity"}],
+      "consumer_hints": {"decision_domains": ["outfit", "weather-response"], "adapter_capabilities": ["text-prompt"]}
+    },
+    {
+      "id": "AHIF-KG-FASHION-0002",
+      "label": "Weather-safe hair arrangement",
+      "domain": "FASHION",
+      "type": "decision-rule",
+      "status": "candidate",
+      "conditions": {"weather": ["wind", "rain", "high-humidity"]},
+      "effects": {"hair": "controlled practical arrangement", "loose_strands": "restrained and physically plausible"},
+      "constraints": ["preserve canonical hairline", "do not alter facial geometry"],
+      "priority": 90,
+      "confidence": 0.96,
+      "provenance": [{"class": "canonical-module", "path": "05_FASHION/HAIR_MAKEUP_ACCESSORIES.md", "anchor": "weather adaptation"}],
+      "consumer_hints": {"decision_domains": ["hair", "identity-risk"], "adapter_capabilities": ["identity-reference", "text-prompt"]}
+    }
+  ],
+  "validation": {"schema_validated": true, "semantic_reviewed": true, "identifier_unique": true, "provenance_resolved": true, "review_status": "release-candidate"}
+}

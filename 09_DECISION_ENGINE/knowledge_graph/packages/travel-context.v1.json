@@ -1,0 +1,43 @@
+{
+  "package_id": "AHIF-KP-TRAVEL-CONTEXT",
+  "package_version": "1.0.0-rc1",
+  "schema_version": "1.0",
+  "status": "candidate",
+  "domain": "TRAVEL",
+  "canonical_sources": [
+    "06_TRAVEL_WORLD/LOCATION_INTELLIGENCE.md",
+    "06_TRAVEL_WORLD/WEATHER_TIME_SEASON.md",
+    "06_TRAVEL_WORLD/CULTURAL_RESPECT.md"
+  ],
+  "records": [
+    {
+      "id": "AHIF-KG-TRAVEL-0001",
+      "label": "Location specificity requirement",
+      "domain": "TRAVEL",
+      "type": "validation-rule",
+      "status": "candidate",
+      "conditions": {"location_input": "present"},
+      "effects": {"environment": "use identifiable architecture, terrain, transport, or social cues"},
+      "constraints": ["avoid generic destination substitution", "avoid unsupported landmarks"],
+      "priority": 85,
+      "confidence": 0.94,
+      "provenance": [{"class": "canonical-module", "path": "06_TRAVEL_WORLD/LOCATION_INTELLIGENCE.md", "anchor": "environmental specificity"}],
+      "consumer_hints": {"decision_domains": ["environment", "story"], "adapter_capabilities": ["text-prompt"]}
+    },
+    {
+      "id": "AHIF-KG-TRAVEL-0002",
+      "label": "Cultural respect gate",
+      "domain": "TRAVEL",
+      "type": "blocking-rule",
+      "status": "candidate",
+      "conditions": {"cultural_context": "present"},
+      "effects": {"qa_gate": "cultural-respect-required"},
+      "constraints": ["no caricature", "no decorative stereotype", "no context-inappropriate behavior"],
+      "priority": 100,
+      "confidence": 0.99,
+      "provenance": [{"class": "canonical-module", "path": "06_TRAVEL_WORLD/CULTURAL_RESPECT.md", "anchor": "respect and stereotype avoidance"}],
+      "consumer_hints": {"decision_domains": ["culture", "activity", "fashion"], "adapter_capabilities": ["text-prompt", "negative-constraints"]}
+    }
+  ],
+  "validation": {"schema_validated": true, "semantic_reviewed": true, "identifier_unique": true, "provenance_resolved": true, "review_status": "release-candidate"}
+}

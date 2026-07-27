@@ -1,0 +1,43 @@
+{
+  "package_id": "AHIF-KP-PHOTO-CONTEXT",
+  "package_version": "1.0.0-rc1",
+  "schema_version": "1.0",
+  "status": "candidate",
+  "domain": "PHOTO",
+  "canonical_sources": [
+    "07_PHOTOGRAPHY/CAMERA_DECISION_ENGINE.md",
+    "07_PHOTOGRAPHY/LIGHTING_COMPOSITION.md",
+    "07_PHOTOGRAPHY/IMPERFECTION.md"
+  ],
+  "records": [
+    {
+      "id": "AHIF-KG-PHOTO-0001",
+      "label": "Identity-safe portrait perspective",
+      "domain": "PHOTO",
+      "type": "decision-rule",
+      "status": "candidate",
+      "conditions": {"portrait_emphasis": true, "identity_risk": ["medium", "high"]},
+      "effects": {"perspective": "moderate focal-length logic", "camera_distance": "non-distorting"},
+      "constraints": ["avoid extreme wide-angle facial perspective", "preserve facial proportional relationships"],
+      "priority": 100,
+      "confidence": 0.98,
+      "provenance": [{"class": "canonical-module", "path": "07_PHOTOGRAPHY/CAMERA_DECISION_ENGINE.md", "anchor": "identity-safe camera selection"}],
+      "consumer_hints": {"decision_domains": ["camera", "identity-risk"], "adapter_capabilities": ["text-prompt", "camera-parameters"]}
+    },
+    {
+      "id": "AHIF-KG-PHOTO-0002",
+      "label": "Lighting coherence",
+      "domain": "PHOTO",
+      "type": "validation-rule",
+      "status": "candidate",
+      "conditions": {"scene_lighting": "defined"},
+      "effects": {"lighting": "align time, weather, practical sources, shadows, reflections, and color temperature"},
+      "constraints": ["no contradictory shadow direction", "no unsupported light source"],
+      "priority": 95,
+      "confidence": 0.97,
+      "provenance": [{"class": "canonical-module", "path": "07_PHOTOGRAPHY/LIGHTING_COMPOSITION.md", "anchor": "lighting consistency"}],
+      "consumer_hints": {"decision_domains": ["lighting", "color", "realism"], "adapter_capabilities": ["text-prompt", "negative-constraints"]}
+    }
+  ],
+  "validation": {"schema_validated": true, "semantic_reviewed": true, "identifier_unique": true, "provenance_resolved": true, "review_status": "release-candidate"}
+}

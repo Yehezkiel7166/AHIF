@@ -1,0 +1,37 @@
+{
+  "registry_version": "1.0.0-rc1",
+  "generated_for_release": "2.0.0-rc1",
+  "schema_version": "1.0",
+  "packages": [
+    {
+      "package_id": "AHIF-KP-FASHION-CONTEXT",
+      "domain": "FASHION",
+      "version": "1.0.0-rc1",
+      "status": "candidate",
+      "path": "09_DECISION_ENGINE/knowledge_graph/packages/fashion-context.v1.json",
+      "canonical_sources": ["05_FASHION/CONTEXT_AWARE_STYLING.md", "05_FASHION/HAIR_MAKEUP_ACCESSORIES.md"],
+      "record_count": 2,
+      "consumer_scopes": ["decision", "reasoning", "qa", "adapter"]
+    },
+    {
+      "package_id": "AHIF-KP-TRAVEL-CONTEXT",
+      "domain": "TRAVEL",
+      "version": "1.0.0-rc1",
+      "status": "candidate",
+      "path": "09_DECISION_ENGINE/knowledge_graph/packages/travel-context.v1.json",
+      "canonical_sources": ["06_TRAVEL_WORLD/LOCATION_INTELLIGENCE.md", "06_TRAVEL_WORLD/WEATHER_TIME_SEASON.md", "06_TRAVEL_WORLD/CULTURAL_RESPECT.md"],
+      "record_count": 2,
+      "consumer_scopes": ["decision", "reasoning", "qa", "adapter"]
+    },
+    {
+      "package_id": "AHIF-KP-PHOTO-CONTEXT",
+      "domain": "PHOTO",
+      "version": "1.0.0-rc1",
+      "status": "candidate",
+      "path": "09_DECISION_ENGINE/knowledge_graph/packages/photography-context.v1.json",
+      "canonical_sources": ["07_PHOTOGRAPHY/CAMERA_DECISION_ENGINE.md", "07_PHOTOGRAPHY/LIGHTING_COMPOSITION.md", "07_PHOTOGRAPHY/IMPERFECTION.md"],
+      "record_count": 2,
+      "consumer_scopes": ["decision", "reasoning", "qa", "adapter"]
+    }
+  ]
+}
