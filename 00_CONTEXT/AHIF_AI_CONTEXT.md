@@ -238,8 +238,12 @@ AHIF 2.0 stabilizes the framework core and adapter contracts. Contract validatio
 Use `16_MODEL_ADAPTERS/SUPPORT_POLICY.md` to interpret target support status and `01_FOUNDATION/COMPATIBILITY_GUARANTEES.md` for 2.x compatibility obligations.
 
 
-## Empirical validation requirement — Version 2.1.0
+## Empirical validation requirement — Version 2.2.0
 
 Generated outputs are observations, not identity authorities. Any claim that a model adapter preserves identity or semantics must be supported by an immutable empirical evidence bundle, linked identity and semantic evaluation reports, disclosed execution metadata, and the adapter promotion gate.
 
 Do not promote an adapter or claim image-output parity from documentation, request serialization, or a single successful output. External evidence is required and must pass `11_QUALITY_ASSURANCE/adapters/EMPIRICAL_EVIDENCE_QA.md`.
+
+## Evidence aggregation rule
+
+Only QA-accepted empirical evidence bundles may be aggregated. Preserve explicit cohorts, source bundle IDs, adverse evidence, confidence limits, and drift findings. Aggregates and target-profile recommendations are advisory; human governance is mandatory for adapter status changes.
