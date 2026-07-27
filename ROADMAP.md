@@ -177,8 +177,14 @@ Knowledge Graph
 - Duplicate detection and append-only registry governance
 - Ingestion schemas, QA, contract tests, and zero-evidence baseline
 
+### 2.4.0 — Sprint 016: Evidence Evaluation and Review Queue Governance — Completed
+- Deterministic E0–E9 post-ingestion evaluation workflow
+- Append-only evaluation queue and governed state transitions
+- Immutable job scope, report linkage, and reviewer-separation rules
+- Evaluation schemas, QA, contract tests, and zero-job baseline
+
 ### Future 2.x direction
-- Real evidence records after user-provided model executions and evaluations
+- Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages
 - Backward-compatible adapter capability updates
 - Governance-approved adapter profile maintenance

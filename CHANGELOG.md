@@ -1,5 +1,21 @@
 # Changelog
 
+## 2.4.0 — Sprint 016: Evidence Evaluation and Review Queue Governance
+
+### Added
+- deterministic E0–E9 evidence evaluation workflow;
+- append-only evaluation queue governance and state model;
+- immutable evaluation job and event schemas;
+- reviewer-separation, duplicate-scope, and report-completion gates;
+- evidence evaluation QA and stable AHIF-EVAL failure codes;
+- contract tests, queue regression, illustrative blocked job, and zero-job baseline.
+
+### Claim boundary
+- no external image evidence, empirical scores, or reviewer identities are included;
+- evidence registry and evaluation queue baselines remain empty;
+- evaluation cannot promote adapters or alter canonical identity authority.
+
+
 ## 2.3.0 — Sprint 015: Evidence Ingestion and Registry Governance
 
 ### Added

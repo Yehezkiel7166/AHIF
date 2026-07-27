@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.3.0
-**Status:** Stable Framework + Governed Evidence Ingestion Infrastructure
+**Version:** 2.4.0
+**Status:** Stable Framework + Governed Evidence Evaluation Infrastructure
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.3.0 preserves the stable 2.x framework and adds deterministic ingestion of owner-supplied execution evidence, artifact-integrity verification, duplicate detection, and an append-only evidence registry. It preserves a strict boundary between infrastructure, external image evidence, and human adapter-governance decisions.
+Version 2.4.0 preserves the stable 2.x framework and adds deterministic post-ingestion evaluation jobs, append-only review events, reviewer-separation controls, and a zero-job evaluation queue baseline. It preserves strict boundaries between ingestion, evaluation, aggregation, and human adapter-promotion governance.
 
 ## Daily use
 
@@ -80,11 +80,11 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.3.0
+## Current release — 2.4.0
 
-Sprint 015 adds the Evidence Ingestion and Registry Governance layer. It defines deterministic I0–I8 intake, artifact checksums, provenance checks, duplicate detection, quarantine and rejection states, and append-only registry events.
+Sprint 016 adds Evidence Evaluation and Review Queue Governance. Accepted evidence records can be converted into deterministic E0–E9 evaluation jobs for identity, semantic, and reproducibility review. Jobs use immutable pinned inputs, governed state transitions, append-only events, duplicate-scope detection, and independent-review gates.
 
-The repository baseline contains no external execution evidence and no accepted registry records. OpenAI Images, Midjourney, and SDXL/Diffusers remain contract-validated experimental targets. Ingestion never promotes adapters automatically.
+The repository baseline contains no external execution evidence, no accepted registry records, no queued jobs, and no empirical scores. OpenAI Images, Midjourney, and SDXL/Diffusers remain contract-validated experimental targets. Evaluation never promotes adapters automatically.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).
 
@@ -96,3 +96,8 @@ Accepted evidence bundles may now be grouped into explicit cohorts, aggregated c
 ## Version 2.3 evidence ingestion
 
 Owner-supplied evidence can now be checked against explicit request and result schemas, verified using SHA-256 artifact fingerprints, classified as accepted, quarantined, rejected, or duplicate, and indexed in an append-only registry. Empirical evaluation and adapter promotion remain separate governed processes.
+
+
+## Version 2.4 evidence evaluation
+
+Only accepted evidence records may enter the evaluation queue. Evaluation jobs pin all governed versions, preserve append-only reviewer events, and resolve to completed, needs-revision, blocked, or cancelled without changing adapter status.
