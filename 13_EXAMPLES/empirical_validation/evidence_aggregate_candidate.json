@@ -1,0 +1,43 @@
+{
+  "aggregate_id": "agg.example.openai-images.2026-07-27.r1",
+  "schema_version": "1.0.0",
+  "adapter_profile_id": "openai-images.experimental.v1",
+  "model_scope": [
+    "example-model-version"
+  ],
+  "protocol_versions": [
+    "empirical-validation.v1"
+  ],
+  "source_bundle_ids": [
+    "example.bundle.001",
+    "example.bundle.002"
+  ],
+  "cohorts": [
+    {
+      "cohort_id": "example-cohort",
+      "bundle_count": 2,
+      "scenario_classes": [
+        "travel-portrait"
+      ],
+      "metrics": {
+        "identity": 0.0,
+        "semantic": 0.0,
+        "reproducibility": 0.0
+      }
+    }
+  ],
+  "confidence": {
+    "score": 0.0,
+    "class": "C0",
+    "limiting_dimensions": [
+      "no-real-evidence"
+    ]
+  },
+  "outliers": [],
+  "drift_findings": [],
+  "claim_boundary": "Illustrative structure only; contains no empirical result.",
+  "provenance": {
+    "generated_at": "2026-07-27T00:00:00Z",
+    "generator_version": "AHIF-2.2.0-example"
+  }
+}
