@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0.0",
+  "example_only": true,
+  "job_id": "ahif:eval:example-record:000000000000",
+  "record_id": "example-record-not-present-in-baseline",
+  "scope_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "policy_version": "2.4.0",
+  "state": "blocked",
+  "dimensions": [
+    "identity",
+    "semantics",
+    "reproducibility"
+  ],
+  "pinned_inputs": {
+    "adapter_id": "example-adapter",
+    "adapter_version": "0.0.0-example",
+    "capability_profile_version": "0.0.0-example",
+    "scenario_id": "example-scenario",
+    "canonical_package_id": "example-package",
+    "identity_protocol_version": "example",
+    "semantic_protocol_version": "example"
+  },
+  "required_reports": {
+    "identity": null,
+    "semantic": null,
+    "reproducibility": null
+  },
+  "review": {
+    "primary_actor_role": null,
+    "independent_actor_role": null,
+    "independent_review_required": true
+  },
+  "supersedes_job_id": null,
+  "events": [],
+  "adapter_status_changed": false,
+  "failure_codes": [
+    "AHIF-EVAL-002"
+  ],
+  "claim_boundary": "Illustrative blocked job only. It is not registry evidence and contains no empirical result."
+}
