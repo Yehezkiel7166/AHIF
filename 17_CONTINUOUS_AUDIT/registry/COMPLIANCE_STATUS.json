@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "status_type": "continuous_compliance_status",
+  "ruleset_version": "1.0.0",
+  "state": "baseline_not_audited",
+  "last_audit_id": null,
+  "active_exceptions": 0,
+  "claims": {
+    "production_health_certified": false,
+    "empirical_behavior_certified": false,
+    "adapter_tier_changed": false
+  }
+}

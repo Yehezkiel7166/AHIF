@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "registry_type": "continuous_audit_findings",
+  "append_only": true,
+  "findings": [],
+  "baseline": {
+    "audit_runs": 0,
+    "open_findings": 0,
+    "critical_findings": 0,
+    "approved_exceptions": 0,
+    "closed_findings": 0
+  }
+}

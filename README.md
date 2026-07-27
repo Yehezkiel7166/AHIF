@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.8.0
-**Status:** Stable Framework + Governed Post-Release Observation Infrastructure
+**Version:** 2.9.0
+**Status:** Stable Framework + Continuous Compliance Audit Governance
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.8.0 preserves the stable 2.x framework and adds governed incident intake, bounded containment and recovery, independent authorization and validation, and append-only incident records. It preserves strict boundaries between governance records, external telemetry, operational execution, adapter-tier mutation, and production-health claims.
+Version 2.9.0 preserves the stable 2.x framework and adds governed continuous compliance audits, drift detection, immutable repository snapshots, append-only findings, bounded exceptions, and independent closure validation. It preserves strict boundaries between repository conformance, empirical evidence, operational execution, adapter-tier mutation, and production-health claims.
 
 ## Daily use
 
@@ -68,7 +68,8 @@ Output: final image-generation prompt
 - `13_EXAMPLES/` — worked examples
 - `14_TESTS/` — identity, decision, reasoning, compiler, QA, and final-prompt regression tests
 - `15_FINAL_PROMPT/` — execution orchestration, release contracts, schemas, and final prompt packaging
-- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, compatibility, empirical evidence, aggregation, and target-profile governance
+- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, compatibility, empirical evidence, release, observation, and incident governance
+- `17_CONTINUOUS_AUDIT/` — continuous compliance rules, drift detection, exceptions, snapshots, and append-only audit status
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
@@ -80,11 +81,11 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.8.0
+## Current release — 2.9.0
 
-Sprint 020 adds Adapter Incident Response and Recovery Governance. A governed release observation may open an IR0–IR9 incident workflow with pinned provenance, bounded severity, reversible containment, authorized recovery, immutable snapshots, independent validation, residual-risk review, and append-only closure.
+Sprint 021 adds Continuous Compliance and Governance Audit. A CA0–CA9 workflow now validates canonical release synchronization, manifest paths, JSON integrity, Markdown links, append-only registries, claim boundaries, exceptions, remediation, and independent closure.
 
-The release contains zero real incidents, executed recoveries, rollbacks, deployments, production-health certifications, or adapter-tier changes.
+The release contains zero real audit runs, findings, approved exceptions, empirical certifications, production-health certifications, deployments, rollbacks, or adapter-tier changes.
 
 ## Version 2.2 evidence aggregation
 

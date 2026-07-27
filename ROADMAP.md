@@ -211,6 +211,13 @@ Knowledge Graph
 - Append-only incident registry and stable AHIF-INC failure codes
 - Incident schemas, contract tests, and zero-incident baseline
 
+### 2.9.0 — Sprint 021: Continuous Compliance and Governance Audit — Completed
+- Deterministic CA0–CA9 repository audit workflow
+- Stable compliance rule-set and governance-drift detection
+- Immutable snapshots and time-bounded exception governance
+- Append-only findings and compliance-status baselines
+- Audit schemas, QA, contract tests, and zero-finding baseline
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages

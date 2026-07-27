@@ -1,5 +1,23 @@
 # Changelog
 
+## 2.9.0 — Continuous Compliance and Governance Audit
+
+Added:
+- CA0–CA9 repository compliance audit workflow
+- stable AHIF-COMP rule-set and governance-drift taxonomy
+- immutable audit snapshot and bounded exception policy
+- append-only audit findings and compliance status registries
+- audit report and event schemas
+- AHIF-AUD QA catalog, contract test, and registry regression
+- Sprint 021 and release validation documentation
+
+Changed:
+- release metadata, roadmap, manifest, README, and AI context synchronized to 2.9.0
+- post-2.0 governance chain extended from incident response to continuous repository audit
+
+Claim boundary:
+- no real audit finding, empirical certification, production-health certification, deployment, rollback, or adapter-tier change is asserted
+
 ## 2.8.0 — Adapter Incident Response and Recovery Governance
 
 Added:

@@ -36,3 +36,7 @@ Treat post-release observation as a separate governed process. Only completed an
 
 Treat incident handling as a separate governed process after release observation. Require pinned release and observation provenance, immutable incident scope, bounded severity, reversible containment, independent authorization, recovery validation, append-only events, residual-risk disclosure, and closure signoff. Never fabricate telemetry or actors, execute rollback or deployment, mutate adapter tiers or canonical identity authority, or certify production health. The AHIF 2.8.0 baseline contains zero incident records.
 
+
+## v2.9 audit boundary
+
+Use continuous audit for repository conformance only. Do not infer telemetry, model quality, production health, deployment, rollback, or adapter-tier changes.

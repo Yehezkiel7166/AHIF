@@ -1,0 +1,13 @@
+{
+  "example_only": true,
+  "audit_id": "AUDIT-EXAMPLE-BLOCKED",
+  "repository_version": "2.9.0",
+  "status": "blocked",
+  "blocking_codes": [
+    "AHIF-AUD-004"
+  ],
+  "reason": "Governed snapshot intentionally omitted. This example is not a completed audit.",
+  "operational_actions_executed": false,
+  "adapter_tier_changed": false,
+  "production_health_certified": false
+}

@@ -270,7 +270,7 @@ A dossier may recommend promote, hold, downgrade, or block, but authorization do
 
 Treat an authorized promotion dossier as permission to prepare one exact release candidate, not permission to mutate the repository automatically. Resolve the R0–R9 workflow in `16_MODEL_ADAPTERS/release_execution/ADAPTER_RELEASE_EXECUTION_PROTOCOL.md`. Pin the adapter, source and target tiers, registry state, support policy, capability profile, compatibility contract, authorized dossier, and declared mutation set.
 
-Require immutable pre-change and post-change snapshots, package fingerprints, independent approval and validation, deterministic rollback readiness, append-only events, and documentation reconciliation. Block undeclared changes, stale authorization, role conflicts, claim inflation, or any mutation of canonical identity authority. The AHIF 2.7.0 baseline contains no real release plan or adapter-tier change.
+Require immutable pre-change and post-change snapshots, package fingerprints, independent approval and validation, deterministic rollback readiness, append-only events, and documentation reconciliation. Block undeclared changes, stale authorization, role conflicts, claim inflation, or any mutation of canonical identity authority. The AHIF 2.6.0 baseline contains no real release plan or adapter-tier change.
 
 
 ## Sprint 019 Adapter Release Observation Rule
@@ -281,3 +281,10 @@ Treat post-release observation as a separate governed process. Only completed an
 
 Treat incident handling as a separate governed process after release observation. Require pinned release and observation provenance, immutable incident scope, bounded severity, reversible containment, independent authorization, recovery validation, append-only events, residual-risk disclosure, and closure signoff. Never fabricate telemetry or actors, execute rollback or deployment, mutate adapter tiers or canonical identity authority, or certify production health. The AHIF 2.8.0 baseline contains zero incident records.
 
+
+
+## Sprint 021 Continuous Compliance Audit Rule
+
+Treat repository compliance auditing as a separate governed process after incident-response governance. Resolve CA0–CA9 through `17_CONTINUOUS_AUDIT/CONTINUOUS_AUDIT_PROTOCOL.md`. Pin repository identity, source fingerprint, active rule-set, immutable snapshot, scope, exclusions, and independent roles. Preserve append-only findings, adverse evidence, exceptions, remediation boundaries, and residual risk.
+
+Audit may validate repository conformance only. It must not fabricate external telemetry, empirical model evidence, production-health certification, actors, approvals, deployments, rollbacks, or adapter-tier changes. The AHIF 2.9.0 baseline contains zero audit runs, findings, and approved exceptions.
