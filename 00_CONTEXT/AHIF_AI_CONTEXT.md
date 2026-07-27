@@ -224,3 +224,9 @@ Treat target-native syntax and control differences as acceptable only when canon
 ## Sprint 010 Machine-Readable Knowledge Rule
 
 Resolve structured knowledge only through `09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_REGISTRY.json`. Treat canonical Markdown modules as authoritative. Cite stable knowledge identifiers in auditable decision and reasoning outputs, validate provenance before consumption, and block packages that conflict with identity invariants or canonical semantics. Candidate packages may support release-candidate evaluation but are not stable until the 2.0 release gate.
+
+## Sprint 011 Cross-Model Validation Rule
+
+Freeze canonical inputs before adapter comparison. Resolve exact adapter, serializer, capability-profile, knowledge-registry, and scenario versions. Validate deterministic request serialization, mandatory semantic preservation, identity-reference integrity, loss disclosure, and support-claim integrity.
+
+Treat contract validation and empirical image validation as separate evidence planes. Never infer generated-image identity preservation from prompt or request similarity. When external output evidence is absent, report `empirical_pending`, keep the adapter experimental, and prohibit production-support claims. Any identity-critical loss, undisclosed degradation, invalid evidence, or overstated support blocks release.

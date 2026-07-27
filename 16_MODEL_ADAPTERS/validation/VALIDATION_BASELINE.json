@@ -1,0 +1,36 @@
+{
+  "baseline_version": "2.0.0-rc2",
+  "validation_scope": "repository_contract_and_semantic_fixtures",
+  "canonical_authority": "Final Prompt Package",
+  "adapters": [
+    {
+      "adapter_id": "openai-images",
+      "status": "contract_validated",
+      "empirical_status": "pending",
+      "support_level": "experimental"
+    },
+    {
+      "adapter_id": "midjourney",
+      "status": "contract_validated",
+      "empirical_status": "pending",
+      "support_level": "experimental"
+    },
+    {
+      "adapter_id": "sdxl-diffusers",
+      "status": "contract_validated",
+      "empirical_status": "pending",
+      "support_level": "experimental"
+    }
+  ],
+  "fixtures": [
+    "kyoto-cold-morning",
+    "tokyo-rain"
+  ],
+  "stable_release_blockers": [
+    "external_execution_evidence",
+    "identity_preservation_reports",
+    "current_degradation_audits",
+    "release_regression_execution"
+  ],
+  "claim": "No empirical image-output equivalence or production support is claimed."
+}
