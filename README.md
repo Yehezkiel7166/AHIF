@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.1.0
-**Status:** Stable Framework + Empirical Validation Infrastructure
+**Version:** 2.2.0
+**Status:** Stable Framework + Evidence Aggregation Infrastructure
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.0.0 stabilizes the complete identity-first framework pipeline, machine-readable contracts, release governance, compatibility guarantees, and model-adapter interfaces. It preserves a strict boundary between repository-level validation and external image-output evidence.
+Version 2.2.0 preserves the stable 2.x framework and adds governed aggregation of accepted empirical evidence into confidence summaries and target-profile recommendations. It preserves a strict boundary between infrastructure, external image evidence, and human adapter-governance decisions.
 
 ## Daily use
 
@@ -68,7 +68,7 @@ Output: final image-generation prompt
 - `13_EXAMPLES/` — worked examples
 - `14_TESTS/` — identity, decision, reasoning, compiler, QA, and final-prompt regression tests
 - `15_FINAL_PROMPT/` — execution orchestration, release contracts, schemas, and final prompt packaging
-- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, compatibility, cross-model validation, and empirical evidence governance
+- `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, compatibility, empirical evidence, aggregation, and target-profile governance
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
@@ -87,3 +87,7 @@ Sprint 013 adds the Empirical Validation Evidence Pipeline. It defines immutable
 OpenAI Images, Midjourney, and SDXL/Diffusers remain contract-validated experimental targets. Version 2.1.0 provides the infrastructure for real evidence but contains no external executions or generated-image proof.
 
 The permanent architectural rules are defined in [`PROJECT_CONSTITUTION.md`](PROJECT_CONSTITUTION.md).
+
+## Version 2.2 evidence aggregation
+
+Accepted evidence bundles may now be grouped into explicit cohorts, aggregated conservatively, audited for outliers and drift, and converted into advisory target-profile recommendations. The framework does not include real external evidence in this release and never promotes adapters automatically.

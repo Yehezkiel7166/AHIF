@@ -164,8 +164,15 @@ Knowledge Graph
 - Adapter promotion and downgrade governance
 - Empirical evidence schemas, QA, and regression tests
 
+### 2.2.0 — Sprint 014: Evidence Aggregation and Target Profile Governance — Completed
+- Evidence eligibility, cohorting, and aggregation architecture
+- Conservative confidence classes and limiting-dimension reporting
+- Outlier and model-version drift protocol
+- Evidence-backed target-profile recommendation governance
+- Aggregation schemas, QA, contract tests, and baseline
+
 ### Future 2.x direction
-- Empirically validated target profiles based on accepted evidence
+- Real evidence ingestion after user-provided model executions
 - Expanded machine-readable knowledge packages
 - Backward-compatible adapter capability updates
-- Automated evidence aggregation after governance approval
+- Governance-approved adapter profile maintenance

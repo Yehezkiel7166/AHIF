@@ -1,5 +1,20 @@
 # Changelog
 
+## 2.2.0 — Sprint 014: Evidence Aggregation and Target Profile Governance
+
+### Added
+- governed evidence aggregation architecture and eligibility policy;
+- confidence aggregation, outlier detection, and drift protocol;
+- target-profile recommendation governance;
+- aggregate, recommendation, and governance report schemas;
+- aggregation QA, contract tests, regression tests, and zero-evidence baseline.
+
+### Claim boundary
+- no external image evidence or empirical scores are included;
+- no adapter status changes automatically;
+- canonical identity authority is unchanged.
+
+
 ## [2.1.0] — Sprint 013: Empirical Validation Evidence Pipeline
 
 ### Added
