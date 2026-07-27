@@ -1,0 +1,51 @@
+{
+  "example_only": true,
+  "schema_version": "1.0.0",
+  "dossier_id": "ahif:promotion-dossier:example-blocked",
+  "scope_fingerprint": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "policy_version": "2.5.0",
+  "state": "blocked",
+  "adapter": {
+    "adapter_id": "example-adapter",
+    "adapter_version": "0.0.0-example",
+    "current_tier": "contract_validated_experimental",
+    "requested_tier": "empirically_validated_preview"
+  },
+  "pinned_inputs": {
+    "support_policy_version": "2.5.0",
+    "promotion_gate_version": "2.5.0",
+    "adapter_registry_version": "example",
+    "evidence_cutoff": "example-only",
+    "evaluation_job_ids": [],
+    "aggregate_ids": []
+  },
+  "coverage": {
+    "required_scenarios": 1,
+    "accepted_scenarios": 0,
+    "adverse_scenarios": 0,
+    "missing_scenarios": [
+      "owner-supplied execution evidence"
+    ]
+  },
+  "findings": {
+    "identity": {},
+    "semantics": {},
+    "reproducibility": {},
+    "drift": {},
+    "blocking": [
+      "No real completed evaluation jobs are present."
+    ]
+  },
+  "review": {
+    "technical_reviewer_role": null,
+    "governance_reviewer_role": null,
+    "authorizing_role": null,
+    "separation_satisfied": false
+  },
+  "recommendation": "block",
+  "authorization": null,
+  "supersedes_dossier_id": null,
+  "events": [],
+  "adapter_registry_changed": false,
+  "claim_boundary": "Illustrative blocked record only; not operational evidence or a real adapter decision."
+}
