@@ -252,3 +252,8 @@ Only QA-accepted empirical evidence bundles may be aggregated. Preserve explicit
 ## Evidence ingestion governance (v2.3)
 
 External execution evidence must enter through the I0–I8 ingestion contract. Verify artifact fingerprints, provenance, duplicate state, and evaluation links. Classify evidence as accepted, quarantined, rejected, or duplicate. Never treat generated output as canonical identity and never change adapter status during ingestion.
+
+
+## Evidence evaluation governance (v2.4.0)
+
+Only registry records with accepted ingestion state may enter E0–E9 evaluation. Pin adapter, profile, scenario, package, and protocol versions; recheck artifact integrity; detect duplicate scope; preserve append-only events; require independent reviewer separation where declared; and attach identity, semantic, and reproducibility reports before completion. Evaluation cannot alter adapter status or canonical identity authority.
