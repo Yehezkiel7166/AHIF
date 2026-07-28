@@ -14,6 +14,6 @@ health:
 failure-injection:
 	@python3 scripts/test_failure_injection.py
 audit: verify-config validate regression
-	@echo "PASS automation audit"
+	@python3 scripts/repository_checks.py audit
 clean-reports:
 	@rm -rf .artifacts/reports reports

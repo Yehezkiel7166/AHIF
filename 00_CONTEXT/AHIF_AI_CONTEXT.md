@@ -320,3 +320,7 @@ Use `make test` or `scripts/test_all.sh` as the canonical full repository check.
 ## Sprint 028 automation stabilization
 
 Version 3.2.1 consolidates repository checks behind shared configuration and one canonical execution engine. Generated reports are ignored, commit-bound, UTC-stamped, deterministic in structure, and cannot establish production or operational evidence. LTS designation remains `hold`.
+
+## Sprint 029 / version 3.3.0 completion boundary
+
+All 22 required modules and the User Request through Model Adapter pipeline are repository-traced and audit-enforced. Architectural completeness means documented repository hand-offs are closed; it does not establish production readiness, empirical validation, Release Eligibility, or LTS designation. Release Eligibility and LTS remain `hold`.

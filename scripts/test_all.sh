@@ -2,11 +2,12 @@
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
 rm -rf .artifacts/reports; mkdir -p .artifacts/reports
-steps=(verify-config validate regression failure-injection health release-check python-syntax shell-syntax)
+steps=(verify-config validate regression framework-audit failure-injection health release-check python-syntax shell-syntax)
 run(){ [[ "${AHIF_MACHINE:-0}" == 1 ]] || printf '==> %s\n' "$1"; shift; "$@"; }
 run verify-config python3 scripts/repository_checks.py verify-config
 run validate scripts/validate_repository.sh
 run regression scripts/run_regression.sh
+run framework-audit python3 scripts/repository_checks.py audit
 run failure-injection python3 scripts/test_failure_injection.py
 run health python3 scripts/repository_health.py
 run release-check scripts/release_gate.sh

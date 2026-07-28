@@ -1,15 +1,11 @@
 # Version
 
-Current version: **3.2.1**
+Current version: **3.3.0**
 
-Release type: Backward-Compatible Minor Verification Expansion
+Release type: Backward-Compatible Minor Framework Audit Capability
 
 ## Semantic-version decision
 
-Sprint 027 adds a public developer command surface, structured report contract, controlled negative-test harness, and stronger release enforcement. These are substantial backward-compatible capabilities, so the repository policy supports **3.2.1**, rather than the patch-only 3.1.1. No 4.0.0 breaking change is introduced.
+Sprint 029 adds a public, executable framework-completion audit; a repository-wide traceability matrix; completeness, gap, and acceptance records; and enforcement of all 22 required modules and the complete logical pipeline. These are repository-visible, backward-compatible capabilities that justify the minor version **3.3.0** under the existing semantic-version policy. No breaking change is introduced.
 
-All 3.1.0 and earlier compatibility guarantees, canonical identity authority, adapter tiers, and claim boundaries remain unchanged. Repository verification can establish only checked-out artifact conformance. Release eligibility and the LTS designation remain **HOLD** because separate governance and operational evidence is absent.
-
-## Sprint 028 stabilization
-
-Sprint 028 consolidates the existing verification surface and corrects automation reliability without adding a meaningful public framework capability. The patch version **3.2.1** is therefore appropriate. LTS remains **HOLD**.
+Canonical identity authority, compatibility guarantees, adapter tiers, governance philosophy, historical records, and claim boundaries remain unchanged. Repository architecture is complete within the documented framework boundary, but repository conformance is not production or empirical validation. Release Eligibility and LTS remain **HOLD** because their separately governed evidence is absent.

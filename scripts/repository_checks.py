@@ -44,7 +44,7 @@ def load_config(path: Path = CONFIG_PATH, root: Path = ROOT) -> dict[str, Any]:
         data = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, UnicodeError, json.JSONDecodeError) as exc:
         raise ConfigError(f"configuration unreadable: {exc}") from exc
-    required = {"schema_version", "version", "sprint", "metadata_files", "source_of_truth_files", "required_workflows", "required_scripts", "required_registries", "reports", "ignored_fixture_paths", "claim_boundary_phrases", "exit_codes"}
+    required = {"schema_version", "version", "sprint", "metadata_files", "source_of_truth_files", "required_modules", "completion_artifacts", "required_workflows", "required_scripts", "required_registries", "reports", "ignored_fixture_paths", "claim_boundary_phrases", "exit_codes"}
     missing = sorted(required - data.keys())
     if missing:
         raise ConfigError(f"missing configuration keys: {', '.join(missing)}")
@@ -59,14 +59,17 @@ def load_config(path: Path = CONFIG_PATH, root: Path = ROOT) -> dict[str, Any]:
     if data["exit_codes"] != {"PASS": 0, "HOLD": 0, "FAIL": 1, "INTERNAL_ERROR": 2}:
         raise ConfigError("invalid exit-code mappings")
     report_values = list(data["reports"].values()) if isinstance(data["reports"], dict) else []
-    all_paths = [*data["metadata_files"], *data["source_of_truth_files"], *data["required_workflows"], *data["required_scripts"], *data["required_registries"], *report_values]
+    all_paths = [*data["metadata_files"], *data["source_of_truth_files"], *data["required_modules"], *data["completion_artifacts"], *data["required_workflows"], *data["required_scripts"], *data["required_registries"], *report_values]
     for value in all_paths:
         p = PurePosixPath(value)
         if p.is_absolute() or ".." in p.parts or "\\" in value:
             raise ConfigError(f"path must be normalized and repository-relative: {value}")
-    for value in [*data["metadata_files"], *data["source_of_truth_files"], *data["required_workflows"], *data["required_scripts"], *data["required_registries"]]:
+    for value in [*data["metadata_files"], *data["source_of_truth_files"], *data["completion_artifacts"], *data["required_workflows"], *data["required_scripts"], *data["required_registries"]]:
         if not (root / value).is_file():
             raise ConfigError(f"unknown required path: {value}")
+    for value in data["required_modules"]:
+        if not (root / value).is_dir():
+            raise ConfigError(f"unknown required module: {value}")
     return data
 
 
@@ -132,7 +135,7 @@ class Engine:
             if manifest.get(key) != value: errors.append(f"manifest.{key} must be {value!r}")
         for name in self.config["metadata_files"]:
             text = (self.root / name).read_text(encoding="utf-8")
-            for token in (self.config["version"], "Sprint 028"):
+            for token in (self.config["version"], "Sprint 029"):
                 if token not in text: errors.append(f"{name} is missing synchronized token: {token}")
         return errors
 
@@ -151,6 +154,19 @@ class Engine:
                 if not isinstance(json.loads((self.root / name).read_text()), (dict, list)): errors.append(f"registry root is not object/array: {name}")
             except Exception as exc: errors.append(f"registry invalid: {name}: {exc}")
         return self.emit("governance-regression", {"lts_hold": self.lts_errors(), "registries": errors}, output=output)
+
+    def audit(self, output: Path | None) -> int:
+        module_errors = [f"module has no tracked files: {name}" for name in self.config["required_modules"] if not any(rel(p, self.root).startswith(name + "/") for p in self.files)]
+        artifact_errors = [f"completion artifact is not manifest-registered: {name}" for name in self.config["completion_artifacts"] if name not in json.loads((self.root / "manifest.json").read_text()).values()]
+        pipeline = {
+            "user_request": "12_TEMPLATES/USER_INPUT_TEMPLATE.md", "context": "00_CONTEXT/AHIF_AI_CONTEXT.md", "identity": "02_CORE_IDENTITY/CANONICAL_IDENTITY.md",
+            "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md", "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
+            "reasoning_engine": "09_DECISION_ENGINE/reasoning/REASONING_PIPELINE.md", "prompt_compiler": "10_PROMPT_COMPILER/COMPILER_PIPELINE.md",
+            "quality_assurance": "11_QUALITY_ASSURANCE/QA_PIPELINE.md", "final_prompt": "15_FINAL_PROMPT/EXECUTION_ORCHESTRATION.md",
+            "model_adapter": "16_MODEL_ADAPTERS/MODEL_SPECIFIC_ADAPTER_LAYER.md",
+        }
+        pipeline_errors = [f"pipeline stage missing: {stage} -> {path}" for stage, path in pipeline.items() if not (self.root / path).is_file()]
+        return self.emit("framework-completion-audit", {"artifacts": artifact_errors, "links": self.link_errors(), "manifest": self.manifest_errors(), "modules": module_errors, "pipeline": pipeline_errors}, output=output, extra={"modules_audited": len(self.config["required_modules"]), "pipeline_stages_audited": len(pipeline)})
 
     def health(self, output: Path | None) -> int:
         checks = {"configuration": [], "lts_hold": self.lts_errors(), "manifest": self.manifest_errors()}
@@ -181,7 +197,7 @@ def report_path(root: Path, config: dict[str, Any], key: str, explicit: Path | N
 
 def main() -> int:
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=["verify-config", "validate", "regression", "health", "release"])
+    parser.add_argument("command", choices=["verify-config", "validate", "regression", "audit", "health", "release"])
     parser.add_argument("--root", type=Path, default=ROOT)
     parser.add_argument("--config", type=Path, default=CONFIG_PATH)
     parser.add_argument("--output", type=Path)
@@ -195,7 +211,7 @@ def main() -> int:
             print(json.dumps({"status": "pass", "exit_code": 0}, separators=(",", ":")) if args.machine else "PASS configuration")
             return 0
         engine = Engine(root, config, args.machine, args.verbose)
-        key = {"validate": "validation", "regression": "regression", "health": "health", "release": "release"}[args.command]
+        key = {"validate": "validation", "regression": "regression", "audit": "completion_audit", "health": "health", "release": "release"}[args.command]
         return getattr(engine, args.command)(report_path(root, config, key, args.output))
     except ConfigError as exc:
         print(f"FAIL configuration: {exc}", file=sys.stderr); return 1
