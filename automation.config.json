@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "version": "3.6.0",
-  "sprint": "SPRINT-032-EMPIRICAL-VALIDATION",
+  "version": "3.7.0",
+  "sprint": "SPRINT-033-FRAMEWORK-INTEGRATION-HARDENING",
   "metadata_files": [
     "00_CONTEXT/AHIF_AI_CONTEXT.md",
     "CHANGELOG.md",
@@ -44,7 +44,8 @@
     "FRAMEWORK_TRACEABILITY_MATRIX.md",
     "FRAMEWORK_COMPLETENESS_REPORT.md",
     "FRAMEWORK_GAP_ANALYSIS.md",
-    "FRAMEWORK_ACCEPTANCE_CHECKLIST.md"
+    "FRAMEWORK_ACCEPTANCE_CHECKLIST.md",
+    "FRAMEWORK_INTEGRATION_REPORT.md"
   ],
   "required_workflows": [
     ".github/workflows/release-gate.yml",
@@ -69,7 +70,12 @@
     "20_OPERATIONAL_RESILIENCE/registry/RESILIENCE_STATUS.json",
     "21_LTS_GOVERNANCE/registry/LTS_MAINTENANCE_REGISTRY.json",
     "21_LTS_GOVERNANCE/registry/LTS_RELEASE_REGISTRY.json",
-    "21_LTS_GOVERNANCE/registry/LTS_STATUS.json"
+    "21_LTS_GOVERNANCE/registry/LTS_STATUS.json",
+    "22_EMPIRICAL_VALIDATION/executions/EXECUTION_REGISTRY.json",
+    "22_EMPIRICAL_VALIDATION/evidence/EVIDENCE_REGISTRY.json",
+    "22_EMPIRICAL_VALIDATION/evaluations/EVALUATION_REGISTRY.json",
+    "22_EMPIRICAL_VALIDATION/baseline/COMPARISON_REGISTRY.json",
+    "22_EMPIRICAL_VALIDATION/reports/REPORT_REGISTRY.json"
   ],
   "reports": {
     "directory": ".artifacts/reports",

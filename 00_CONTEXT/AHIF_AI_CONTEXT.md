@@ -2,9 +2,9 @@
 
 This file is the operational context for ChatGPT.
 
-AHIF 3.6.0 / Sprint 032 retains `Framework.execute()` as the canonical local
-execution interface and adds the repository empirical evidence framework. The runtime runs every documented pipeline stage through mandatory
-QA and adapter request preparation without invoking an external model. Release
+AHIF 3.7.0 / Sprint 033 retains `Framework.execute()` as the canonical local
+execution interface and integrates the repository empirical evidence contracts. The runtime runs every documented pipeline stage through mandatory
+QA, adapter request preparation, and claim-bounded empirical metadata preparation without invoking an external model or mutating a registry. Release
 Eligibility and LTS remain HOLD. The empirical registries are empty; never infer completed runs, scores, benchmarks, certification, or production readiness from the infrastructure.
 
 ## Mission

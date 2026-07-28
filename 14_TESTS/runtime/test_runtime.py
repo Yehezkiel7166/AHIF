@@ -27,10 +27,26 @@ class RuntimeEndToEndTest(unittest.TestCase):
         self.assertEqual([x["execution_state"] for x in first["execution_trace"]["stages"]],
                          ["CONTEXT_READY", "IDENTITY_LOCKED", "KNOWLEDGE_READY",
                           "DECISION_COMPLETE", "REASONING_COMPLETE", "PROMPT_COMPILED",
-                          "QA_COMPLETE", "FINAL_PACKAGE_READY", "ADAPTER_READY"])
+                          "QA_COMPLETE", "FINAL_PACKAGE_READY", "ADAPTER_READY",
+                          "EMPIRICAL_VALIDATION_READY"])
         self.assertEqual(first["execution_report"]["validation"]["status"], "pass")
         self.assertTrue(first["final_prompt"])
         self.assertTrue(first["adapter_request"])
+        empirical = first["empirical_validation"]
+        self.assertEqual(empirical["execution_record"]["execution_id"], first["execution_id"])
+        self.assertEqual(empirical["evidence_record"]["execution_id"], first["execution_id"])
+        self.assertEqual(empirical["report"]["claim_boundary"], "NO_PRODUCTION_CLAIM")
+        self.assertFalse(empirical["persisted"])
+
+    def test_complete_flow_has_no_qa_or_adapter_bypass(self):
+        result = Framework.execute(self.request())
+        stages = result["execution_trace"]["stages"]
+        order = {stage["stage"]: stage["execution_order"] for stage in stages}
+        self.assertLess(order["qa"], order["final_prompt"])
+        self.assertLess(order["final_prompt"], order["adapter"])
+        self.assertLess(order["adapter"], order["empirical_validation"])
+        self.assertEqual(result["pipeline_state"]["qa"]["gate"], "pass")
+        self.assertEqual(result["empirical_validation"]["status"], "NOT_EVALUATED")
 
     def test_existing_examples_are_executable(self):
         for path in sorted((ROOT / "13_EXAMPLES/runtime").glob("*.json")):

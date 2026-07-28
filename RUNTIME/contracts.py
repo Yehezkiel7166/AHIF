@@ -7,7 +7,7 @@ from typing import Any, Mapping
 
 from .errors import RuntimeContractError
 
-RUNTIME_VERSION = "3.6.0"
+RUNTIME_VERSION = "3.7.0"
 CONTRACT_VERSION = "1.1"
 
 
@@ -29,6 +29,7 @@ class ExecutionState(str, Enum):
     QA_COMPLETE = "QA_COMPLETE"
     FINAL_PACKAGE_READY = "FINAL_PACKAGE_READY"
     ADAPTER_READY = "ADAPTER_READY"
+    EMPIRICAL_VALIDATION_READY = "EMPIRICAL_VALIDATION_READY"
     FINISHED = "FINISHED"
     FAILED = "FAILED"
 

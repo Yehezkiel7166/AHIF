@@ -12,6 +12,13 @@ from typing import Any, Mapping
 ROOT = Path(__file__).resolve().parent
 SCHEMAS = ROOT / "schemas"
 RECORD_SCHEMAS = {name: SCHEMAS / f"{name}.schema.json" for name in ("scenario", "execution", "evaluation", "evidence", "report", "comparison")}
+REGISTRIES = {
+    "execution": ("executions/EXECUTION_REGISTRY.json", "executions", "execution_id"),
+    "evaluation": ("evaluations/EVALUATION_REGISTRY.json", "evaluations", "evaluation_id"),
+    "evidence": ("evidence/EVIDENCE_REGISTRY.json", "evidence", "evidence_id"),
+    "report": ("reports/REPORT_REGISTRY.json", "reports", "report_id"),
+    "comparison": ("baseline/COMPARISON_REGISTRY.json", "comparisons", "comparison_id"),
+}
 
 class ValidationError(ValueError):
     """A record violates its repository schema."""
@@ -75,6 +82,32 @@ def verify_evidence(record: Mapping[str, Any], repository_root: str | Path) -> N
         actual = sha256_file(path)
         if actual != artifact["sha256"]: raise IntegrityError(f"hash mismatch for {artifact['path']}")
 
+def validate_registries(root: str | Path = ROOT) -> dict[str, int]:
+    """Validate registry envelopes, identifiers, and execution references."""
+    base = Path(root)
+    loaded: dict[str, list[dict[str, Any]]] = {}
+    for kind, (relative, collection, identifier) in REGISTRIES.items():
+        payload = json.loads((base / relative).read_text(encoding="utf-8"))
+        if set(payload) != {"schema_version", collection} or payload["schema_version"] != "1.0":
+            raise ValidationError(f"{relative}: incompatible registry envelope")
+        records = payload[collection]
+        if not isinstance(records, list): raise ValidationError(f"{relative}: {collection} must be an array")
+        identifiers = []
+        for record in records:
+            validate_record(kind, record); identifiers.append(record[identifier])
+        if len(identifiers) != len(set(identifiers)):
+            raise ValidationError(f"{relative}: duplicate identifiers")
+        loaded[kind] = records
+    execution_ids = {item["execution_id"] for item in loaded["execution"]}
+    for kind in ("evaluation", "evidence"):
+        orphaned = sorted(item["execution_id"] for item in loaded[kind]
+                          if item["execution_id"] not in execution_ids)
+        if orphaned: raise ValidationError(f"{kind} registry has orphan executions: {', '.join(orphaned)}")
+    for report in loaded["report"]:
+        if report["execution_metadata"].get("execution_id") not in execution_ids:
+            raise ValidationError(f"report registry has orphan report: {report['report_id']}")
+    return {kind: len(records) for kind, records in loaded.items()}
+
 def build_report(execution: Mapping[str, Any], scenario: Mapping[str, Any], prompt_package: Mapping[str, Any]) -> dict[str, Any]:
     """Create metadata-only output; it asserts neither success nor readiness."""
     validate_record("execution", execution); validate_record("scenario", scenario)
@@ -82,3 +115,55 @@ def build_report(execution: Mapping[str, Any], scenario: Mapping[str, Any], prom
     report = {"schema_version":"1.0", "report_id":f"report:{execution['execution_id']}", "execution_metadata":dict(execution), "scenario_metadata":dict(scenario), "prompt_package":dict(prompt_package), "evaluation_status":execution["evaluation_status"], "evidence_status":execution["evidence_status"], "claim_boundary":"NO_PRODUCTION_CLAIM"}
     validate_record("report", report)
     return report
+
+def _canonical_hash(value: Mapping[str, Any]) -> str:
+    encoded = json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=True)
+    return "sha256:" + hashlib.sha256(encoded.encode()).hexdigest()
+
+def prepare_runtime_validation(source: Mapping[str, Any]):
+    """Prepare claim-bounded empirical records for the canonical runtime path.
+
+    The returned registry update is an in-memory append proposal. It deliberately
+    records missing evidence because the runtime neither calls a model nor writes
+    governance registries as a side effect.
+    """
+    from RUNTIME.contracts import StageResult
+    execution_id = source["execution_id"]
+    scenario = {
+        "schema_version": "1.0", "scenario_id": f"runtime:{execution_id}",
+        "title": "Canonical runtime execution", "source": "RUNTIME.Framework.execute",
+        "input": dict(source["user_request"]),
+        "dimensions": ["identity", "environment", "prompt_consistency"],
+        "comments": "Runtime metadata only; no image generation was performed.",
+    }
+    execution = {
+        "schema_version": "1.0", "execution_id": execution_id,
+        "framework_version": "3.7.0", "scenario_id": scenario["scenario_id"],
+        "timestamp": source["timestamp"], "model_adapter": source["adapter_id"],
+        "prompt_package_hash": _canonical_hash(source["prompt_package"]),
+        "image_hash": None, "evaluation_status": "NOT_EVALUATED",
+        "evidence_status": "MISSING", "reviewer": None,
+        "comments": "Adapter request prepared only; no external execution occurred.",
+    }
+    evidence = {
+        "schema_version": "1.0", "evidence_id": f"evidence:{execution_id}",
+        "execution_id": execution_id, "status": "MISSING", "artifacts": [],
+        "collected_at": None, "collector": None,
+        "comments": "No externally produced artifact was supplied.",
+    }
+    validate_record("scenario", scenario)
+    validate_record("execution", execution)
+    validate_record("evidence", evidence)
+    report = build_report(execution, scenario, source["prompt_package"])
+    return StageResult({
+        "status": "NOT_EVALUATED", "evidence_status": "MISSING",
+        "execution_record": execution, "evidence_record": evidence,
+        "report": report,
+        "registry_update": {
+            "execution_id": execution_id,
+            "execution_registry": execution,
+            "evidence_registry": evidence,
+            "report_registry": report,
+        },
+        "persisted": False, "claim_boundary": "NO_PRODUCTION_CLAIM",
+    })

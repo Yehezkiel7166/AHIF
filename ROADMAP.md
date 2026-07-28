@@ -1,5 +1,12 @@
 # Roadmap
 
+## 3.7.0 — Sprint 033: Framework Integration and Hardening — Completed
+
+- Canonical runtime now reaches empirical-validation metadata and report preparation after QA and adapter preparation
+- Execution, evidence, and report identifiers are cross-referenced deterministically
+- All five empirical registries are audited for canonical envelopes, duplicate IDs, and orphan execution references
+- Remaining work is limited to separately performed model runs, supplied artifacts, and human review; Release Eligibility and LTS remain HOLD
+
 ## 3.6.0 — Sprint 032: Empirical Validation Infrastructure — Completed
 
 - Repository-defined scenarios and empty execution/evidence registries

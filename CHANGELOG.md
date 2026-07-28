@@ -1,5 +1,12 @@
 # Changelog
 
+## 3.7.0 — Sprint 033: Framework Integration and Hardening
+
+- Extended the sole canonical runtime state machine through empirical-validation record and report preparation after the governed adapter handoff.
+- Added deterministic execution/evidence/report cross-references, registry envelope/orphan/duplicate checks, and complete-flow integration tests.
+- Preserved side-effect-free execution: registries receive explicit in-memory append proposals, evidence remains `MISSING`, and no model or external API is invoked.
+- Release Eligibility and LTS remain **HOLD**; no empirical result, benchmark, certification, deployment, or production-readiness claim is made.
+
 ## 3.6.0 — Sprint 032: Empirical Validation Infrastructure
 
 - Added dependency-free Scenario, Execution, Evaluation, Evidence, Comparison, and Report schemas and validators.

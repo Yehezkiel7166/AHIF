@@ -1,7 +1,7 @@
 # AHIF Executable Framework
 
 `Framework.execute()` is the one canonical public execution interface for AHIF
-3.6.0. The compatibility function `execute_framework()` and the command-line
+3.7.0. The compatibility function `execute_framework()` and the command-line
 interface delegate directly to it; they do not implement alternate pipelines.
 
 The framework performs no network calls and does not execute an image model. It
@@ -73,3 +73,9 @@ responsible input followed by a new run.
 Runtime conformance is not empirical model validation, production readiness,
 release eligibility, or an LTS designation. Existing Release Eligibility and
 LTS HOLD decisions are unchanged.
+
+## Sprint 033 integrated handoff
+
+The canonical state machine continues from `ADAPTER_READY` to `EMPIRICAL_VALIDATION_READY`. This final local stage validates a deterministic Scenario/Execution/Evidence/Report package and exposes a registry append proposal in `empirical_validation.registry_update`. The proposal is deliberately not persisted: canonical execution is repeatable and side-effect free, and no external artifact exists. Evidence therefore remains `MISSING` and evaluation remains `NOT_EVALUATED`. There is no QA, final-prompt, adapter, or empirical-contract bypass.
+
+Identical request objects, including their explicit UTC execution timestamp, produce identical structured results. Intentional variability is limited to caller-provided request fields and separately supplied external artifacts or human review; those are outside `Framework.execute()`.

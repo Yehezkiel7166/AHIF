@@ -39,5 +39,7 @@ class EmpiricalValidationTests(unittest.TestCase):
   dimensions={d:'PENDING' for d in read('22_EMPIRICAL_VALIDATION/metrics/EVALUATION_CRITERIA.json')['dimensions']}; dimensions['overall']=5
   evaluation={'schema_version':'1.0','evaluation_id':'v-2','execution_id':'exec-001','status':'PENDING','dimensions':dimensions,'reviewer':None,'reviewed_at':None,'comments':''}
   with self.assertRaises(f.ValidationError): f.validate_record('evaluation',evaluation)
+ def test_empty_canonical_registries_are_consistent(self):
+  self.assertEqual(f.validate_registries(), {'execution':0,'evaluation':0,'evidence':0,'report':0,'comparison':0})
 
 if __name__=='__main__': unittest.main()
