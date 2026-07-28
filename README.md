@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 3.6.0
-**Status:** Stable Framework + Executable Repository Automation; LTS Designation HOLD
+**Version:** 3.7.0
+**Status:** Integrated AHIF Framework; Release Eligibility and LTS Designation HOLD
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -13,16 +13,23 @@ AHIF is a modular software-engineering framework for generating a persistent dig
 ## Framework pipeline
 
 ```text
-Knowledge Graph
+User Request
+→ Context
+→ Core Identity
+→ Knowledge Graph
 → Decision Engine
 → Reasoning Engine
 → Prompt Compiler
 → Quality Assurance
 → Final Prompt
+→ Runtime
 → Model Adapter
+→ Empirical Validation
+→ Evidence Registry Proposal
+→ Framework Result
 ```
 
-Version 3.6.0 preserves the stable framework, canonical identity authority, prior governance modules, and claim boundaries while making repository validation, regression, release gates, and health reporting executable. Repository validation does not establish production health or operational LTS support; the LTS designation remains `hold`.
+Version 3.7.0 preserves the stable framework, canonical identity authority, prior governance modules, and claim boundaries while making repository validation, regression, release gates, and health reporting executable. Repository validation does not establish production health or operational LTS support; the LTS designation remains `hold`.
 
 ## Daily use
 
@@ -91,9 +98,9 @@ The uploaded master photo is the only canonical identity reference. Text may cla
 
 Sprint 029 connects every required module, contract boundary, schema boundary, regression, example, pipeline stage, and output in the [Framework Traceability Matrix](FRAMEWORK_TRACEABILITY_MATRIX.md). The [Completeness Report](FRAMEWORK_COMPLETENESS_REPORT.md) states the audited denominator and result; the [Gap Analysis](FRAMEWORK_GAP_ANALYSIS.md) contains only repository-evidenced gaps; and the [Acceptance Checklist](FRAMEWORK_ACCEPTANCE_CHECKLIST.md) separates architectural acceptance from prohibited production, empirical, release, and LTS claims. Run `make audit` for the executable module, pipeline, manifest, and link gate.
 
-## Current release — 3.6.0
+## Current release — 3.7.0
 
-Sprint 032 adds empirical validation infrastructure while preserving the Sprint 029 completion audit and Sprint 025–028 governance and automation surfaces. Run `scripts/validate_repository.sh`, `scripts/run_regression.sh`, and `scripts/release_gate.sh` locally; pull requests and release tags run equivalent GitHub Actions gates. `python3 scripts/repository_health.py` emits a machine-readable repository-only assessment.
+Sprint 033 integrates the canonical runtime with the existing empirical-validation contracts after mandatory QA and adapter preparation. It emits deterministic, cross-referenced execution/evidence/report records as a non-persisted registry proposal; it does not invoke a model or fabricate evidence. The [Framework Integration Report](FRAMEWORK_INTEGRATION_REPORT.md) records the audited interfaces and remaining work. Run `make test`, `make audit`, and `make release-check` for repository-only verification.
 
 Passing automation establishes repository conformance only. The baseline still contains zero registered LTS releases and zero maintenance events. The LTS designation is `hold`; no maintainer commitment, support adoption, backport execution, SLA achievement, deployment, empirical certification, production health, or production availability is asserted.
 
@@ -141,4 +148,4 @@ Treat repository security as a scoped, evidence-bound governance process. Never 
 
 ## Executable Runtime (Sprint 030)
 
-AHIF 3.6.0 provides a canonical deterministic executable framework in [`RUNTIME/`](RUNTIME/README.md). It executes the architectural pipeline through mandatory QA and prepares, but does not invoke, a registered model adapter. Use `Framework.execute()` or run `python3 -m RUNTIME 13_EXAMPLES/runtime/KYOTO_AUTUMN.json`; run `make runtime-test` for executable end-to-end examples. This capability does not change Release Eligibility or LTS HOLD status.
+AHIF 3.7.0 provides a canonical deterministic executable framework in [`RUNTIME/`](RUNTIME/README.md). It executes the architectural pipeline through mandatory QA and prepares, but does not invoke, a registered model adapter. Use `Framework.execute()` or run `python3 -m RUNTIME 13_EXAMPLES/runtime/KYOTO_AUTUMN.json`; run `make runtime-test` for executable end-to-end examples. This capability does not change Release Eligibility or LTS HOLD status.

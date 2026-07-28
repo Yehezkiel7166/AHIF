@@ -44,3 +44,7 @@ A baseline comparison records baseline and candidate image digests, categorical 
 ```bash
 python3 -m unittest discover -s 14_TESTS/empirical_validation -p 'test_*.py' -v
 ```
+
+## Runtime integration (Sprint 033)
+
+`Framework.execute()` delegates its final local stage to `prepare_runtime_validation()` after QA, final-prompt release control, and adapter preparation. The function validates and returns cross-referenced execution, missing-evidence, and report records. Its `registry_update` is an in-memory proposal, not a persisted empirical claim. `validate_registries()` checks canonical envelopes, record schemas, duplicate identifiers, and execution references across all five registries. External execution, artifact ingestion, and human review remain separate governed actions.

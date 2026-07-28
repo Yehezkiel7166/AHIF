@@ -12,7 +12,7 @@ def command(root, action, config=None, output=None):
  return subprocess.run(args,cwd=ROOT,text=True,capture_output=True)
 def fixture(name, mutate, action='validate'):
  with tempfile.TemporaryDirectory() as temp:
-  repo=Path(temp)/'repo'; shutil.copytree(ROOT,repo,ignore=shutil.ignore_patterns('.git','.artifacts','reports','__pycache__')); mutate(repo)
+  repo=Path(temp)/'repo'; shutil.copytree(ROOT,repo,ignore=shutil.ignore_patterns('.git','.artifacts','__pycache__')); mutate(repo)
   CASES[name]=command(repo,action,repo/'automation.config.json').returncode==1
 fixture('malformed_repository_state',lambda r:(r/'manifest.json').write_text('{'))
 fixture('unknown_required_path',lambda r:(lambda d:(d['required_scripts'].append('scripts/unknown.py'),(r/'automation.config.json').write_text(json.dumps(d))))(copy.deepcopy(CONFIG)))
@@ -21,7 +21,7 @@ fixture('invalid_exit_code_mapping',lambda r:(lambda d:(d['exit_codes'].update({
 fixture('invalid_lts_status',lambda r:(lambda p,d:(d.update({'status':'designated'}),p.write_text(json.dumps(d))))(r/'21_LTS_GOVERNANCE/registry/LTS_STATUS.json',json.loads((r/'21_LTS_GOVERNANCE/registry/LTS_STATUS.json').read_text())),'regression')
 fixture('broken_markdown_link',lambda r:(r/'BROKEN.md').write_text('[missing](no-such-file.md)'))
 with tempfile.TemporaryDirectory() as temp:
- repo=Path(temp)/'repo'; shutil.copytree(ROOT,repo,ignore=shutil.ignore_patterns('.git','.artifacts','reports','__pycache__')); cfg=repo/'automation.config.json'
+ repo=Path(temp)/'repo'; shutil.copytree(ROOT,repo,ignore=shutil.ignore_patterns('.git','.artifacts','__pycache__')); cfg=repo/'automation.config.json'
  for action,key in (('validate','validation'),('regression','regression'),('health','health')): command(repo,action,cfg,repo/CONFIG['reports'][key])
  report=repo/CONFIG['reports']['validation']; data=json.loads(report.read_text()); data['commit_sha']='stale'; report.write_text(json.dumps(data))
  CASES['stale_report_evidence']=command(repo,'release',cfg).returncode==1

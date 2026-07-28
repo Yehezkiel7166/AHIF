@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib
 import json
 from typing import Any, Callable, Mapping
 
@@ -29,6 +30,8 @@ TRANSITIONS = (
     ("qa", ExecutionState.PROMPT_COMPILED, ExecutionState.QA_COMPLETE),
     ("final_prompt", ExecutionState.QA_COMPLETE, ExecutionState.FINAL_PACKAGE_READY),
     ("adapter", ExecutionState.FINAL_PACKAGE_READY, ExecutionState.ADAPTER_READY),
+    ("empirical_validation", ExecutionState.ADAPTER_READY,
+     ExecutionState.EMPIRICAL_VALIDATION_READY),
 )
 
 
@@ -79,6 +82,14 @@ class Framework:
         final = run("final_prompt", {"compiled": compiled.output, "qa": qa.output}, generate_final_prompt)
         adapter = run("adapter", {"final_prompt": final.output,
                                    "adapter_id": source["adapter_id"]}, prepare_model_adapter)
+        empirical_module = importlib.import_module("22_EMPIRICAL_VALIDATION.framework")
+        empirical = run(
+            "empirical_validation",
+            {"execution_id": execution_id, "timestamp": timestamp,
+             "adapter_id": source["adapter_id"], "user_request": context.output,
+             "prompt_package": final.output},
+            empirical_module.prepare_runtime_validation,
+        )
         current = ExecutionState.FINISHED
 
         statuses = [item["execution_status"] for item in trace]
@@ -115,6 +126,7 @@ class Framework:
             "qa_report": qa.output,
             "final_prompt": final.output.get("final_prompt"),
             "adapter_request": adapter.output.get("target_request"),
+            "empirical_validation": empirical.output,
             "metadata": {"framework_version": RUNTIME_VERSION, "execution_id": execution_id,
                          "deterministic": True, "external_model_invoked": False},
             "execution_report": report,

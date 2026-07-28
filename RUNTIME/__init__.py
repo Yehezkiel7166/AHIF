@@ -1,4 +1,4 @@
-"""Executable AHIF 3.5 framework API."""
+"""Integrated AHIF 3.7 framework API."""
 
 from .engine import Framework, execute_framework
 from .errors import RuntimeContractError
