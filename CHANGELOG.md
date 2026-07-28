@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.2.0 — Sprint 027: Executable Verification Hardening
+
+Added machine-readable reports, deterministic full-test orchestration, six isolated negative fixtures, dual-format health inventory, Make targets, and artifact-producing CI. Release eligibility and LTS designation remain **HOLD**; canonical identity, adapter tiers, compatibility guarantees, and all production/operational claim boundaries are unchanged.
+
+
 ## 3.1.0 — Sprint 026: Executable Repository Automation
 
 Added:

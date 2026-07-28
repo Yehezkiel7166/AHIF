@@ -312,3 +312,7 @@ An LTS framework designation requires complete repository evidence plus separate
 Use `scripts/validate_repository.sh` for repository structure and metadata, `scripts/run_regression.sh` for registry and claim-boundary regressions, and `scripts/release_gate.sh` for composed release eligibility. GitHub Actions invokes the same entry points; `scripts/repository_health.py` reports repository-only health.
 
 A passing gate proves only that the checked-out repository satisfies the declared deterministic checks. It cannot establish production health, external telemetry, deployed security, operational recovery, empirical model quality, maintainer commitment, SLA achievement, LTS designation, rollback execution, or adapter-tier change. Preserve every earlier claim boundary; LTS remains `hold`.
+
+## Sprint 027 executable verification hardening (v3.2.0)
+
+Use `make test` or `scripts/test_all.sh` as the canonical full repository check. Versioned JSON reports describe repository evidence only. Controlled invalid fixtures must be rejected, and missing release evidence fails closed. Repository conformance does not establish any production, deployment, telemetry, security, recovery, empirical, or availability claim. Canonical identity authority and adapter tiers remain unchanged; LTS and release eligibility remain `hold`.
