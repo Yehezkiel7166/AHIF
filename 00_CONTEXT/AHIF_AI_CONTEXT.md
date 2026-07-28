@@ -306,3 +306,9 @@ Treat recovery plans, backup declarations, RTO/RPO targets, and runbooks as gove
 Resolve LTS candidates through `21_LTS_GOVERNANCE/LTS_GOVERNANCE_PROTOCOL.md`. Preserve canonical identity authority, the identity-first pipeline, stable 2.x framework and adapter contracts, append-only history, evidence-plane separation, and every earlier claim boundary.
 
 An LTS framework designation requires complete repository evidence plus separately supplied governance evidence. Missing or unverifiable required evidence resolves to `hold`, never `designated`. The 3.0.0 repository artifacts pass repository validation, but the LTS designation remains `hold`: no named maintainer commitment, independent approval, maintenance or backport execution, support adoption, SLA achievement, deployment, production availability, rollback, empirical certification, or adapter-tier change is asserted.
+
+## Sprint 026 executable repository automation (v3.1.0)
+
+Use `scripts/validate_repository.sh` for repository structure and metadata, `scripts/run_regression.sh` for registry and claim-boundary regressions, and `scripts/release_gate.sh` for composed release eligibility. GitHub Actions invokes the same entry points; `scripts/repository_health.py` reports repository-only health.
+
+A passing gate proves only that the checked-out repository satisfies the declared deterministic checks. It cannot establish production health, external telemetry, deployed security, operational recovery, empirical model quality, maintainer commitment, SLA achievement, LTS designation, rollback execution, or adapter-tier change. Preserve every earlier claim boundary; LTS remains `hold`.

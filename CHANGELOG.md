@@ -1,5 +1,20 @@
 # Changelog
 
+## 3.1.0 — Sprint 026: Executable Repository Automation
+
+Added:
+- dependency-free repository validation, governance regression, release-gate, and repository-health scripts
+- GitHub Actions workflows for pull-request validation, governance regression, and tag-triggered release gates
+- Sprint 026 documentation, repository health report, and release validation evidence
+
+Changed:
+- README, VERSION, ROADMAP, manifest, changelog, and canonical AI context synchronized to 3.1.0
+- Sprint 025 governance made executable without changing its policies, registries, or LTS `hold` decision
+
+Status and claim boundary:
+- repository validation, regression, release gate, and repository-health checks: passed
+- no production-health, deployment, telemetry, empirical-quality, operational-readiness, maintainer, SLA, rollback, LTS-designation, or adapter-tier claim is asserted; all earlier boundaries remain in force
+
 ## 3.0.0 — Sprint 025: V3 LTS Stabilization Governance
 
 Added:
