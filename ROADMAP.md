@@ -1,5 +1,12 @@
 # Roadmap
 
+## 3.6.0 — Sprint 032: Empirical Validation Infrastructure — Completed
+
+- Repository-defined scenarios and empty execution/evidence registries
+- Categorical, human-only evaluation and baseline comparison contracts
+- Artifact SHA-256 integrity validation and claim-bounded machine-readable reports
+- Infrastructure only: empirical runs and reviews remain objectively outstanding; Release Eligibility and LTS remain HOLD
+
 ## 3.5.0 — Sprint 031: Executable AHIF Framework — Completed
 
 - One canonical `Framework.execute()` path with compatibility delegates

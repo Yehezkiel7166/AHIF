@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "version": "3.5.0",
-  "sprint": "SPRINT-031-EXECUTABLE-FRAMEWORK",
+  "version": "3.6.0",
+  "sprint": "SPRINT-032-EMPIRICAL-VALIDATION",
   "metadata_files": [
     "00_CONTEXT/AHIF_AI_CONTEXT.md",
     "CHANGELOG.md",
@@ -37,7 +37,8 @@
     "19_SECURITY_SUPPLY_CHAIN",
     "20_OPERATIONAL_RESILIENCE",
     "21_LTS_GOVERNANCE",
-    "RUNTIME"
+    "RUNTIME",
+    "22_EMPIRICAL_VALIDATION"
   ],
   "completion_artifacts": [
     "FRAMEWORK_TRACEABILITY_MATRIX.md",
@@ -56,7 +57,8 @@
     "scripts/run_regression.sh",
     "scripts/test_all.sh",
     "scripts/test_failure_injection.py",
-    "scripts/validate_repository.sh"
+    "scripts/validate_repository.sh",
+    "22_EMPIRICAL_VALIDATION/framework.py"
   ],
   "required_registries": [
     "16_MODEL_ADAPTERS/REGISTRY/ADAPTER_REGISTRY.json",

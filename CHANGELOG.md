@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.6.0 — Sprint 032: Empirical Validation Infrastructure
+
+- Added dependency-free Scenario, Execution, Evaluation, Evidence, Comparison, and Report schemas and validators.
+- Added repository-grounded Kyoto and Tokyo scenario definitions, empty evidence/evaluation/report/baseline registries, categorical criteria, SHA-256 verification, deterministic report assembly, and negative-path tests.
+- No image generation was performed and no evidence, score, benchmark, certification, production-readiness, Release Eligibility, adapter-tier, or LTS claim is made. LTS remains **HOLD**.
+
 ## 3.5.0 — Sprint 031: Executable AHIF Framework
 
 Added one canonical `Framework.execute()` interface, an explicit deterministic state machine, complete trace contracts, a canonical framework result and machine-readable execution report, blocked-path propagation, deterministic recovery reporting, scenario CLI execution, and comprehensive runtime failure tests. The former public function delegates to the canonical method. Release Eligibility and LTS remain HOLD; no external model, production, or empirical claim is made.

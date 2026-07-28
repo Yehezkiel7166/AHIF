@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "schema_version",
+    "report_id",
+    "execution_metadata",
+    "scenario_metadata",
+    "prompt_package",
+    "evaluation_status",
+    "evidence_status",
+    "claim_boundary"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "report_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "execution_metadata": {
+      "type": "object"
+    },
+    "scenario_metadata": {
+      "type": "object"
+    },
+    "prompt_package": {
+      "type": "object"
+    },
+    "evaluation_status": {
+      "type": "string",
+      "enum": [
+        "NOT_EVALUATED",
+        "PENDING",
+        "APPROVED",
+        "REJECTED"
+      ]
+    },
+    "evidence_status": {
+      "type": "string",
+      "enum": [
+        "MISSING",
+        "PENDING",
+        "AVAILABLE",
+        "REJECTED"
+      ]
+    },
+    "claim_boundary": {
+      "const": "NO_PRODUCTION_CLAIM"
+    }
+  }
+}

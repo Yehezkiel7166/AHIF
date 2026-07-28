@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "schema_version",
+    "comparison_id",
+    "baseline_image",
+    "candidate_image",
+    "decision",
+    "evidence_link",
+    "reviewer",
+    "comments"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "comparison_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baseline_image": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "(sha256:[0-9a-f]{64})|null"
+    },
+    "candidate_image": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "(sha256:[0-9a-f]{64})|null"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "NOT_EVALUATED",
+        "PENDING",
+        "APPROVED",
+        "REJECTED"
+      ]
+    },
+    "evidence_link": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": "string"
+    }
+  }
+}

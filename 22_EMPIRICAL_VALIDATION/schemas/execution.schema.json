@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "schema_version",
+    "execution_id",
+    "framework_version",
+    "scenario_id",
+    "timestamp",
+    "model_adapter",
+    "prompt_package_hash",
+    "image_hash",
+    "evaluation_status",
+    "evidence_status",
+    "reviewer",
+    "comments"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "execution_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "framework_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model_adapter": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt_package_hash": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "(sha256:[0-9a-f]{64})|null"
+    },
+    "image_hash": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "(sha256:[0-9a-f]{64})|null"
+    },
+    "evaluation_status": {
+      "type": "string",
+      "enum": [
+        "NOT_EVALUATED",
+        "PENDING",
+        "APPROVED",
+        "REJECTED"
+      ]
+    },
+    "evidence_status": {
+      "type": "string",
+      "enum": [
+        "MISSING",
+        "PENDING",
+        "AVAILABLE",
+        "REJECTED"
+      ]
+    },
+    "reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": "string"
+    }
+  }
+}
