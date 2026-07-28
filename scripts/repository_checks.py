@@ -1,121 +1,208 @@
 #!/usr/bin/env python3
-"""AHIF dependency-free executable verification and reporting library."""
+"""Canonical, dependency-free AHIF repository verification engine."""
 from __future__ import annotations
 
-import argparse, json, os, re, subprocess, sys
+import argparse
+import json
+import os
+import re
+import subprocess
+import sys
 from datetime import datetime, timezone
-from pathlib import Path
+from pathlib import Path, PurePosixPath
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "3.2.0"
-SPRINT = "SPRINT-027-EXECUTABLE-VERIFICATION-HARDENING"
-REPORT_DIR = ROOT / "reports"
-PLACEHOLDERS = {"assets/identity-reference/MASTER_PHOTO.jpg"}
+CONFIG_PATH = ROOT / "automation.config.json"
 LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)]+)\)")
+STATUS_EXIT = {"pass": 0, "hold": 0, "fail": 1, "internal_error": 2}
 
-def git(*args: str, root: Path = ROOT) -> str:
-    p = subprocess.run(["git", *args], cwd=root, text=True, capture_output=True)
-    return p.stdout.strip() if p.returncode == 0 else "unknown"
 
-def files(root: Path) -> list[Path]:
-    if root == ROOT:
-        out = subprocess.run(["git", "ls-files", "-z"], cwd=root, check=True, capture_output=True).stdout
-        return [root / x.decode() for x in out.split(b"\0") if x and (root / x.decode()).is_file()]
-    return sorted(p for p in root.rglob("*") if p.is_file())
+class ConfigError(ValueError):
+    pass
 
-def context(root: Path) -> dict:
-    return {"timestamp": datetime.now(timezone.utc).isoformat(), "commit_sha": git("rev-parse", "HEAD", root=root),
-            "branch": git("branch", "--show-current", root=root)}
 
-def check_json(root: Path) -> list[str]:
-    errors=[]
-    for p in files(root):
-        if p.suffix == ".json":
-            try: json.loads(p.read_text(encoding="utf-8"))
-            except (OSError, UnicodeError, json.JSONDecodeError) as e: errors.append(f"invalid JSON: {p.relative_to(root)}: {e}")
-    return errors
+def git(root: Path, *args: str) -> str:
+    proc = subprocess.run(["git", *args], cwd=root, text=True, capture_output=True)
+    return proc.stdout.strip() if proc.returncode == 0 else "unknown"
 
-def manifest(root: Path) -> dict:
-    return json.loads((root / "manifest.json").read_text(encoding="utf-8"))
 
-def check_manifest(root: Path) -> list[str]:
-    errors=[]
-    try: data=manifest(root)
-    except Exception as e: return [f"manifest unreadable: {e}"]
-    for key,value in data.items():
-        if isinstance(value,str) and "/" in value and value not in PLACEHOLDERS and not (root/value).is_file():
-            errors.append(f"manifest.{key} points to missing file: {value}")
-    return errors
+def rel(path: Path, root: Path) -> str:
+    return path.relative_to(root).as_posix()
 
-def check_links(root: Path) -> list[str]:
-    errors=[]
-    for p in files(root):
-        if p.suffix.lower() != ".md": continue
-        for raw in LINK.findall(p.read_text(encoding="utf-8")):
-            target=raw.strip().split("#",1)[0].replace("%20"," ")
-            if target and "://" not in target and not target.startswith(("mailto:","#")) and not (p.parent/target).resolve().is_file():
-                errors.append(f"broken link: {p.relative_to(root)} -> {raw}")
-    return errors
 
-def check_metadata(root: Path) -> list[str]:
-    try: data=manifest(root)
-    except Exception as e: return [f"metadata unavailable: {e}"]
-    expected={"version":VERSION,"latest_sprint":SPRINT,"latest_sprint_document":f"docs/sprints/{SPRINT}.md",
-              "release_validation_report":f"docs/releases/RELEASE-{VERSION}-VALIDATION.md"}
-    errors=[f"manifest.{k} must be {v!r}" for k,v in expected.items() if data.get(k)!=v]
-    required={"README.md":[VERSION,"Sprint 027"],"VERSION.md":[VERSION],"CHANGELOG.md":[VERSION,"Sprint 027"],
-              "ROADMAP.md":[VERSION,"Sprint 027"],"00_CONTEXT/AHIF_AI_CONTEXT.md":["Sprint 027"]}
-    for name,tokens in required.items():
-        try: text=(root/name).read_text(encoding="utf-8")
-        except OSError as e: errors.append(f"missing metadata file: {name}: {e}"); continue
-        errors += [f"{name} is missing synchronized token: {t}" for t in tokens if t not in text]
-    return errors
+def tracked_files(root: Path) -> list[Path]:
+    if (root / ".git").exists():
+        proc = subprocess.run(["git", "ls-files", "-z"], cwd=root, check=True, capture_output=True)
+        return sorted((root / item.decode()) for item in proc.stdout.split(b"\0") if item and (root / item.decode()).is_file())
+    ignored = {".git", ".artifacts", "__pycache__"}
+    return sorted(p for p in root.rglob("*") if p.is_file() and not ignored.intersection(p.parts))
 
-def check_lts(root: Path) -> list[str]:
-    try: status=json.loads((root/"21_LTS_GOVERNANCE/registry/LTS_STATUS.json").read_text()).get("status")
-    except Exception as e: return [f"LTS status unverifiable: {e}"]
-    return [] if status == "hold" else [f"invalid LTS status: expected hold, got {status!r}"]
 
-def check_claims(root: Path) -> list[str]:
-    p=root/f"docs/releases/RELEASE-{VERSION}-VALIDATION.md"
-    if not p.is_file(): return [f"release validation missing: {p.relative_to(root)}"]
-    text=p.read_text(encoding="utf-8").lower()
-    required=["does not claim production readiness","does not claim deployment success","lts status"]
-    return [f"claim-boundary statement missing: {x}" for x in required if x not in text]
+def load_config(path: Path = CONFIG_PATH, root: Path = ROOT) -> dict[str, Any]:
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        raise ConfigError(f"configuration unreadable: {exc}") from exc
+    required = {"schema_version", "version", "sprint", "metadata_files", "source_of_truth_files", "required_workflows", "required_scripts", "required_registries", "reports", "ignored_fixture_paths", "claim_boundary_phrases", "exit_codes"}
+    missing = sorted(required - data.keys())
+    if missing:
+        raise ConfigError(f"missing configuration keys: {', '.join(missing)}")
+    list_keys = sorted(required - {"schema_version", "version", "sprint", "reports", "exit_codes"})
+    for key in list_keys:
+        values = data[key]
+        if not isinstance(values, list) or any(not isinstance(v, str) or not v for v in values):
+            raise ConfigError(f"{key} must be a list of non-empty strings")
+        duplicates = sorted({v for v in values if values.count(v) > 1})
+        if duplicates:
+            raise ConfigError(f"duplicate {key} entries: {', '.join(duplicates)}")
+    if data["exit_codes"] != {"PASS": 0, "HOLD": 0, "FAIL": 1, "INTERNAL_ERROR": 2}:
+        raise ConfigError("invalid exit-code mappings")
+    report_values = list(data["reports"].values()) if isinstance(data["reports"], dict) else []
+    all_paths = [*data["metadata_files"], *data["source_of_truth_files"], *data["required_workflows"], *data["required_scripts"], *data["required_registries"], *report_values]
+    for value in all_paths:
+        p = PurePosixPath(value)
+        if p.is_absolute() or ".." in p.parts or "\\" in value:
+            raise ConfigError(f"path must be normalized and repository-relative: {value}")
+    for value in [*data["metadata_files"], *data["source_of_truth_files"], *data["required_workflows"], *data["required_scripts"], *data["required_registries"]]:
+        if not (root / value).is_file():
+            raise ConfigError(f"unknown required path: {value}")
+    return data
 
-def report(kind: str, checks: dict[str,list[str]], output: Path|None, status: str|None=None, warnings: list[str]|None=None) -> int:
-    failures=[f"{name}: {e}" for name,errs in checks.items() for e in errs]
-    code=1 if failures else 0
-    final=status or ("fail" if failures else "pass")
-    data={"schema":"ahif.verification-report","schema_version":"1.0","report_type":kind,**context(ROOT),
-          "checks_executed":[{"name":n,"status":"fail" if e else "pass"} for n,e in checks.items()],
-          "status":final,"warnings":warnings or [],"failures":failures,"exit_code":code}
-    if output:
-        output.parent.mkdir(parents=True,exist_ok=True); output.write_text(json.dumps(data,indent=2)+"\n")
-    print(f"{final.upper()} {kind}: {len(checks)} checks, {len(failures)} failures, {len(data['warnings'])} warnings")
-    for x in failures: print(f"  - {x}")
-    return code
 
-def validation(root: Path, output: Path|None) -> int:
-    return report("repository-validation", {"json":check_json(root),"manifest":check_manifest(root),"links":check_links(root),"metadata":check_metadata(root)},output)
+class Engine:
+    def __init__(self, root: Path, config: dict[str, Any], machine: bool = False, verbose: bool = False):
+        self.root, self.config, self.machine, self.verbose = root, config, machine, verbose
+        self.files = tracked_files(root)
+        self.sha = git(root, "rev-parse", "HEAD")
+        self.timestamp = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+        self.report_dir = root / PurePosixPath(config["reports"]["directory"])
 
-def regression(root: Path, output: Path|None) -> int:
-    regs=[]
-    for p in files(root):
-        if p.suffix==".json" and ("registry" in p.parts or "REGISTRY" in p.parts):
+    def emit(self, kind: str, checks: dict[str, list[str]], status: str | None = None, warnings: list[str] | None = None, output: Path | None = None, extra: dict[str, Any] | None = None) -> int:
+        failures = sorted(f"{name}: {message}" for name, messages in checks.items() for message in messages)
+        final = status or ("fail" if failures else "pass")
+        if failures:
+            final = "fail"
+        data = {"schema": "ahif.verification-report", "schema_version": "2.0", "report_type": kind, "generated_at": self.timestamp, "commit_sha": self.sha, "checks_executed": [{"name": name, "status": "fail" if checks[name] else "pass"} for name in sorted(checks)], "status": final, "warnings": sorted(warnings or []), "failures": failures, "exit_code": STATUS_EXIT[final]}
+        if extra:
+            data.update(extra)
+        if output:
+            output.parent.mkdir(parents=True, exist_ok=True)
+            output.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+        if self.machine:
+            print(json.dumps(data, sort_keys=True, separators=(",", ":")))
+        else:
+            print(f"{final.upper()} {kind}: {len(checks)} checks, {len(failures)} failures")
+            if self.verbose:
+                for item in failures: print(f"  - {item}")
+        return STATUS_EXIT[final]
+
+    def json_errors(self) -> list[str]:
+        errors = []
+        for path in self.files:
+            if path.suffix == ".json":
+                try: json.loads(path.read_text(encoding="utf-8"))
+                except (OSError, UnicodeError, json.JSONDecodeError) as exc: errors.append(f"invalid JSON: {rel(path, self.root)}: {exc}")
+        return errors
+
+    def manifest_errors(self) -> list[str]:
+        errors = []
+        try: manifest = json.loads((self.root / "manifest.json").read_text(encoding="utf-8"))
+        except Exception as exc: return [f"manifest unreadable: {exc}"]
+        placeholders = set(self.config.get("placeholder_paths", []))
+        for key, value in sorted(manifest.items()):
+            if isinstance(value, str) and "/" in value and value not in placeholders and not (self.root / value).is_file(): errors.append(f"manifest.{key} points to missing file: {value}")
+        return errors
+
+    def link_errors(self) -> list[str]:
+        errors = []
+        for path in self.files:
+            if path.suffix.lower() != ".md": continue
+            for raw in LINK.findall(path.read_text(encoding="utf-8")):
+                target = raw.strip().split("#", 1)[0].replace("%20", " ")
+                if target and "://" not in target and not target.startswith(("mailto:", "#")) and not (path.parent / target).resolve().is_file(): errors.append(f"broken link: {rel(path, self.root)} -> {raw}")
+        return errors
+
+    def metadata_errors(self) -> list[str]:
+        errors = []
+        try: manifest = json.loads((self.root / "manifest.json").read_text())
+        except Exception as exc: return [f"metadata unavailable: {exc}"]
+        expected = {"version": self.config["version"], "latest_sprint": self.config["sprint"], "latest_sprint_document": f"docs/sprints/{self.config['sprint']}.md", "release_validation_report": f"docs/releases/RELEASE-{self.config['version']}-VALIDATION.md"}
+        for key, value in expected.items():
+            if manifest.get(key) != value: errors.append(f"manifest.{key} must be {value!r}")
+        for name in self.config["metadata_files"]:
+            text = (self.root / name).read_text(encoding="utf-8")
+            for token in (self.config["version"], "Sprint 028"):
+                if token not in text: errors.append(f"{name} is missing synchronized token: {token}")
+        return errors
+
+    def lts_errors(self) -> list[str]:
+        try: status = json.loads((self.root / "21_LTS_GOVERNANCE/registry/LTS_STATUS.json").read_text())["status"]
+        except Exception as exc: return [f"LTS status unverifiable: {exc}"]
+        return [] if status == "hold" else [f"invalid LTS status: expected hold, got {status!r}"]
+
+    def validate(self, output: Path | None) -> int:
+        return self.emit("repository-validation", {"configuration": [], "json": self.json_errors(), "links": self.link_errors(), "manifest": self.manifest_errors(), "metadata": self.metadata_errors()}, output=output)
+
+    def regression(self, output: Path | None) -> int:
+        errors = []
+        for name in sorted(self.config["required_registries"]):
             try:
-                if not isinstance(json.loads(p.read_text()),(dict,list)): regs.append(f"registry root is not object/array: {p.relative_to(root)}")
-            except Exception as e: regs.append(f"registry invalid: {p.relative_to(root)}: {e}")
-    return report("governance-regression",{"registries":regs,"lts_hold":check_lts(root)},output)
+                if not isinstance(json.loads((self.root / name).read_text()), (dict, list)): errors.append(f"registry root is not object/array: {name}")
+            except Exception as exc: errors.append(f"registry invalid: {name}: {exc}")
+        return self.emit("governance-regression", {"lts_hold": self.lts_errors(), "registries": errors}, output=output)
 
-def release(root: Path, output: Path|None) -> int:
-    checks={"version_and_sprint":check_metadata(root),"manifest_paths":check_manifest(root),"claim_boundaries":check_claims(root),"lts_hold":check_lts(root),
-            "release_validation":[] if (root/f"docs/releases/RELEASE-{VERSION}-VALIDATION.md").is_file() else ["release validation absent"],
-            "required_reports":[f"required report missing: {p}" for p in ["validation.json","regression.json","repository-health.json"] if not (REPORT_DIR/p).is_file()]}
-    return report("release-gate",checks,output,"fail" if any(checks.values()) else "hold",["Repository checks pass, but absent separate operational LTS evidence requires HOLD."])
+    def health(self, output: Path | None) -> int:
+        checks = {"configuration": [], "lts_hold": self.lts_errors(), "manifest": self.manifest_errors()}
+        extra = {"version": self.config["version"], "sprint": self.config["sprint"], "workflows": sorted(self.config["required_workflows"]), "scripts": sorted(self.config["required_scripts"]), "registries": sorted(self.config["required_registries"]), "release_eligibility": "hold", "lts_status": "hold"}
+        return self.emit("repository-health", checks, "hold", ["Repository evidence is conformant; separate operational LTS evidence remains absent."], output, extra)
+
+    def release(self, output: Path | None) -> int:
+        stale = []
+        for key in ("validation", "regression", "health"):
+            path = self.root / self.config["reports"][key]
+            try:
+                report = json.loads(path.read_text())
+                if report.get("commit_sha") != self.sha: stale.append(f"stale report evidence: {rel(path, self.root)}")
+                if report.get("status") not in ("pass", "hold"): stale.append(f"non-passing report evidence: {rel(path, self.root)}")
+            except Exception as exc: stale.append(f"required report unavailable: {rel(path, self.root)}: {exc}")
+        release_doc = self.root / f"docs/releases/RELEASE-{self.config['version']}-VALIDATION.md"
+        claims = []
+        text = release_doc.read_text(encoding="utf-8").lower() if release_doc.is_file() else ""
+        for phrase in self.config["claim_boundary_phrases"]:
+            if phrase.lower() not in text: claims.append(f"claim-boundary statement missing: {phrase}")
+        checks = {"claim_boundaries": claims, "evidence_freshness": stale, "lts_hold": self.lts_errors(), "manifest": self.manifest_errors(), "metadata": self.metadata_errors()}
+        return self.emit("release-gate", checks, "hold", ["Repository checks pass; release eligibility and LTS designation remain HOLD."], output)
+
+
+def report_path(root: Path, config: dict[str, Any], key: str, explicit: Path | None) -> Path | None:
+    return explicit or root / config["reports"][key]
+
 
 def main() -> int:
-    ap=argparse.ArgumentParser(); ap.add_argument("command",choices=["validate","regression","release"]); ap.add_argument("--root",type=Path,default=ROOT); ap.add_argument("--output",type=Path)
-    a=ap.parse_args(); root=a.root.resolve()
-    return {"validate":validation,"regression":regression,"release":release}[a.command](root,a.output)
-if __name__=="__main__": raise SystemExit(main())
+    parser = argparse.ArgumentParser()
+    parser.add_argument("command", choices=["verify-config", "validate", "regression", "health", "release"])
+    parser.add_argument("--root", type=Path, default=ROOT)
+    parser.add_argument("--config", type=Path, default=CONFIG_PATH)
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--machine", action="store_true", default=os.environ.get("AHIF_MACHINE") == "1")
+    parser.add_argument("--verbose", action="store_true")
+    args = parser.parse_args()
+    root = args.root.resolve()
+    try:
+        config = load_config(args.config, root)
+        if args.command == "verify-config":
+            print(json.dumps({"status": "pass", "exit_code": 0}, separators=(",", ":")) if args.machine else "PASS configuration")
+            return 0
+        engine = Engine(root, config, args.machine, args.verbose)
+        key = {"validate": "validation", "regression": "regression", "health": "health", "release": "release"}[args.command]
+        return getattr(engine, args.command)(report_path(root, config, key, args.output))
+    except ConfigError as exc:
+        print(f"FAIL configuration: {exc}", file=sys.stderr); return 1
+    except Exception as exc:
+        print(f"INTERNAL_ERROR: {exc}", file=sys.stderr)
+        if args.verbose: raise
+        return 2
+
+
+if __name__ == "__main__": raise SystemExit(main())

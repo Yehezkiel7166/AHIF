@@ -6,26 +6,30 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: verification-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   verification:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Repository validation
-        run: make validate
-      - name: Governance regression
-        run: make regression
-      - name: Failure injection
-        run: make failure-injection
-      - name: Full harness
+      - name: Canonical full harness
+        env:
+          AHIF_MACHINE: "1"
         run: make test
-      - name: Upload machine-readable reports
+      - name: Job summary
+        if: always()
+        run: echo '### AHIF repository verification — release/LTS remain HOLD' >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload verification reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: verification-reports
-          path: reports/
+          name: verification-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .artifacts/reports/
           if-no-files-found: error
+          retention-days: 14

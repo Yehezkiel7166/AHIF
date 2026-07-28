@@ -1,6 +1,6 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 3.2.0
+**Version:** 3.2.1
 **Status:** Stable Framework + Executable Repository Automation; LTS Designation HOLD
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 3.2.0 preserves the stable framework, canonical identity authority, prior governance modules, and claim boundaries while making repository validation, regression, release gates, and health reporting executable. Repository validation does not establish production health or operational LTS support; the LTS designation remains `hold`.
+Version 3.2.1 preserves the stable framework, canonical identity authority, prior governance modules, and claim boundaries while making repository validation, regression, release gates, and health reporting executable. Repository validation does not establish production health or operational LTS support; the LTS designation remains `hold`.
 
 ## Daily use
 
@@ -87,9 +87,9 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 3.2.0
+## Current release — 3.2.1
 
-Sprint 027 hardens Sprint 026 automation with a canonical `make test` harness, versioned JSON reports, isolated failure injection, deterministic exit codes, CI artifacts, and composed release enforcement. Run `scripts/validate_repository.sh`, `scripts/run_regression.sh`, and `scripts/release_gate.sh` locally; pull requests and release tags run equivalent GitHub Actions gates. `python3 scripts/repository_health.py` emits a machine-readable repository-only assessment.
+Sprint 028 stabilizes and consolidates Sprint 025–027 automation with a canonical `make test` harness, versioned JSON reports, isolated failure injection, deterministic exit codes, CI artifacts, and composed release enforcement. Run `scripts/validate_repository.sh`, `scripts/run_regression.sh`, and `scripts/release_gate.sh` locally; pull requests and release tags run equivalent GitHub Actions gates. `python3 scripts/repository_health.py` emits a machine-readable repository-only assessment.
 
 Passing automation establishes repository conformance only. The baseline still contains zero registered LTS releases and zero maintenance events. The LTS designation is `hold`; no maintainer commitment, support adoption, backport execution, SLA achievement, deployment, empirical certification, production health, or production availability is asserted.
 
