@@ -1,5 +1,8 @@
 {
   "name": "AHIF",
+  "framework_acceptance_report": "FRAMEWORK_ACCEPTANCE_REPORT.md",
+  "framework_certification_checklist": "FRAMEWORK_CERTIFICATION_CHECKLIST.md",
+  "known_limitations": "KNOWN_LIMITATIONS.md",
   "full_name": "Artificial Human Identity Framework",
   "version": "3.7.0",
   "status": "integrated-framework-empirically-validatable-lts-designation-hold",
