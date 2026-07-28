@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.3.0 — Sprint 029: Framework Completion Audit
+
+Audited all 22 required modules and the full User Request through Model Adapter pipeline; added traceability, completeness, real-gap, and acceptance artifacts; and added executable module, pipeline, link, and registration enforcement. The framework is architecturally complete within its repository boundary. Production, empirical, Release Eligibility, and LTS claims remain unchanged and LTS remains **HOLD**.
+
 ## 3.2.1 — Sprint 028: Automation Stabilization
 
 Consolidated automation behind shared configuration and one Python engine; standardized ignored reports, exit semantics, deterministic structure, negative self-tests, and reliable CI. LTS remains **HOLD** and all claim boundaries remain unchanged.
