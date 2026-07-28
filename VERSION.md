@@ -1,19 +1,16 @@
 # Version
 
-Current version: **3.0.0**
+Current version: **3.1.0**
 
-Release type: Backward-Compatible Framework Expansion
+Release type: Backward-Compatible Repository Automation Expansion
 
 Compatibility:
+- AHIF 3.0.0 LTS governance and its `hold` designation
 - all AHIF 2.x stable framework, adapter, evidence, audit, metrics, security, and resilience contracts
-- AHIF 2.11.0 security and supply-chain governance
-- AHIF 2.10.0 metrics, KPI, and quality governance
-- AHIF 2.9.0 continuous compliance and governance audit
-- AHIF 2.8.0 adapter incident response and recovery governance
-- AHIF 2.0.0 stable framework and adapter contracts
+- all prior canonical identity and claim boundaries
 
 ## Release focus and status
 
-Version 3.0.0 adds deterministic LTS governance for candidate assessment, compatibility preservation, maintenance, change control, backports, deprecation, release validation, designation, supersession, and retirement.
+Version 3.1.0 makes repository validation, governance regression, release gating, and repository-only health reporting executable locally and in GitHub Actions.
 
-The 3.0.0 repository artifacts are validated, but the LTS designation remains **HOLD**. No named maintainer commitment, independent governance approval, maintenance action, backport, support adoption, service-level achievement, deployment, production availability, rollback, empirical certification, or adapter-tier change is included. All previous AHIF claim boundaries remain in force.
+The Sprint 026 repository gates pass. This status describes repository artifacts only. It does not assert production health, external telemetry, operational readiness, deployment, empirical certification, LTS support adoption, SLA achievement, maintainer commitment, rollback, or adapter-tier change. The LTS designation remains **HOLD**.

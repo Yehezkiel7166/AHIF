@@ -246,6 +246,13 @@ Knowledge Graph
 - LTS schemas, append-only empty registries, QA, contract tests, regression tests, and blocked example
 - Repository validation passed; independent governance approval and operational support remain unverified, so LTS designation is `hold`
 
+### 3.1.0 — Sprint 026: Executable Repository Automation — Completed
+- Dependency-free repository-wide validation and governance regression scripts
+- Pull-request, main-branch, manual, and version-tag GitHub Actions workflows
+- Composed release gates with synchronized evidence requirements
+- Machine-readable and checked-in repository health reporting
+- Repository gates passed; production health and operational LTS designation remain explicitly out of scope and `hold`
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages

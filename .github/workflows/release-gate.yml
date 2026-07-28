@@ -1,0 +1,21 @@
+name: Release gate
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: read
+jobs:
+  release-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: scripts/release_gate.sh
+      - run: python3 scripts/repository_health.py > repository-health.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: repository-health
+          path: repository-health.json
