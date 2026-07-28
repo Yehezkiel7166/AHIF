@@ -1,5 +1,12 @@
 # Roadmap
 
+## 3.5.0 — Sprint 031: Executable AHIF Framework — Completed
+
+- One canonical `Framework.execute()` path with compatibility delegates
+- Explicit deterministic state machine and complete stage trace contracts
+- Canonical result package, machine-readable report, scenarios, and failure tests
+- No external model execution; Release Eligibility and LTS remain HOLD
+
 ## Architectural sequence
 
 ```text

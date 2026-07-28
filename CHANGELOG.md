@@ -1,10 +1,15 @@
+# Changelog
+
+## 3.5.0 — Sprint 031: Executable AHIF Framework
+
+Added one canonical `Framework.execute()` interface, an explicit deterministic state machine, complete trace contracts, a canonical framework result and machine-readable execution report, blocked-path propagation, deterministic recovery reporting, scenario CLI execution, and comprehensive runtime failure tests. The former public function delegates to the canonical method. Release Eligibility and LTS remain HOLD; no external model, production, or empirical claim is made.
+
 ## 3.4.0 — Sprint 030
 
 - Added the deterministic canonical runtime execution engine and explicit stage contracts.
 - Added backward-compatible execution-trace fields, mandatory runtime QA, adapter preparation, executable examples, and end-to-end tests.
 - Preserved Release Eligibility and LTS at HOLD; no external model or empirical execution is claimed.
 
-# Changelog
 
 ## 3.3.0 — Sprint 029: Framework Completion Audit
 
