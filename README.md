@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.12.0
-**Status:** Stable Framework + Operational Resilience Governance
+**Version:** 2.13.0
+**Status:** Stable Framework + LTS Stabilization Governance
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.12.0 preserves the stable 2.x framework and adds operational resilience and disaster recovery governance for recovery objectives, dependency mapping, backups, restores, runbooks, exercises, failover, validation, and immutable records. Documentation remains distinct from operational proof.
+Version 2.13.0 preserves the stable 2.x framework and adds the governance foundation required to evaluate a future LTS release. It introduces scope freeze, architecture reconciliation, contract inventory, metadata synchronization, regression review, migration assessment, independent release review, acceptance controls, and an explicit LTS maintenance policy.
 
 ## Daily use
 
@@ -66,13 +66,14 @@ Output: final image-generation prompt
 - `11_QUALITY_ASSURANCE/` — QA orchestration, linting, failure taxonomy, recovery, schemas, domain gates, and final validation
 - `12_TEMPLATES/` — reusable input and output templates
 - `13_EXAMPLES/` — worked examples
-- `14_TESTS/` — identity, decision, reasoning, compiler, QA, and final-prompt regression tests
+- `14_TESTS/` — identity, decision, reasoning, compiler, QA, final-prompt, governance, and LTS regression tests
 - `15_FINAL_PROMPT/` — execution orchestration, release contracts, schemas, and final prompt packaging
 - `16_MODEL_ADAPTERS/` — adapter architecture, registry, profiles, serializers, compatibility, empirical evidence, release, observation, and incident governance
 - `17_CONTINUOUS_AUDIT/` — continuous compliance rules, drift detection, exceptions, snapshots, and append-only audit status
 - `18_METRICS_QUALITY/` — canonical metrics, KPI thresholds, denominator controls, snapshots, and dashboard governance
 - `19_SECURITY_SUPPLY_CHAIN/` — security scope, provenance, secret handling, vulnerability risk, exceptions, snapshots, and append-only registries
 - `20_OPERATIONAL_RESILIENCE/` — recovery objectives, backup/restore governance, disaster declaration, runbooks, exercises, and resilience registries
+- `21_LTS_GOVERNANCE/` — LTS stabilization workflow, maintenance policy, release schema, and append-only registry
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
@@ -84,46 +85,16 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.11.0
+## Current release — 2.13.0
 
-Sprint 023 adds Security and Supply Chain Governance. An S0–S9 workflow now governs scope, inventory, provenance, secret review, vulnerability intake, risk classification, remediation, independent validation, and immutable closure.
+Sprint 025 adds LTS Stabilization Governance. An LTS0–LTS9 workflow now governs scope freeze, architecture reconciliation, contract inventory, documentation synchronization, baseline verification, regression review, migration assessment, independent review, release acceptance, and closure.
 
-The release contains zero security findings, zero provenance records, zero approved security exceptions, no external scan results, and no production-security certification.
+The LTS registry is intentionally empty and resolves to `not-evaluated`. AHIF 2.13.0 does not independently accept a 3.0.0 LTS release and does not certify production deployment, empirical image quality, security posture, disaster recovery execution, or adapter-tier promotion.
 
-## Version 2.2 evidence aggregation
+## Governance boundaries
 
-Accepted evidence bundles may now be grouped into explicit cohorts, aggregated conservatively, audited for outliers and drift, and converted into advisory target-profile recommendations. The framework does not include real external evidence in this release and never promotes adapters automatically.
-
-
-## Version 2.3 evidence ingestion
-
-Owner-supplied evidence can now be checked against explicit request and result schemas, verified using SHA-256 artifact fingerprints, classified as accepted, quarantined, rejected, or duplicate, and indexed in an append-only registry. Empirical evaluation and adapter promotion remain separate governed processes.
-
-
-## Version 2.4 evidence evaluation
-
-Only accepted evidence records may enter the evaluation queue. Evaluation jobs pin all governed versions, preserve append-only reviewer events, and resolve to completed, needs-revision, blocked, or cancelled without changing adapter status.
-
-
-## Version 2.5 promotion decisions
-
-Only completed evaluation jobs and eligible aggregates may enter a promotion dossier. Recommendations and authorizations are append-only governance records. Adapter registry mutation requires a separate release action with before/after snapshots, rollback instructions, stable-release QA, and documentation updates.
-
-
-## Version 2.6 release execution
-
-Only an authorized promote or downgrade dossier may open an adapter release plan. Every mutation must be declared, fingerprinted, validated, independently approved, reversible, and reconciled with repository documentation. AHIF 2.6.0 defines this mechanism without executing a real release.
-
-
-## Version 2.7 release observation
-
-Only a completed and signed release may open an observation plan. Observation may classify repository-level conformance and rollback readiness, but it cannot prove production health, create empirical evidence, mutate the adapter registry, or execute rollback.
-
-
-## Sprint 022 Metrics and Quality Rule
-
-Treat every metric as a versioned governance contract. Pin the exact population, numerator, denominator, exclusions, missing-data treatment, threshold version, and source fingerprints. Empty populations must produce `not-evaluated`, not zero or success. Dashboards are projections of immutable snapshots and may not fabricate telemetry, KPI achievement, empirical certification, production health, or adapter-tier changes. The AHIF 2.10.0 baseline contains zero registered metric specifications, zero metric snapshots, and zero dashboards.
-
-## Sprint 023 Security and Supply Chain Rule
-
-Treat repository security as a scoped, evidence-bound governance process. Never store raw secrets, fabricate advisory data, infer vulnerability absence from an empty finding registry, or treat repository review as infrastructure penetration testing. Unknown executable provenance and unresolved critical exposure block release eligibility. The AHIF 2.11.0 baseline contains zero security findings, zero provenance records, and status `not-evaluated`.
+- Evidence registries without accepted records do not prove empirical performance.
+- Empty metric, security, resilience, and LTS registries mean `not-evaluated`, not success.
+- Documentation and repository review do not replace external execution evidence.
+- Adapter support tiers change only through their governed evidence, authorization, release, and validation processes.
+- Any unresolved critical contract inconsistency blocks LTS acceptance.
