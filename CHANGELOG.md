@@ -1,3 +1,9 @@
+## 3.4.0 — Sprint 030
+
+- Added the deterministic canonical runtime execution engine and explicit stage contracts.
+- Added backward-compatible execution-trace fields, mandatory runtime QA, adapter preparation, executable examples, and end-to-end tests.
+- Preserved Release Eligibility and LTS at HOLD; no external model or empirical execution is claimed.
+
 # Changelog
 
 ## 3.3.0 — Sprint 029: Framework Completion Audit

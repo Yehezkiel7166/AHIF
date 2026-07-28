@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 3.3.0 preserves the stable framework, canonical identity authority, prior governance modules, and claim boundaries while making repository validation, regression, release gates, and health reporting executable. Repository validation does not establish production health or operational LTS support; the LTS designation remains `hold`.
+Version 3.4.0 preserves the stable framework, canonical identity authority, prior governance modules, and claim boundaries while making repository validation, regression, release gates, and health reporting executable. Repository validation does not establish production health or operational LTS support; the LTS designation remains `hold`.
 
 ## Daily use
 
@@ -91,9 +91,9 @@ The uploaded master photo is the only canonical identity reference. Text may cla
 
 Sprint 029 connects every required module, contract boundary, schema boundary, regression, example, pipeline stage, and output in the [Framework Traceability Matrix](FRAMEWORK_TRACEABILITY_MATRIX.md). The [Completeness Report](FRAMEWORK_COMPLETENESS_REPORT.md) states the audited denominator and result; the [Gap Analysis](FRAMEWORK_GAP_ANALYSIS.md) contains only repository-evidenced gaps; and the [Acceptance Checklist](FRAMEWORK_ACCEPTANCE_CHECKLIST.md) separates architectural acceptance from prohibited production, empirical, release, and LTS claims. Run `make audit` for the executable module, pipeline, manifest, and link gate.
 
-## Current release — 3.3.0
+## Current release — 3.4.0
 
-Sprint 029 adds the executable framework completion audit and repository-wide evidence maps while preserving the Sprint 025–028 governance and automation surfaces. Run `scripts/validate_repository.sh`, `scripts/run_regression.sh`, and `scripts/release_gate.sh` locally; pull requests and release tags run equivalent GitHub Actions gates. `python3 scripts/repository_health.py` emits a machine-readable repository-only assessment.
+Sprint 030 adds the canonical runtime execution layer while preserving the Sprint 029 completion audit and Sprint 025–028 governance and automation surfaces. Run `scripts/validate_repository.sh`, `scripts/run_regression.sh`, and `scripts/release_gate.sh` locally; pull requests and release tags run equivalent GitHub Actions gates. `python3 scripts/repository_health.py` emits a machine-readable repository-only assessment.
 
 Passing automation establishes repository conformance only. The baseline still contains zero registered LTS releases and zero maintenance events. The LTS designation is `hold`; no maintainer commitment, support adoption, backport execution, SLA achievement, deployment, empirical certification, production health, or production availability is asserted.
 
@@ -134,3 +134,7 @@ Treat every metric as a versioned governance contract. Pin the exact population,
 ## Sprint 023 Security and Supply Chain Rule
 
 Treat repository security as a scoped, evidence-bound governance process. Never store raw secrets, fabricate advisory data, infer vulnerability absence from an empty finding registry, or treat repository review as infrastructure penetration testing. Unknown executable provenance and unresolved critical exposure block release eligibility. The AHIF 2.11.0 baseline contains zero security findings, zero provenance records, and status `not-evaluated`.
+
+## Executable Runtime (Sprint 030)
+
+AHIF 3.4.0 provides a canonical deterministic runtime in [`RUNTIME/`](RUNTIME/README.md). It executes the architectural pipeline through mandatory QA and prepares, but does not invoke, a registered model adapter. Run `make runtime-test` for executable end-to-end examples. This capability does not change Release Eligibility or LTS HOLD status.

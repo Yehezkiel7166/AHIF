@@ -1,10 +1,12 @@
-.PHONY: verify-config validate regression test release-check health failure-injection audit clean-reports
+.PHONY: verify-config validate regression runtime-test test release-check health failure-injection audit clean-reports
 verify-config:
 	@python3 scripts/repository_checks.py verify-config
 validate:
 	@./scripts/validate_repository.sh
 regression:
 	@./scripts/run_regression.sh
+runtime-test:
+	@python3 -m unittest discover -s 14_TESTS/runtime -p 'test_*.py' -v
 test:
 	@./scripts/test_all.sh
 release-check: validate regression health

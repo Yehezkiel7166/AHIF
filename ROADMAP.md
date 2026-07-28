@@ -278,3 +278,7 @@ Knowledge Graph
 - Executable completion audit added to the canonical full-test harness
 - Internal links and manifest registration enforced with zero architectural gaps at audit completion
 - Repository architecture complete within the documented boundary; Release Eligibility and LTS remain `hold`
+
+## Sprint 030 — Runtime execution engine (3.4.0)
+
+Completed: canonical sequential runtime, explicit stage contracts, deterministic execution traces, mandatory QA, adapter preparation, executable examples, and end-to-end tests. External model execution and empirical validation are not claimed. Release Eligibility and LTS remain HOLD.

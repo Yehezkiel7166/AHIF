@@ -324,3 +324,7 @@ Version 3.2.1 consolidates repository checks behind shared configuration and one
 ## Sprint 029 / version 3.3.0 completion boundary
 
 All 22 required modules and the User Request through Model Adapter pipeline are repository-traced and audit-enforced. Architectural completeness means documented repository hand-offs are closed; it does not establish production readiness, empirical validation, Release Eligibility, or LTS designation. Release Eligibility and LTS remain `hold`.
+
+## Sprint 030 / version 3.4.0 runtime boundary
+
+The canonical `RUNTIME/engine.py` path executes the framework architecture locally through adapter request preparation. It does not invoke a model or supply empirical evidence. Release Eligibility and LTS remain HOLD.
