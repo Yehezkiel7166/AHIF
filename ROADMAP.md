@@ -237,6 +237,15 @@ Knowledge Graph
 - Governed exercises, failover controls, independent validation, and immutable event chains
 - Recovery schemas, QA, contract tests, regression tests, and `not-evaluated` baseline
 
+## 3.x stabilization
+
+### 3.0.0 — Sprint 025: V3 LTS Stabilization — Repository Complete; LTS Designation HOLD
+- Deterministic LTS0–LTS9 candidate, designation, maintenance, and retirement workflow
+- Preservation of canonical identity rules, stable 2.x contracts, registry history, and all prior claim boundaries
+- Governed support scope, change classification, backports, deprecation, supersession, and retirement
+- LTS schemas, append-only empty registries, QA, contract tests, regression tests, and blocked example
+- Repository validation passed; independent governance approval and operational support remain unverified, so LTS designation is `hold`
+
 ### Future 2.x direction
 - Real evidence records and evaluation jobs after user-provided model executions
 - Expanded machine-readable knowledge packages

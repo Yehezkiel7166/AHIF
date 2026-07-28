@@ -300,3 +300,9 @@ Use the S0–S9 process for security scope, inventory, provenance, secret handli
 ## Operational resilience governance (v2.12.0)
 
 Treat recovery plans, backup declarations, RTO/RPO targets, and runbooks as governed specifications rather than operational proof. Empty resilience registries mean `not-evaluated`. Never infer successful backup, restore, failover, disaster recovery, or production readiness without user-provided execution evidence.
+
+## LTS governance (v3.0.0)
+
+Resolve LTS candidates through `21_LTS_GOVERNANCE/LTS_GOVERNANCE_PROTOCOL.md`. Preserve canonical identity authority, the identity-first pipeline, stable 2.x framework and adapter contracts, append-only history, evidence-plane separation, and every earlier claim boundary.
+
+An LTS framework designation requires complete repository evidence plus separately supplied governance evidence. Missing or unverifiable required evidence resolves to `hold`, never `designated`. The 3.0.0 repository artifacts pass repository validation, but the LTS designation remains `hold`: no named maintainer commitment, independent approval, maintenance or backport execution, support adoption, SLA achievement, deployment, production availability, rollback, empirical certification, or adapter-tier change is asserted.

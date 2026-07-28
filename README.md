@@ -1,7 +1,7 @@
 # AHIF — Artificial Human Identity Framework
 
-**Version:** 2.12.0
-**Status:** Stable Framework + Operational Resilience Governance
+**Version:** 3.0.0
+**Status:** Stable Framework + LTS Governance; LTS Designation HOLD
 **Primary use case:** Consistent AI travel influencer generation from one canonical master photo.
 
 AHIF is a modular software-engineering framework for generating a persistent digital human whose identity remains stable while clothing, hairstyle, pose, expression, activity, camera, weather response, and storytelling adapt to the requested context.
@@ -22,7 +22,7 @@ Knowledge Graph
 → Model Adapter
 ```
 
-Version 2.12.0 preserves the stable 2.x framework and adds operational resilience and disaster recovery governance for recovery objectives, dependency mapping, backups, restores, runbooks, exercises, failover, validation, and immutable records. Documentation remains distinct from operational proof.
+Version 3.0.0 preserves the stable 2.x framework, canonical identity authority, prior governance modules, and claim boundaries while adding LTS lifecycle, compatibility, maintenance, backport, deprecation, and retirement governance. The framework release is repository-validated; an operational LTS designation remains `hold` because independent governance actors and operational support evidence have not been supplied.
 
 ## Daily use
 
@@ -73,6 +73,7 @@ Output: final image-generation prompt
 - `18_METRICS_QUALITY/` — canonical metrics, KPI thresholds, denominator controls, snapshots, and dashboard governance
 - `19_SECURITY_SUPPLY_CHAIN/` — security scope, provenance, secret handling, vulnerability risk, exceptions, snapshots, and append-only registries
 - `20_OPERATIONAL_RESILIENCE/` — recovery objectives, backup/restore governance, disaster declaration, runbooks, exercises, and resilience registries
+- `21_LTS_GOVERNANCE/` — LTS designation, compatibility, maintenance, backport, deprecation, retirement, evidence, and registries
 - `docs/sprints/` — versioned sprint documentation
 - `assets/identity-reference/` — canonical master-photo location
 
@@ -84,11 +85,11 @@ The repository is the source of truth. AI context files are condensed operationa
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
 
-## Current release — 2.11.0
+## Current release — 3.0.0
 
-Sprint 023 adds Security and Supply Chain Governance. An S0–S9 workflow now governs scope, inventory, provenance, secret review, vulnerability intake, risk classification, remediation, independent validation, and immutable closure.
+Sprint 025 adds LTS Governance through the LTS0–LTS9 lifecycle. It governs candidate scope, compatibility, support policy, change control, release validation, independent review, designation, maintenance, and retirement without weakening earlier compatibility or claim boundaries.
 
-The release contains zero security findings, zero provenance records, zero approved security exceptions, no external scan results, and no production-security certification.
+The baseline contains zero registered LTS releases and zero maintenance events. The LTS designation is `hold`; no maintainer commitment, support adoption, backport execution, SLA achievement, deployment, empirical certification, or production availability is asserted.
 
 ## Version 2.2 evidence aggregation
 
