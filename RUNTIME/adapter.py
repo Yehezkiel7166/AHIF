@@ -16,6 +16,11 @@ def prepare_model_adapter(payload: Mapping[str, Any]) -> StageResult:
         return StageResult({"adapter_id": adapter_id, "adapter_status": "blocked", "target_request": None},
                            Status.BLOCKED, errors=("AHIF-ADAPTER-UNKNOWN",))
     package = value["final_prompt"]
+    if not package.get("release_eligible"):
+        return StageResult({"adapter_id": adapter_id, "adapter_version": profile["adapter_version"],
+                            "adapter_status": "blocked", "target_family": profile["target_family"],
+                            "target_request": None}, Status.BLOCKED,
+                           errors=("AHIF-ADAPTER-FINAL-PACKAGE-BLOCKED",))
     return StageResult({"adapter_id": adapter_id, "adapter_version": profile["adapter_version"],
                         "adapter_status": "prepared", "target_family": profile["target_family"],
                         "target_request": {"prompt": package["final_prompt"],

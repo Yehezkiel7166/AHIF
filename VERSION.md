@@ -1,15 +1,17 @@
 # Version
 
-Current version: **3.4.0**
+Current version: **3.5.0**
 
-Release type: Backward-Compatible Minor Runtime Capability
+Release type: Backward-Compatible Minor Executable Framework Capability
 
 ## Semantic-version decision
 
-Sprint 030 adds a public, deterministic runtime that executes the documented pipeline through mandatory QA and adapter request preparation. The runtime contracts, trace extension, executable examples, and end-to-end tests are repository-visible, backward-compatible capabilities that justify the minor version **3.4.0** under the existing semantic-version policy. No breaking change is introduced.
+Sprint 031 materially expands the 3.4 runtime into one public executable framework with an explicit deterministic state machine, complete stage contracts, a canonical result package, a machine-readable execution report, blocked-path propagation, deterministic recovery records, scenario execution, and failure-path tests. `Framework.execute()` is canonical; the prior `execute_framework()` API remains compatible and delegates to it. These additive capabilities justify version **3.5.0** under the existing semantic-version policy.
 
-Canonical identity authority, compatibility guarantees, adapter tiers, governance philosophy, historical records, and claim boundaries remain unchanged. Repository architecture is complete within the documented framework boundary, but repository conformance is not production or empirical validation. Release Eligibility and LTS remain **HOLD** because their separately governed evidence is absent.
+Canonical identity authority, compatibility guarantees, adapter contracts, governance, historical records, and claim boundaries remain unchanged. Release Eligibility and LTS remain **HOLD**. Executable repository conformance is not production readiness or empirical validation.
 
-## Sprint 030 capability
+## Claim boundary
 
-Version 3.4.0 adds the first executable runtime orchestration layer. This semantic-minor capability does not change Release Eligibility or LTS HOLD status and does not claim production or empirical validation.
+Repository execution does not claim production readiness, does not claim deployment success, does not claim external telemetry, does not claim operational availability, does not claim security certification, does not claim disaster-recovery execution, and does not claim empirical model certification.
+
+LTS status: HOLD

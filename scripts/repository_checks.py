@@ -135,7 +135,8 @@ class Engine:
             if manifest.get(key) != value: errors.append(f"manifest.{key} must be {value!r}")
         for name in self.config["metadata_files"]:
             text = (self.root / name).read_text(encoding="utf-8")
-            for token in (self.config["version"], "Sprint 030"):
+            sprint_number = self.config["sprint"].split("-")[1]
+            for token in (self.config["version"], f"Sprint {sprint_number}"):
                 if token not in text: errors.append(f"{name} is missing synchronized token: {token}")
         return errors
 

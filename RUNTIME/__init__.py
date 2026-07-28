@@ -1,6 +1,6 @@
-"""Executable AHIF 3.4 runtime API."""
+"""Executable AHIF 3.5 framework API."""
 
-from .engine import execute_framework
+from .engine import Framework, execute_framework
 from .errors import RuntimeContractError
 
-__all__ = ["RuntimeContractError", "execute_framework"]
+__all__ = ["Framework", "RuntimeContractError", "execute_framework"]

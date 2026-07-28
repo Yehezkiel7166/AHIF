@@ -1,12 +1,12 @@
 {
   "name": "AHIF",
   "full_name": "Artificial Human Identity Framework",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "status": "stable-framework-executable-verification-lts-designation-hold",
   "canonical_context": "00_CONTEXT/AHIF_AI_CONTEXT.md",
   "canonical_identity_asset": "assets/identity-reference/MASTER_PHOTO.jpg",
   "license": "MIT",
-  "latest_sprint": "SPRINT-030-RUNTIME-EXECUTION-ENGINE",
+  "latest_sprint": "SPRINT-031-EXECUTABLE-FRAMEWORK",
   "identity_protocol": "02_CORE_IDENTITY/validation/IDENTITY_VALIDATION_PROTOCOL.md",
   "knowledge_graph": "09_DECISION_ENGINE/knowledge_graph/KNOWLEDGE_GRAPH_OVERVIEW.md",
   "decision_engine": "09_DECISION_ENGINE/inference/INFERENCE_PIPELINE.md",
@@ -129,8 +129,8 @@
   "evidence_ingestion_contract_test": "14_TESTS/adapters/EVIDENCE_INGESTION_CONTRACT_TEST.md",
   "evidence_registry_regression": "14_TESTS/adapters/EVIDENCE_REGISTRY_REGRESSION.md",
   "evidence_ingestion_example": "13_EXAMPLES/empirical_validation/EVIDENCE_INGESTION_REQUEST_EXAMPLE.json",
-  "latest_sprint_document": "docs/sprints/SPRINT-030-RUNTIME-EXECUTION-ENGINE.md",
-  "latest_upload_guide": "UPLOAD_UPDATE_v3.4.md",
+  "latest_sprint_document": "docs/sprints/SPRINT-031-EXECUTABLE-FRAMEWORK.md",
+  "latest_upload_guide": "UPLOAD_UPDATE_v3.5.md",
   "evidence_evaluation_workflow": "16_MODEL_ADAPTERS/empirical_validation/EVIDENCE_EVALUATION_WORKFLOW.md",
   "evaluation_queue_governance": "16_MODEL_ADAPTERS/empirical_validation/EVALUATION_QUEUE_GOVERNANCE.md",
   "evaluation_job_schema": "16_MODEL_ADAPTERS/schemas/EVIDENCE_EVALUATION_JOB_SCHEMA.md",
@@ -140,7 +140,7 @@
   "evidence_evaluation_contract_test": "14_TESTS/adapters/EVIDENCE_EVALUATION_CONTRACT_TEST.md",
   "evaluation_queue_regression": "14_TESTS/adapters/EVALUATION_QUEUE_REGRESSION.md",
   "evidence_evaluation_example": "13_EXAMPLES/empirical_validation/EVIDENCE_EVALUATION_JOB_EXAMPLE.json",
-  "release_validation_report": "docs/releases/RELEASE-3.4.0-VALIDATION.md",
+  "release_validation_report": "docs/releases/RELEASE-3.5.0-VALIDATION.md",
   "adapter_promotion_decision_dossier": "16_MODEL_ADAPTERS/empirical_validation/ADAPTER_PROMOTION_DECISION_DOSSIER.md",
   "promotion_decision_registry_governance": "16_MODEL_ADAPTERS/empirical_validation/PROMOTION_DECISION_REGISTRY_GOVERNANCE.md",
   "adapter_promotion_dossier_schema": "16_MODEL_ADAPTERS/schemas/ADAPTER_PROMOTION_DOSSIER_SCHEMA.md",
@@ -299,5 +299,7 @@
   "runtime_documentation": "RUNTIME/README.md",
   "runtime_end_to_end_test": "14_TESTS/runtime/test_runtime.py",
   "runtime_example_kyoto": "13_EXAMPLES/runtime/KYOTO_AUTUMN.json",
-  "runtime_example_tokyo": "13_EXAMPLES/runtime/TOKYO_RAIN.json"
+  "runtime_example_tokyo": "13_EXAMPLES/runtime/TOKYO_RAIN.json",
+  "framework_public_api": "RUNTIME/__init__.py",
+  "framework_execution_report": "RUNTIME/engine.py"
 }

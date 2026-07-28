@@ -2,6 +2,11 @@
 
 This file is the operational context for ChatGPT.
 
+AHIF 3.5.0 / Sprint 031 exposes `Framework.execute()` as the canonical local
+execution interface. It runs every documented pipeline stage through mandatory
+QA and adapter request preparation without invoking an external model. Release
+Eligibility and LTS remain HOLD.
+
 ## Mission
 
 Transform compact user input into a complete, coherent image-generation prompt for one persistent AI travel influencer.

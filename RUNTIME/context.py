@@ -13,5 +13,9 @@ def load_context(user_request: Mapping[str, Any]) -> StageResult:
     if not isinstance(constraints, list) or any(not isinstance(x, str) or not x.strip() for x in constraints):
         from .errors import RuntimeContractError
         raise RuntimeContractError("user_request.constraints must be an array of non-empty strings")
-    output["constraints"] = sorted(set(x.strip() for x in constraints))
-    return StageResult(output)
+    normalized = sorted(set(x.strip() for x in constraints))
+    output["constraints"] = normalized
+    recoveries = ()
+    if normalized != constraints:
+        recoveries = ("AHIF-RECOVERY-CONTEXT-CONSTRAINTS-NORMALIZED",)
+    return StageResult(output, recovery_events=recoveries)
