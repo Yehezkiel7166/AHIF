@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "tokyo-rain",
+  "title": "Tokyo Rain",
+  "source": "13_EXAMPLES/runtime/TOKYO_RAIN.json",
+  "input": {
+    "location": "Tokyo, Japan",
+    "place": "a neighborhood street",
+    "atmosphere": "quiet rainy evening",
+    "weather": "rain"
+  },
+  "dimensions": [
+    "identity",
+    "environment",
+    "lighting",
+    "prompt_consistency"
+  ],
+  "comments": "Executable input definition only; no image generation or outcome is recorded."
+}

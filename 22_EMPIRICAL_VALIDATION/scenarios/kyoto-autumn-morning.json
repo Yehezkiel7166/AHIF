@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "scenario_id": "kyoto-autumn-morning",
+  "title": "Kyoto Autumn Morning",
+  "source": "13_EXAMPLES/runtime/KYOTO_AUTUMN.json",
+  "input": {
+    "location": "Kyoto, Japan",
+    "place": "Gion district",
+    "atmosphere": "calm autumn morning"
+  },
+  "dimensions": [
+    "identity",
+    "environment",
+    "cultural_accuracy",
+    "lighting"
+  ],
+  "comments": "Executable input definition only; no image generation or outcome is recorded."
+}

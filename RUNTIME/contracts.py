@@ -7,7 +7,7 @@ from typing import Any, Mapping
 
 from .errors import RuntimeContractError
 
-RUNTIME_VERSION = "3.5.0"
+RUNTIME_VERSION = "3.6.0"
 CONTRACT_VERSION = "1.1"
 
 

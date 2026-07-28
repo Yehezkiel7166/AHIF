@@ -1,7 +1,7 @@
 # AHIF Executable Framework
 
 `Framework.execute()` is the one canonical public execution interface for AHIF
-3.5.0. The compatibility function `execute_framework()` and the command-line
+3.6.0. The compatibility function `execute_framework()` and the command-line
 interface delegate directly to it; they do not implement alternate pipelines.
 
 The framework performs no network calls and does not execute an image model. It

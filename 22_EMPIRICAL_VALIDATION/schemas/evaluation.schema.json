@@ -1,0 +1,190 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "type": "object",
+  "required": [
+    "schema_version",
+    "evaluation_id",
+    "execution_id",
+    "status",
+    "dimensions",
+    "reviewer",
+    "reviewed_at",
+    "comments"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "evaluation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "execution_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "NOT_EVALUATED",
+        "PENDING",
+        "APPROVED",
+        "REJECTED"
+      ]
+    },
+    "dimensions": {
+      "type": "object",
+      "required": [
+        "identity",
+        "anatomy",
+        "pose",
+        "hair",
+        "face",
+        "lighting",
+        "camera",
+        "composition",
+        "story",
+        "environment",
+        "cultural_accuracy",
+        "prompt_consistency",
+        "overall"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "identity": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "anatomy": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "pose": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "hair": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "face": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "lighting": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "camera": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "composition": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "story": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "environment": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "cultural_accuracy": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "prompt_consistency": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        },
+        "overall": {
+          "type": "string",
+          "enum": [
+            "NOT_EVALUATED",
+            "PENDING",
+            "APPROVED",
+            "REJECTED"
+          ]
+        }
+      }
+    },
+    "reviewer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reviewed_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "comments": {
+      "type": "string"
+    }
+  }
+}
