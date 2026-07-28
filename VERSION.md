@@ -1,10 +1,11 @@
 # Version
 
-Current version: **2.12.0**
+Current version: **2.13.0**
 
-Release type: Backward-Compatible Framework Expansion
+Release type: Backward-Compatible Governance Expansion
 
 Compatibility:
+- AHIF 2.12.0 operational resilience and disaster recovery governance
 - AHIF 2.11.0 security and supply-chain governance
 - AHIF 2.10.0 metrics, KPI, and quality governance
 - AHIF 2.9.0 continuous compliance and governance audit
@@ -13,6 +14,6 @@ Compatibility:
 
 ## Release focus
 
-Version 2.12.0 adds deterministic operational resilience and disaster recovery governance for recovery objectives, dependency mapping, backup/restore controls, disaster declaration, runbooks, exercises, failover, validation, and immutable records.
+Version 2.13.0 adds LTS stabilization governance for release-scope freeze, architecture reconciliation, contract inventory, metadata synchronization, regression review, migration assessment, independent review, acceptance, and maintenance policy.
 
-No real backup, restore, failover, disaster, measured RTO/RPO, production recovery, deployment, rollback, empirical certification, or adapter-tier change is included. Resilience registries remain empty and status remains `not-evaluated`.
+This release does not independently accept AHIF 3.0.0 LTS. It does not claim production deployment, empirical image quality, security certification, successful backup or recovery, or adapter-tier promotion. The LTS release registry remains empty and status remains `not-evaluated`.
