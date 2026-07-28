@@ -313,6 +313,10 @@ Use `scripts/validate_repository.sh` for repository structure and metadata, `scr
 
 A passing gate proves only that the checked-out repository satisfies the declared deterministic checks. It cannot establish production health, external telemetry, deployed security, operational recovery, empirical model quality, maintainer commitment, SLA achievement, LTS designation, rollback execution, or adapter-tier change. Preserve every earlier claim boundary; LTS remains `hold`.
 
-## Sprint 027 executable verification hardening (v3.2.0)
+## Sprint 027 executable verification hardening (v3.2.1)
 
 Use `make test` or `scripts/test_all.sh` as the canonical full repository check. Versioned JSON reports describe repository evidence only. Controlled invalid fixtures must be rejected, and missing release evidence fails closed. Repository conformance does not establish any production, deployment, telemetry, security, recovery, empirical, or availability claim. Canonical identity authority and adapter tiers remain unchanged; LTS and release eligibility remain `hold`.
+
+## Sprint 028 automation stabilization
+
+Version 3.2.1 consolidates repository checks behind shared configuration and one canonical execution engine. Generated reports are ignored, commit-bound, UTC-stamped, deterministic in structure, and cannot establish production or operational evidence. LTS designation remains `hold`.

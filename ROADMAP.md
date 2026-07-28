@@ -259,9 +259,15 @@ Knowledge Graph
 - Backward-compatible adapter capability updates
 - Governance-approved adapter profile maintenance
 
-### 3.2.0 — Sprint 027: Executable Verification Hardening — Completed
+### 3.2.1 — Sprint 027: Executable Verification Hardening — Completed
 - Canonical fail-fast test harness and deterministic exit codes
 - Versioned JSON reports and dual-format repository health inventory
 - Six isolated failure-injection tests and end-to-end release enforcement
 - Hardened artifact-producing pull-request CI and simple Make targets
+- Repository conformance can pass while release eligibility and LTS designation remain `hold`
+
+### 3.2.1 — Sprint 028: Automation Stabilization — Completed
+- Shared machine-readable automation configuration and canonical execution engine
+- Deterministic ignored report lifecycle, freshness enforcement, and negative self-tests
+- Consolidated CI execution with timeouts, concurrency, retention, and summaries
 - Repository conformance can pass while release eligibility and LTS designation remain `hold`

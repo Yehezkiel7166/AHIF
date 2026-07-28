@@ -5,18 +5,29 @@ on:
     tags: ["v*"]
 permissions:
   contents: read
+concurrency:
+  group: release-gate-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
   release-gate:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: make release-check
+      - name: Build fresh evidence and enforce release gate
+        env:
+          AHIF_MACHINE: "1"
+        run: make release-check
+      - name: Job summary
+        if: always()
+        run: echo '### AHIF release gate — repository evidence only; LTS HOLD' >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: release-verification-reports
-          path: reports/
+          name: release-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .artifacts/reports/
           if-no-files-found: error
+          retention-days: 30

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")/.."
-python3 scripts/repository_checks.py regression --output reports/regression.json
+python3 scripts/repository_checks.py regression "$@"

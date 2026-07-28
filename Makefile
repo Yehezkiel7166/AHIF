@@ -1,4 +1,6 @@
-.PHONY: validate regression test release-check health failure-injection
+.PHONY: verify-config validate regression test release-check health failure-injection audit clean-reports
+verify-config:
+	@python3 scripts/repository_checks.py verify-config
 validate:
 	@./scripts/validate_repository.sh
 regression:
@@ -11,3 +13,7 @@ health:
 	@python3 scripts/repository_health.py >/dev/null
 failure-injection:
 	@python3 scripts/test_failure_injection.py
+audit: verify-config validate regression
+	@echo "PASS automation audit"
+clean-reports:
+	@rm -rf .artifacts/reports reports

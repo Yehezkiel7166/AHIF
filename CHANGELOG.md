@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.1 — Sprint 028: Automation Stabilization
+
+Consolidated automation behind shared configuration and one Python engine; standardized ignored reports, exit semantics, deterministic structure, negative self-tests, and reliable CI. LTS remains **HOLD** and all claim boundaries remain unchanged.
+
 ## 3.2.0 — Sprint 027: Executable Verification Hardening
 
 Added machine-readable reports, deterministic full-test orchestration, six isolated negative fixtures, dual-format health inventory, Make targets, and artifact-producing CI. Release eligibility and LTS designation remain **HOLD**; canonical identity, adapter tiers, compatibility guarantees, and all production/operational claim boundaries are unchanged.
