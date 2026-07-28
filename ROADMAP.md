@@ -258,3 +258,10 @@ Knowledge Graph
 - Expanded machine-readable knowledge packages
 - Backward-compatible adapter capability updates
 - Governance-approved adapter profile maintenance
+
+### 3.2.0 — Sprint 027: Executable Verification Hardening — Completed
+- Canonical fail-fast test harness and deterministic exit codes
+- Versioned JSON reports and dual-format repository health inventory
+- Six isolated failure-injection tests and end-to-end release enforcement
+- Hardened artifact-producing pull-request CI and simple Make targets
+- Repository conformance can pass while release eligibility and LTS designation remain `hold`

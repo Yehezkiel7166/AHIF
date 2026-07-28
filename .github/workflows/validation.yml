@@ -1,16 +1,31 @@
-name: Repository validation
+name: Executable verification
 on:
   pull_request:
   push:
     branches: [main]
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  validation:
+  verification:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: scripts/validate_repository.sh
+      - name: Repository validation
+        run: make validate
+      - name: Governance regression
+        run: make regression
+      - name: Failure injection
+        run: make failure-injection
+      - name: Full harness
+        run: make test
+      - name: Upload machine-readable reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verification-reports
+          path: reports/
+          if-no-files-found: error

@@ -1,16 +1,11 @@
 # Version
 
-Current version: **3.1.0**
+Current version: **3.2.0**
 
-Release type: Backward-Compatible Repository Automation Expansion
+Release type: Backward-Compatible Minor Verification Expansion
 
-Compatibility:
-- AHIF 3.0.0 LTS governance and its `hold` designation
-- all AHIF 2.x stable framework, adapter, evidence, audit, metrics, security, and resilience contracts
-- all prior canonical identity and claim boundaries
+## Semantic-version decision
 
-## Release focus and status
+Sprint 027 adds a public developer command surface, structured report contract, controlled negative-test harness, and stronger release enforcement. These are substantial backward-compatible capabilities, so the repository policy supports **3.2.0**, rather than the patch-only 3.1.1. No 4.0.0 breaking change is introduced.
 
-Version 3.1.0 makes repository validation, governance regression, release gating, and repository-only health reporting executable locally and in GitHub Actions.
-
-The Sprint 026 repository gates pass. This status describes repository artifacts only. It does not assert production health, external telemetry, operational readiness, deployment, empirical certification, LTS support adoption, SLA achievement, maintainer commitment, rollback, or adapter-tier change. The LTS designation remains **HOLD**.
+All 3.1.0 and earlier compatibility guarantees, canonical identity authority, adapter tiers, and claim boundaries remain unchanged. Repository verification can establish only checked-out artifact conformance. Release eligibility and the LTS designation remain **HOLD** because separate governance and operational evidence is absent.
