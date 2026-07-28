@@ -1,5 +1,27 @@
 # Changelog
 
+## 3.0.0 — Sprint 025: V3 LTS Stabilization Governance
+
+Added:
+- LTS0–LTS9 candidate, compatibility, support, validation, designation, maintenance, and retirement lifecycle
+- LTS support, compatibility, deprecation, backport, release, retirement, evidence, and claim policies
+- LTS release record, maintenance event, and status schemas
+- append-only empty LTS release and maintenance registries with a candidate `hold` baseline
+- AHIF-LTS-001 through AHIF-LTS-018 QA catalog, contract test, registry regression, and blocked example
+- Sprint 025, upload, and release-validation documentation
+
+Changed:
+- release metadata, roadmap, manifest, README, and AI context synchronized only after Sprint 025 repository validation passed
+- framework version advanced to 3.0.0 while retaining all 2.x compatibility obligations and prior governance modules
+
+Status:
+- repository artifact validation: passed
+- operational LTS designation: **HOLD**
+
+Claim boundary:
+- no LTS adoption, named maintainer commitment, independent authorization, maintenance execution, backport execution, SLA achievement, deployment, production availability, rollback, empirical certification, or adapter-tier change is asserted
+- every earlier AHIF claim boundary remains in force
+
 ## 2.12.0 — Operational Resilience and Disaster Recovery Governance
 
 Added:

@@ -1,0 +1,15 @@
+{
+  "example_only": true,
+  "lts_release_id": "example-lts-hold-001",
+  "release_version": "3.0.0-candidate",
+  "decision": "hold",
+  "repository_validation": "not-evaluated",
+  "governance_validation": "not-evaluated",
+  "operational_validation": "not-evaluated",
+  "blocking_findings": [
+    "source commit is not pinned before the final commit",
+    "independent reviewer and authorizer evidence was not supplied",
+    "operational support evidence was not supplied"
+  ],
+  "claim_boundary": "Illustrative blocked record only; it is not a registry entry, approval, LTS designation, or operational-support claim."
+}

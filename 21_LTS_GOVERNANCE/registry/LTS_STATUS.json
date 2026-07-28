@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "status": "hold",
+  "release_version": "3.0.0-candidate",
+  "source_commit": null,
+  "repository_validation": "not-evaluated",
+  "governance_validation": "not-evaluated",
+  "operational_validation": "not-evaluated",
+  "registered_releases": 0,
+  "maintenance_events": 0,
+  "open_blockers": 1,
+  "last_assessed_at": null,
+  "claim_boundary": "LTS governance artifacts alone do not designate an LTS release or prove operational support."
+}
