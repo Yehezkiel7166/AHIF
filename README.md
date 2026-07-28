@@ -90,6 +90,82 @@ Output: final image-generation prompt
 
 The repository is the source of truth. AI context files are condensed operational views derived from canonical modules.
 
+## Developer quick start
+
+AHIF's local runtime and verification tools use the Python standard library; no
+package installation or provider credential is required for repository-only
+execution.
+
+```sh
+git clone <repository-url>
+cd AHIF
+python3 -m RUNTIME 13_EXAMPLES/runtime/KYOTO_AUTUMN.json > /tmp/ahif-result.json
+make test
+```
+
+For a custom request, copy an example JSON and set `user_request.location`,
+`user_request.place`, `user_request.atmosphere`, `identity.canonical_asset`, and
+`adapter_id`. The committed repository contains a placement instruction at
+`assets/identity-reference/PLACE_MASTER_PHOTO_HERE.txt`, not a real identity
+photo. Supply a master photo through the applicable image workflow; local AHIF
+records the asset reference but does not inspect pixels or invoke the provider.
+See [`RUNTIME/README.md`](RUNTIME/README.md) for the complete input contract.
+
+### Canonical minimal workflow
+
+```text
+User-supplied Master Photo reference
+→ request Context (`user_request`)
+→ Framework.execute(request)
+→ `final_prompt_package`
+→ `adapter_request`
+→ `execution_report`
+→ `empirical_validation.registry_update` proposal
+→ governed Evidence Registration only if a real external artifact exists
+```
+
+The quickest API invocation is:
+
+```python
+import json
+from pathlib import Path
+from RUNTIME import Framework
+
+request = json.loads(Path("13_EXAMPLES/runtime/KYOTO_AUTUMN.json").read_text())
+result = Framework.execute(request)
+print(result["final_prompt_package"])
+print(result["adapter_request"])
+print(result["execution_report"])
+```
+
+Interpret `execution_report.validation.status`, `stage_status`, `warnings`, and
+`errors` before using an output. `metadata.external_model_invoked` remains
+`false`: the adapter request is prepared, not submitted. Evidence registration
+is conditional and governed; a missing external artifact must remain `MISSING`
+and `NOT_EVALUATED`.
+
+### Validation and troubleshooting
+
+- Run `make test` for the canonical all-in-one check. A successful repository
+  run ends with `SUMMARY: PASS`; `HOLD` from health and release-gate steps is an
+  intentional governance outcome, not a fabricated release approval.
+- Run `make runtime-test`, `make empirical-test`, `make audit`, or
+  `make release-check` to isolate a subsystem.
+- A CLI usage error means exactly one request JSON path is required. Invalid
+  JSON must be corrected in the request file. `RuntimeContractError` identifies
+  missing or invalid request fields; compare the request with
+  `13_EXAMPLES/runtime/KYOTO_AUTUMN.json` and the input contract in
+  `RUNTIME/README.md`.
+- An unknown adapter or a QA failure returns a structured blocked result; inspect
+  the execution report instead of bypassing the failed stage.
+- Generated verification reports are in `.artifacts/reports/` and are ignored by
+  Git. They prove only the checked-out repository state.
+
+The final acceptance decision, certification criteria, and canonical boundaries
+are in the [Framework V1 Acceptance Report](FRAMEWORK_ACCEPTANCE_REPORT.md),
+[Certification Checklist](FRAMEWORK_CERTIFICATION_CHECKLIST.md), and
+[Known Limitations](KNOWN_LIMITATIONS.md).
+
 ## Canonical identity rule
 
 The uploaded master photo is the only canonical identity reference. Text may clarify the image but must never replace, reinterpret, or override it.
