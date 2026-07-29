@@ -13,4 +13,5 @@ def generate_final_prompt(payload: Mapping[str, Any]) -> StageResult:
     compiled = value["compiled"]
     return StageResult({"release_eligible": True, "final_prompt": compiled["positive_prompt"],
                         "negative_constraints": compiled["negative_constraints"],
-                        "identity_binding": compiled["identity_binding"], "qa_gate": "pass"})
+                        "identity_binding": compiled["identity_binding"], "qa_gate": "pass",
+                        "realism_contract": compiled.get("realism_contract")})

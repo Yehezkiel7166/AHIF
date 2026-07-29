@@ -71,8 +71,11 @@ Recovery is deterministic normalization or correction of the earliest
 responsible input followed by a new run.
 
 Runtime conformance is not empirical model validation, production readiness,
-release eligibility, or an LTS designation. Existing Release Eligibility and
-LTS HOLD decisions are unchanged.
+release eligibility, or an LTS designation. Human-photo executions include an additive structured photographic-realism reasoning handoff. The
+compiler accepts only ready semantics, QA blocks synthetic-surface and unsupported empirical-claim
+instructions, and adapter preparation reports experimental registry status plus semantic mapping.
+No model is invoked and semantic preservation does not establish generated-image quality.
+Existing Release Eligibility and LTS HOLD decisions are unchanged.
 
 ## Sprint 033 integrated handoff
 

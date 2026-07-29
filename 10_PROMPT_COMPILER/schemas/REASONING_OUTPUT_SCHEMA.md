@@ -45,6 +45,22 @@ This schema defines the machine-readable handoff from the Reasoning Engine to th
     "aggregate": 0.91
   },
   "qa_flags": []
+  ,"realism": {
+    "contract_version": "1.0",
+    "compiler_ready": true,
+    "intended_photographic_capture": "context-derived capture intent",
+    "human_surface_realism": [],
+    "anatomical_realism": [],
+    "lighting_model": [],
+    "camera_plausibility": [],
+    "environmental_integration": [],
+    "controlled_imperfections": [],
+    "artifact_risks": [],
+    "confidence": "high",
+    "unresolved_uncertainties": [],
+    "compiler_directives": {},
+    "qa_flags": []
+  }
 }
 ```
 
@@ -55,3 +71,5 @@ This schema defines the machine-readable handoff from the Reasoning Engine to th
 - every compiler directive must derive from an accepted decision
 - identity confidence below `0.85` requires `blocked`
 - unsupported facts must not appear in compiler directives
+- realism directives compile only when `compiler_ready` is true and material uncertainties are resolved
+- camera, lens, optics, or styling absent from accepted reasoning must not be invented
