@@ -31,6 +31,8 @@ User Request
 
 Version 3.7.0 preserves the stable framework, canonical identity authority, prior governance modules, and claim boundaries while making repository validation, regression, release gates, and health reporting executable. Repository validation does not establish production health or operational LTS support; the LTS designation remains `hold`.
 
+The runtime now applies the canonical [Photographic Realism Contract](07_PHOTOGRAPHY/PHOTOGRAPHIC_REALISM_CONTRACT.md): context-derived positive realism semantics, bounded artifact constraints, compiler readiness and contradiction controls, mandatory QA checks, and explicit adapter mapping disclosure. This additive integration does not copy mutable appearance from the master photo and does not alter version, empirical status, adapter tier, Release Eligibility, or LTS `hold`.
+
 ## Daily use
 
 1. Upload the canonical master photo to the image generator.

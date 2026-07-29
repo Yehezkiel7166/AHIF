@@ -153,6 +153,12 @@ High-risk or low-confidence cases must be simplified before prompt compilation.
 
 # Reasoning Engine — Version 1.3 Operational Contract
 
+For human photography, apply `07_PHOTOGRAPHY/PHOTOGRAPHIC_REALISM_CONTRACT.md`. Emit an auditable
+`realism` record for capture intent, surface, anatomy, lighting, camera, environment, controlled
+imperfections, risks, confidence, uncertainties, compiler-ready directives, and QA flags. The
+master photo supplies identity invariants only; do not inherit its pose, styling, accessories,
+hairstyle, expression, camera, or framing without current-context reasoning.
+
 Before prompt compilation, produce an internal reasoning result with:
 
 1. normalized premises

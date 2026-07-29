@@ -1,5 +1,13 @@
 # Prompt Compiler Specification
 
+## Photographic realism handoff
+
+Accept realism only when the Reasoning Engine marks it `compiler_ready`. Serialize positive capture,
+human, lighting, camera, environment, and controlled-imperfection directives in semantic order;
+deduplicate equivalent meaning and block unresolved optical contradictions. Never invent a lens,
+camera, style, or missing material decision. Negative artifact controls supplement rather than
+replace positive realism semantics.
+
 ## Responsibility
 
 The Prompt Compiler converts a validated reasoning result into a coherent, model-neutral image-generation prompt. It is a deterministic expression layer, not a decision-making layer.

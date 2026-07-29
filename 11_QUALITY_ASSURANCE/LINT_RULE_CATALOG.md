@@ -30,3 +30,18 @@ The same normalized QA package must produce the same triggered rule set. Rules m
 ## Extension policy
 
 New rules append new identifiers. Existing identifiers must not be repurposed because test history and release records depend on stable semantics.
+
+## Photographic realism runtime rules
+
+| ID | Trigger | Effect |
+|---|---|---|
+| `AHIF-QA-REALISM-SKIN-SYNTHETIC` | Positive prompt requests waxy, plastic, or porcelain skin | block |
+| `AHIF-QA-REALISM-EXCESSIVE-SYMMETRY` | Positive prompt requests perfect or hyper-symmetry | block |
+| `AHIF-QA-REALISM-EMPIRICAL-CLAIM` | Prompt asserts empirical generated-image success | block |
+| `AHIF-QA-REALISM-LIGHTING-INCOHERENT` | Positive semantics request contradictory physical lighting | block |
+| `AHIF-QA-REALISM-ENVIRONMENT-INTEGRATION` | Positive semantics request a pasted or cutout subject | block |
+| `AHIF-QA-REALISM-COMPILER-INTEGRITY` | Declared realism contract lacks its semantic section | block |
+
+Compiler failures `AHIF-COMPILER-REALISM-NOT-READY` and
+`AHIF-COMPILER-REALISM-OPTICS-CONTRADICTION` block before QA. These checks do not score-compensate
+identity failure.

@@ -22,7 +22,11 @@ def prepare_model_adapter(payload: Mapping[str, Any]) -> StageResult:
                             "target_request": None}, Status.BLOCKED,
                            errors=("AHIF-ADAPTER-FINAL-PACKAGE-BLOCKED",))
     return StageResult({"adapter_id": adapter_id, "adapter_version": profile["adapter_version"],
-                        "adapter_status": "prepared", "target_family": profile["target_family"],
+                        "adapter_status": "prepared", "registry_status": profile["status"],
+                        "target_family": profile["target_family"],
+                        "realism_mapping": {"semantic_preservation": "verbatim-prompt",
+                            "lossy_mappings": [], "unsupported_parameters": [],
+                            "empirical_quality": "NOT_EVALUATED"},
                         "target_request": {"prompt": package["final_prompt"],
                                            "negative_constraints": package["negative_constraints"],
                                            "identity_asset": package["identity_binding"]["canonical_asset"]}})

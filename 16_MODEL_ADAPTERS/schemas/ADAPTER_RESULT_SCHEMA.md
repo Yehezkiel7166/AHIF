@@ -11,6 +11,13 @@
   "compatibility": "compatible",
   "release_state": "released",
   "target_request": {},
+  "registry_status": "experimental",
+  "realism_mapping": {
+    "semantic_preservation": "verbatim-prompt",
+    "lossy_mappings": [],
+    "unsupported_parameters": [],
+    "empirical_quality": "NOT_EVALUATED"
+  },
   "transformation_plan": {},
   "conformance": {
     "identity_preserved": true,
@@ -30,3 +37,5 @@
 - `blocked`.
 
 The result is blocked whenever identity preservation or mandatory directive preservation is false.
+Realism mapping reports semantic transport only. Unsupported parameters and lossy mappings must be
+explicit; the field never certifies generated-image quality or promotes an adapter tier.

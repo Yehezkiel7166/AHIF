@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+- Integrated a context-derived photographic realism contract across runtime reasoning, compilation,
+  QA, final packaging, and experimental adapter disclosure.
+- Added Bali sunset, Tokyo night, Swiss Alps café, compiler, QA, adapter, identity-boundary,
+  determinism, and empirical-claim regression coverage.
+- Preserved AHIF 3.7.0, canonical identity authority, adapter tiers, and Release Eligibility/LTS HOLD.
+
 ## 3.7.0 — Sprint 033: Framework Integration and Hardening
 
 - Extended the sole canonical runtime state machine through empirical-validation record and report preparation after the governed adapter handoff.
